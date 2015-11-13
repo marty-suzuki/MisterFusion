@@ -1,0 +1,6 @@
+framework module Pods_MisterFusionSample {
+  umbrella header "Pods-MisterFusionSample-umbrella.h"
+
+  export *
+  module * { export * }
+}

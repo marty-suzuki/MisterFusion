@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37F35B221BF625AB008C6EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B211BF625AB008C6EAB /* AppDelegate.swift */; };
+		37F35B241BF625AB008C6EAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B231BF625AB008C6EAB /* ViewController.swift */; };
+		37F35B271BF625AB008C6EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F35B251BF625AB008C6EAB /* Main.storyboard */; };
+		37F35B291BF625AB008C6EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37F35B281BF625AB008C6EAB /* Assets.xcassets */; };
+		37F35B2C1BF625AB008C6EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F35B2A1BF625AB008C6EAB /* LaunchScreen.storyboard */; };
+		C1E7624B7602DFDE305B56A7 /* Pods_MisterFusionSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE5CD4A6696F96E19871051 /* Pods_MisterFusionSample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		37F35B1E1BF625AB008C6EAB /* MisterFusionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisterFusionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F35B211BF625AB008C6EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37F35B231BF625AB008C6EAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37F35B261BF625AB008C6EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37F35B281BF625AB008C6EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37F35B2B1BF625AB008C6EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37F35B2D1BF625AB008C6EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		738CA985457FC49832F740D8 /* Pods-MisterFusionSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MisterFusionSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample.debug.xcconfig"; sourceTree = "<group>"; };
+		8299F12ED0486E9976BB6CC5 /* Pods-MisterFusionSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MisterFusionSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample.release.xcconfig"; sourceTree = "<group>"; };
+		FCE5CD4A6696F96E19871051 /* Pods_MisterFusionSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37F35B1B1BF625AB008C6EAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1E7624B7602DFDE305B56A7 /* Pods_MisterFusionSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CB700AD471CAB76221797ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCE5CD4A6696F96E19871051 /* Pods_MisterFusionSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37F35B151BF625AB008C6EAB = {
+			isa = PBXGroup;
+			children = (
+				37F35B201BF625AB008C6EAB /* MisterFusionSample */,
+				37F35B1F1BF625AB008C6EAB /* Products */,
+				A46107936931AD07131AE308 /* Pods */,
+				1CB700AD471CAB76221797ED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37F35B1F1BF625AB008C6EAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37F35B1E1BF625AB008C6EAB /* MisterFusionSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37F35B201BF625AB008C6EAB /* MisterFusionSample */ = {
+			isa = PBXGroup;
+			children = (
+				37F35B211BF625AB008C6EAB /* AppDelegate.swift */,
+				37F35B231BF625AB008C6EAB /* ViewController.swift */,
+				37F35B251BF625AB008C6EAB /* Main.storyboard */,
+				37F35B281BF625AB008C6EAB /* Assets.xcassets */,
+				37F35B2A1BF625AB008C6EAB /* LaunchScreen.storyboard */,
+				37F35B2D1BF625AB008C6EAB /* Info.plist */,
+			);
+			path = MisterFusionSample;
+			sourceTree = "<group>";
+		};
+		A46107936931AD07131AE308 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				738CA985457FC49832F740D8 /* Pods-MisterFusionSample.debug.xcconfig */,
+				8299F12ED0486E9976BB6CC5 /* Pods-MisterFusionSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37F35B1D1BF625AB008C6EAB /* MisterFusionSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37F35B301BF625AB008C6EAB /* Build configuration list for PBXNativeTarget "MisterFusionSample" */;
+			buildPhases = (
+				FC0B607619AF52A6BBDDD3EC /* Check Pods Manifest.lock */,
+				37F35B1A1BF625AB008C6EAB /* Sources */,
+				37F35B1B1BF625AB008C6EAB /* Frameworks */,
+				37F35B1C1BF625AB008C6EAB /* Resources */,
+				C1226797CCF6ACBDB7AFBED5 /* Embed Pods Frameworks */,
+				177AA4FE6B063710168AB09E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MisterFusionSample;
+			productName = MisterFusionSample;
+			productReference = 37F35B1E1BF625AB008C6EAB /* MisterFusionSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37F35B161BF625AB008C6EAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Taiki Suzuki";
+				TargetAttributes = {
+					37F35B1D1BF625AB008C6EAB = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 37F35B191BF625AB008C6EAB /* Build configuration list for PBXProject "MisterFusionSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37F35B151BF625AB008C6EAB;
+			productRefGroup = 37F35B1F1BF625AB008C6EAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37F35B1D1BF625AB008C6EAB /* MisterFusionSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37F35B1C1BF625AB008C6EAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37F35B2C1BF625AB008C6EAB /* LaunchScreen.storyboard in Resources */,
+				37F35B291BF625AB008C6EAB /* Assets.xcassets in Resources */,
+				37F35B271BF625AB008C6EAB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		177AA4FE6B063710168AB09E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1226797CCF6ACBDB7AFBED5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC0B607619AF52A6BBDDD3EC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37F35B1A1BF625AB008C6EAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37F35B241BF625AB008C6EAB /* ViewController.swift in Sources */,
+				37F35B221BF625AB008C6EAB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		37F35B251BF625AB008C6EAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37F35B261BF625AB008C6EAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37F35B2A1BF625AB008C6EAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37F35B2B1BF625AB008C6EAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37F35B2E1BF625AB008C6EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37F35B2F1BF625AB008C6EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37F35B311BF625AB008C6EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 738CA985457FC49832F740D8 /* Pods-MisterFusionSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MisterFusionSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		37F35B321BF625AB008C6EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8299F12ED0486E9976BB6CC5 /* Pods-MisterFusionSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MisterFusionSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37F35B191BF625AB008C6EAB /* Build configuration list for PBXProject "MisterFusionSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37F35B2E1BF625AB008C6EAB /* Debug */,
+				37F35B2F1BF625AB008C6EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37F35B301BF625AB008C6EAB /* Build configuration list for PBXNativeTarget "MisterFusionSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37F35B311BF625AB008C6EAB /* Debug */,
+				37F35B321BF625AB008C6EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37F35B161BF625AB008C6EAB /* Project object */;
+}
