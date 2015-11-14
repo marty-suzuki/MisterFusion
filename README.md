@@ -95,7 +95,7 @@ In addtion, import **MisterFusion** like this.
 ## Advanced Setting
 
 You can set `multiplier`, `constant` and `priority` like this.
-(This is same implementation as [first example](#misterfusion-code).)
+(This is same implementation as [first example](#misterfusion-code-for-swift).)
 
 #### Swift
 
@@ -149,7 +149,7 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutConstraints(
 
 ## For Objective-C
 
-### Readonly Closures
+### Readonly Blocks
 
 ```objective-c
 @interface MisterFusion : NSObject

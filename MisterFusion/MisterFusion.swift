@@ -31,27 +31,27 @@ public class MisterFusion: NSObject {
     }
     
     public var Equal: MisterFusion -> MisterFusion {
-        return { self |==| $0 }
+        return { [unowned self] in self |==| $0 }
     }
     
     public var LessThanOrEqual: MisterFusion -> MisterFusion {
-        return { self |<=| $0 }
+        return { [unowned self] in self |<=| $0 }
     }
     
     public var GreaterThanOrEqual: MisterFusion -> MisterFusion {
-        return { self |>=| $0 }
+        return { [unowned self] in self |>=| $0 }
     }
     
     public var Multiplier: CGFloat -> MisterFusion {
-        return { self |*| $0 }
+        return { [unowned self] in self |*| $0 }
     }
     
     public var Constant: CGFloat -> MisterFusion {
-        return { self |+| $0 }
+        return { [unowned self] in self |+| $0 }
     }
     
     public var Priority: UILayoutPriority -> MisterFusion {
-        return { self |<>| $0 }
+        return { [unowned self] in self |<>| $0 }
     }
 }
 
