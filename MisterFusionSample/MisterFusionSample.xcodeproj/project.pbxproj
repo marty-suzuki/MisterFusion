@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3743B7891BF6EF9A00515882 /* MFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743B7881BF6EF9A00515882 /* MFViewController.m */; };
 		37F35B221BF625AB008C6EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B211BF625AB008C6EAB /* AppDelegate.swift */; };
 		37F35B241BF625AB008C6EAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B231BF625AB008C6EAB /* ViewController.swift */; };
 		37F35B271BF625AB008C6EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F35B251BF625AB008C6EAB /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3743B7861BF6EF9A00515882 /* MisterFusionSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MisterFusionSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		3743B7871BF6EF9A00515882 /* MFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFViewController.h; sourceTree = "<group>"; };
+		3743B7881BF6EF9A00515882 /* MFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFViewController.m; sourceTree = "<group>"; };
 		37F35B1E1BF625AB008C6EAB /* MisterFusionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisterFusionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F35B211BF625AB008C6EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F35B231BF625AB008C6EAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,9 @@
 				37F35B281BF625AB008C6EAB /* Assets.xcassets */,
 				37F35B2A1BF625AB008C6EAB /* LaunchScreen.storyboard */,
 				37F35B2D1BF625AB008C6EAB /* Info.plist */,
+				3743B7871BF6EF9A00515882 /* MFViewController.h */,
+				3743B7881BF6EF9A00515882 /* MFViewController.m */,
+				3743B7861BF6EF9A00515882 /* MisterFusionSample-Bridging-Header.h */,
 			);
 			path = MisterFusionSample;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37F35B241BF625AB008C6EAB /* ViewController.swift in Sources */,
+				3743B7891BF6EF9A00515882 /* MFViewController.m in Sources */,
 				37F35B221BF625AB008C6EAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,10 +331,13 @@
 			baseConfigurationReference = 738CA985457FC49832F740D8 /* Pods-MisterFusionSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MisterFusionSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MisterFusionSample/MisterFusionSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -335,10 +346,12 @@
 			baseConfigurationReference = 8299F12ED0486E9976BB6CC5 /* Pods-MisterFusionSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MisterFusionSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MisterFusionSample/MisterFusionSample-Bridging-Header.h";
 			};
 			name = Release;
 		};
