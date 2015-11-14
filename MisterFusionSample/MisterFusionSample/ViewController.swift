@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         yellowView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(yellowView)
         //MisterFusion code
-        view.addConstraints(
+        view.addLayoutConstraints(
             yellowView.Top    |==| redView.Bottom |+| 10,
             yellowView.Right  |==| view.Right     |-| 10,
             yellowView.Left   |==| view.Left      |+| 10,
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         greenView.translatesAutoresizingMaskIntoConstraints = false
         yellowView.addSubview(greenView)
         //Advanced MisterFusion code
-        greenViewBottomConstraint = yellowView.addConstraints(
+        greenViewBottomConstraint = yellowView.addLayoutConstraints(
             greenView.Top,
             greenView.Right,
             greenView.Bottom,
