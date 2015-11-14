@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '73B7C7BB41F9FFCAAF757CDA'
+               BlueprintIdentifier = '39239920AC692C20AA7AFBB0'
                BlueprintName = 'MisterFusion'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'MisterFusion.framework'>

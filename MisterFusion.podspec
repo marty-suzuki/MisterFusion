@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "MisterFusion"
-  s.version          = "0.1.0"
-  s.summary          = "MisterFusion makes more easier to use AutoLayout in code."
+  s.version          = "0.2.0"
+  s.summary          = "MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code."
 
   s.homepage         = "https://github.com/szk-atmosphere/MisterFusion"
 
