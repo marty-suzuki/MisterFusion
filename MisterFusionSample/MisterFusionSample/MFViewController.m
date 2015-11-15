@@ -26,11 +26,11 @@
     [self.view addSubview: redView];
     //Ordinary AutoLayout code
     [self.view addConstraints:@[
-                                [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeTop    relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop    multiplier:1.0f constant:10.0f],
-                                [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeRight  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight  multiplier:1.0f constant:-10.0f],
-                                [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeLeft   relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft   multiplier:1.0f constant:10.0f],
-                                [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.5f constant:-15.0f]
-                                ]];
+        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeTop    relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop    multiplier:1.0f constant:10.0f],
+        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeRight  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight  multiplier:1.0f constant:-10.0f],
+        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeLeft   relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft   multiplier:1.0f constant:10.0f],
+        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.5f constant:-15.0f]
+    ]];
     
     UIView *yellowView = [UIView new];
     yellowView.backgroundColor = [UIColor yellowColor];
@@ -38,23 +38,21 @@
     [self.view addSubview:yellowView];
     //MisterFusion code
     [self.view addLayoutConstraints:@[
-                                      yellowView.Top   .Equal(redView.Bottom)  .Constant(10.0f),
-                                      yellowView.Right .Equal(self.view.Right) .Constant(-10.0f),
-                                      yellowView.Left  .Equal(self.view.Left)  .Constant(10.0f),
-                                      yellowView.Height.Equal(self.view.Height).Multiplier(0.5f).Constant(-15.0f)
-                                      ]];
+        yellowView.Top   .Equal(redView.Bottom)  .Constant(10.0f),
+        yellowView.Right .Equal(self.view.Right) .Constant(-10.0f),
+        yellowView.Left  .Equal(self.view.Left)  .Constant(10.0f),
+        yellowView.Height.Equal(self.view.Height).Multiplier(0.5f).Constant(-15.0f)
+    ]];
     
     UIView *greenView = [UIView new];
     greenView.backgroundColor = [UIColor greenColor];
-    greenView.translatesAutoresizingMaskIntoConstraints = NO;
-    [yellowView addSubview:greenView];
     //Advanced MisterFusion code
-    NSArray<NSLayoutConstraint *> *constraints = [yellowView addLayoutConstraints:@[
-                                                                                    greenView.Top,
-                                                                                    greenView.Right,
-                                                                                    greenView.Bottom,
-                                                                                    greenView.Width.Multiplier(0.5f)
-                                                                                    ]];
+    NSArray<NSLayoutConstraint *> *constraints = [yellowView addSubview:greenView addLayoutConstraints:@[
+        greenView.Top,
+        greenView.Right,
+        greenView.Bottom,
+        greenView.Width.Multiplier(0.5f)
+    ]];
     
     for (NSLayoutConstraint *constraint in constraints) {
         if (constraint.firstAttribute == NSLayoutAttributeBottom) {

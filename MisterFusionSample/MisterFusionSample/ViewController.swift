@@ -43,10 +43,8 @@ class ViewController: UIViewController {
         
         let greenView = UIView()
         greenView.backgroundColor = .greenColor()
-        greenView.translatesAutoresizingMaskIntoConstraints = false
-        yellowView.addSubview(greenView)
         //Advanced MisterFusion code
-        greenViewBottomConstraint = yellowView.addLayoutConstraints(
+        greenViewBottomConstraint = yellowView.addSubview(greenView, addLayoutConstraints:
             greenView.Top,
             greenView.Right,
             greenView.Bottom,
