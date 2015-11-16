@@ -51,6 +51,15 @@ class ViewController: UIViewController {
             greenView.Width |*| 0.5
         ).filter { $0.firstAttribute == .Bottom }.first
         self.greenView = greenView
+        
+        let whiteView = UIView()
+        whiteView.backgroundColor = .whiteColor()
+        redView.addLayoutSubview(whiteView, andConstraints:
+            whiteView.Bottom |-| 10,
+            whiteView.Right |-| 10,
+            whiteView.Left |+| 10,
+            whiteView.Height |=| 100
+        )
     }
     
     override func viewDidAppear(animated: Bool) {

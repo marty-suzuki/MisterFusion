@@ -121,6 +121,7 @@ self.view.addLayoutSubview(view, andConstraints:
 - `|*|`, `|/|` ... `multiplier`
 - `|+|`, `|-|` ... `constant`
 - `|<>|` ... `UILayoutPriority`
+- `|=|` ... For fixed `Height` and `Width`
 
 #### UIView Extensions
 
@@ -160,6 +161,7 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andC
 @property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull Constant)(CGFloat);
 //UILayoutPriority
 @property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull Priority)(UILayoutPriority);
+@property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull NotRelatedConstant)(CGFloat);
 @end
 ```
 

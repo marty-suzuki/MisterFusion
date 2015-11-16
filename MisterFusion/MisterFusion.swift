@@ -53,6 +53,10 @@ public class MisterFusion: NSObject {
     public var Priority: UILayoutPriority -> MisterFusion {
         return { [unowned self] in self |<>| $0 }
     }
+    
+    public var NotRelatedConstant: CGFloat -> MisterFusion {
+        return { [unowned self] in self |=| $0 }
+    }
 }
 
 infix operator |==| { associativity left precedence 100 }
@@ -93,6 +97,11 @@ public func |/| (left: MisterFusion, right: CGFloat) -> MisterFusion {
 infix operator |<>| { associativity left precedence 100 }
 public func |<>| (left: MisterFusion, right: UILayoutPriority) -> MisterFusion {
     return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: left.relatedBy, toItem: left.toItem, toAttribute: left.toAttribute, multiplier: left.multiplier, constant: left.constant, priority: right)
+}
+
+infix operator |=| { associativity left precedence 100 }
+public func |=| (left: MisterFusion, right: CGFloat) -> MisterFusion {
+    return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .Equal, toItem: nil, toAttribute: .NotAnAttribute, multiplier: left.multiplier, constant: right, priority: left.priority)
 }
 
 extension UIView {
@@ -154,8 +163,8 @@ extension UIView {
         let item: UIView = misterFusion.item ?? self
         let attribute: NSLayoutAttribute = misterFusion.attribute ?? .NotAnAttribute
         let relatedBy: NSLayoutRelation = misterFusion.relatedBy ?? .Equal
-        let toItem: UIView = misterFusion.toItem ?? self
         let toAttribute: NSLayoutAttribute = misterFusion.toAttribute ?? attribute
+        let toItem: UIView? = toAttribute == .NotAnAttribute ? nil : misterFusion.toItem ?? self
         let multiplier: CGFloat = misterFusion.multiplier ?? 1
         let constant: CGFloat = misterFusion.constant ?? 0
         let constraint = NSLayoutConstraint(item: item, attribute: attribute, relatedBy: relatedBy, toItem: toItem, attribute: toAttribute, multiplier: multiplier, constant: constant)
