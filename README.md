@@ -152,16 +152,16 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andC
 ```objective-c
 @interface MisterFusion : NSObject
 //NSLayoutRelation
-@property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull Equal)(MisterFusion * __nonnull);
-@property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull LessThanOrEqual)(MisterFusion * __nonnull);
-@property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull GreaterThanOrEqual)(MisterFusion * __nonnull);
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull Equal)(MisterFusion * __nonnull);
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull LessThanOrEqual)(MisterFusion * __nonnull);
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull GreaterThanOrEqual)(MisterFusion * __nonnull);
 //multiplier
-@property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull Multiplier)(CGFloat);
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull Multiplier)(CGFloat);
 //constant
-@property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull Constant)(CGFloat);
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull Constant)(CGFloat);
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull NotRelatedConstant)(CGFloat);
 //UILayoutPriority
-@property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull Priority)(UILayoutPriority);
-@property (nonatomic, readonly, copy) MisterFusion * __nonnull (^ __nonnull NotRelatedConstant)(CGFloat);
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull Priority)(UILayoutPriority);
 @end
 ```
 

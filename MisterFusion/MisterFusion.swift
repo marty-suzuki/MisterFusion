@@ -30,32 +30,53 @@ public class MisterFusion: NSObject {
         super.init()
     }
     
-    public var Equal: MisterFusion -> MisterFusion {
-        return { [unowned self] in self |==| $0 }
+    public var Equal: MisterFusion -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |==| $0
+        }
     }
     
-    public var LessThanOrEqual: MisterFusion -> MisterFusion {
-        return { [unowned self] in self |<=| $0 }
+    public var LessThanOrEqual: MisterFusion -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |<=| $0
+        }
     }
     
-    public var GreaterThanOrEqual: MisterFusion -> MisterFusion {
-        return { [unowned self] in self |>=| $0 }
+    public var GreaterThanOrEqual: MisterFusion -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |>=| $0
+        }
     }
     
-    public var Multiplier: CGFloat -> MisterFusion {
-        return { [unowned self] in self |*| $0 }
+    public var Multiplier: CGFloat -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |*| $0
+        }
     }
     
-    public var Constant: CGFloat -> MisterFusion {
-        return { [unowned self] in self |+| $0 }
+    public var Constant: CGFloat -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |+| $0
+        }
     }
     
-    public var Priority: UILayoutPriority -> MisterFusion {
-        return { [unowned self] in self |<>| $0 }
+    public var Priority: UILayoutPriority -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |<>| $0
+        }
     }
     
-    public var NotRelatedConstant: CGFloat -> MisterFusion {
-        return { [unowned self] in self |=| $0 }
+    public var NotRelatedConstant: CGFloat -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |=| $0
+        }
     }
 }
 
