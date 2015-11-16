@@ -15,7 +15,7 @@ MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 
 ```swift
 let view = UIView()
-self.view.addSubview(view, addLayoutConstraints:
+self.view.addLayoutSubview(view, andConstraints:
     view.Top    |+| 10,
     view.Right  |-| 10,
     view.Left   |+| 10,
@@ -43,7 +43,7 @@ self.view.addConstraints([
 
 ```objective-c
 UIView *view = [UIView new];
-[self.view addSubview:view addLayoutConstraints:@[
+[self.view addLayoutSubview:view andConstraints:@[
     view.Top   .Constant(10.0f),
     view.Right .Constant(-10.0f),
     view.Left  .Constant(10.0f),
@@ -94,7 +94,7 @@ You can set `multiplier`, `constant` and `priority` like this.
 #### Swift
 
 ```swift
-self.view.addSubview(view, addLayoutConstraints:
+self.view.addLayoutSubview(view, andConstraints:
     view.Top    |==| self.view.Top    |*| 1 |+| 10 |<>| UILayoutPriorityRequired,
     view.Right  |==| self.view.Right  |*| 1 |-| 10 |<>| UILayoutPriorityRequired,
     view.Left   |==| self.view.Left   |*| 1 |+| 10 |<>| UILayoutPriorityRequired,
@@ -105,7 +105,7 @@ self.view.addSubview(view, addLayoutConstraints:
 #### Objective-C
 
 ```objective-c
-[self.view addSubview:view addLayoutConstraints:@[
+[self.view addLayoutSubview:view andConstraints:@[
     view.Top   .Equal(self.view.Top)   .Multiplier(1.0f).Constant(10.0f) .Priority(UILayoutPriorityRequired),
     view.Right .Equal(self.view.Right) .Multiplier(1.0f).Constant(-10.0f).Priority(UILayoutPriorityRequired),
     view.Left  .Equal(self.view.Left)  .Multiplier(1.0f).Constant(10.0f) .Priority(UILayoutPriorityRequired),
@@ -128,15 +128,15 @@ self.view.addSubview(view, addLayoutConstraints:
 public func addLayoutConstraint(misterFusion: MisterFusion) -> NSLayoutConstraint
 public func addLayoutConstraints(misterFusions: MisterFusion...) -> [NSLayoutConstraint]
 public func addLayoutConstraints(misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
-public func addSubview(subview: UIView, addLayoutConstraint misterFusion: MisterFusion) -> NSLayoutConstraint
-public func addSubview(subview: UIView, addLayoutConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
-public func addSubview(subview: UIView, addLayoutConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
+public func addLayoutSubview(subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint
+public func addLayoutSubview(subview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
+public func addLayoutSubview(subview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
 ```
 
 You can get added `NSLayoutConstraint` like this.
 
 ```swift
-let bottomConstraint: NSLayoutConstraint = self.view.addSubview(view, addLayoutConstraints:
+let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andConstraints:
     view.Top    |+| 10,
     view.Right  |-| 10,
     view.Left   |+| 10,
@@ -168,8 +168,8 @@ let bottomConstraint: NSLayoutConstraint = self.view.addSubview(view, addLayoutC
 ```objective-c
 - (NSLayoutConstraint * __nonnull)addLayoutConstraint:(MisterFusion * __nonnull)misterFusion;
 - (NSArray<NSLayoutConstraint *> * __nonnull)addLayoutConstraints:(NSArray<MisterFusion *> * __nonnull)misterFusions;
-- (NSLayoutConstraint * __nonnull)addSubview:(UIView * __nonnull)subview addLayoutConstraint:(MisterFusion * __nonnull)misterFusion;
-- (NSArray<NSLayoutConstraint *> * __nonnull)addSubview:(UIView * __nonnull)subview addLayoutConstraint:(NSArray<MisterFusion *> * __nonnull)misterFusions;
+- (NSLayoutConstraint * __nonnull)addLayoutSubview:(UIView * __nonnull)subview andConstraint:(MisterFusion * __nonnull)misterFusion;
+- (NSArray<NSLayoutConstraint *> * __nonnull)addLayoutSubview:(UIView * __nonnull)subview andConstraints:(NSArray<MisterFusion *> * __nonnull)misterFusions;
 ```
 
 ## Requirements

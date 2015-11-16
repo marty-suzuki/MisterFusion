@@ -172,19 +172,19 @@ extension UIView {
         return addLayoutConstraints(misterFusions)
     }
     
-    public func addSubview(subview: UIView, addLayoutConstraint misterFusion: MisterFusion) -> NSLayoutConstraint {
+    public func addLayoutSubview(subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint {
         addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
         return addLayoutConstraint(misterFusion)
     }
     
-    public func addSubview(subview: UIView, addLayoutConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+    public func addLayoutSubview(subview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
         return addLayoutConstraints(misterFusions)
     }
     
-    public func addSubview(subview: UIView, addLayoutConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint] {
-        return addSubview(subview, addLayoutConstraints: misterFusions)
+    public func addLayoutSubview(subview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint] {
+        return addLayoutSubview(subview, andConstraints: misterFusions)
     }
 }
