@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             greenView.Right,
             greenView.Bottom,
             greenView.Width |*| 0.5
-        ).filter { $0.firstAttribute == .Bottom }.first
+        ).firstAttribute(.Bottom).first
         self.greenView = greenView
         
         let whiteView = UIView()

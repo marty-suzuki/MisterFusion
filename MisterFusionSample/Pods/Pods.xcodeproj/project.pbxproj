@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		08AB139BBE48EC7BECA3812CCE90E2E9 /* Pods-MisterFusionSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A8B88FE9E8358AAD2EC077C740E402 /* Pods-MisterFusionSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EFA896C54B5BB7D3B033270F84C45EF /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675535307773E44184D8549D118CC471 /* MisterFusion.swift */; };
-		0F5990428CFEB4A980437E4D23C5DFEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
-		16848D15E0B9CB819BDBC6827C82F38C /* MisterFusion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05467BC5B1B331F75809EBA6581C6143 /* MisterFusion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BEF9895F082AD647D455AB242C27B60 /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */; };
 		28518F68426CD56460535B7AEF101DB4 /* Pods-MisterFusionSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D10D098BE4301F117601D64A125CD /* Pods-MisterFusionSample-dummy.m */; };
-		899EC32A6C85B884F4D71D99EFEC88DF /* MisterFusion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F419AF51A6FE067C1EC65A26C284609 /* MisterFusion-dummy.m */; };
-		A43A04C19F11AFABCFB11B3DC3321E01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		3F9B69CC86EA382696261B1D3A8FE1AD /* MisterFusion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 582D55589B5D19A5567ECBB428AB1F9D /* MisterFusion-dummy.m */; };
+		86C50D6856E2843A47C95790B13A97A7 /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF67586D47989BA06D5D71E41E4853 /* MisterFusion.swift */; };
+		B2AC28704B5159D1E6C0642B3FEA19ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
 		D68B03C8FEB179B109D9B8305C7F292B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		E97A332AFCB13BB4E1857CA5BCB2A357 /* MisterFusion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86861608603591FC0166E8195FEC8F7E /* MisterFusion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE6E4183E3F9C468C244DAE05651626A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,43 +23,44 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2CB481FA530D525826AE616F1D6882CF;
+			remoteGlobalIDString = 9FC843BD22328DEFBCAB1DA4A92108F7;
 			remoteInfo = MisterFusion;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05467BC5B1B331F75809EBA6581C6143 /* MisterFusion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-umbrella.h"; sourceTree = "<group>"; };
 		05E5EA5BA6D73EC44B6A75816DCF428C /* Pods-MisterFusionSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MisterFusionSample.modulemap"; sourceTree = "<group>"; };
+		06CF67586D47989BA06D5D71E41E4853 /* MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MisterFusion.swift; sourceTree = "<group>"; };
 		13C4A448F118513D7E8BD7B25BEA7A68 /* Pods-MisterFusionSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSample.release.xcconfig"; sourceTree = "<group>"; };
 		153D1CCBC301C5B4064CC42D9E7A77B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		387F3D5212DBA06E4CADBBB2B30920F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247D0134F0E2B3294BEFE065107DE0C2 /* MisterFusion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-prefix.pch"; sourceTree = "<group>"; };
+		2ECD9B7FE7996E97983718A9BBD1B3AF /* MisterFusion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MisterFusion.modulemap; sourceTree = "<group>"; };
 		45A8B88FE9E8358AAD2EC077C740E402 /* Pods-MisterFusionSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MisterFusionSample-umbrella.h"; sourceTree = "<group>"; };
+		582D55589B5D19A5567ECBB428AB1F9D /* MisterFusion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MisterFusion-dummy.m"; sourceTree = "<group>"; };
 		5AE8B16D3C2316C46DF1DB5066AC6D8E /* Pods-MisterFusionSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSample-frameworks.sh"; sourceTree = "<group>"; };
-		675535307773E44184D8549D118CC471 /* MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MisterFusion.swift; sourceTree = "<group>"; };
 		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6F419AF51A6FE067C1EC65A26C284609 /* MisterFusion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MisterFusion-dummy.m"; sourceTree = "<group>"; };
+		86861608603591FC0166E8195FEC8F7E /* MisterFusion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-umbrella.h"; sourceTree = "<group>"; };
 		948A0B26AEFBAAC078D89D3A9372CAF9 /* Pods_MisterFusionSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B262301189D93C44F4DD9B879B623565 /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCB7B7AEC609A3159AC4314357CB1D10 /* MisterFusion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MisterFusion.xcconfig; sourceTree = "<group>"; };
 		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+MisterFusion.swift"; sourceTree = "<group>"; };
 		F175D732F81EBA3C2BBD40CCC01123A3 /* Pods-MisterFusionSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSample.debug.xcconfig"; sourceTree = "<group>"; };
-		F1E03EDC0ED656F283E2753AAA027B75 /* MisterFusion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MisterFusion.modulemap; sourceTree = "<group>"; };
 		F2C488C95DD2D20DE20D411AF095361D /* Pods-MisterFusionSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MisterFusionSample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F4874063673E22FF4D9B42833ED9DDD8 /* Pods-MisterFusionSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MisterFusionSample-acknowledgements.plist"; sourceTree = "<group>"; };
 		F58D10D098BE4301F117601D64A125CD /* Pods-MisterFusionSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MisterFusionSample-dummy.m"; sourceTree = "<group>"; };
 		F683787F7A559DEE991F58B6FD047AF5 /* Pods-MisterFusionSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSample-resources.sh"; sourceTree = "<group>"; };
-		FA455F9D04C1D7B27AF46ABD92115D8F /* MisterFusion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-prefix.pch"; sourceTree = "<group>"; };
-		FA5D630C222566A5B3D4576D54472988 /* MisterFusion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MisterFusion.xcconfig; sourceTree = "<group>"; };
+		F69C31646ABBCF8995B0EE78559FEDBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DECFC48DC6F69DF8E98243658AD5A952 /* Frameworks */ = {
+		54C77337B476137FCBAD1AB008AFCC03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43A04C19F11AFABCFB11B3DC3321E01 /* Foundation.framework in Frameworks */,
-				0F5990428CFEB4A980437E4D23C5DFEB /* UIKit.framework in Frameworks */,
+				EE6E4183E3F9C468C244DAE05651626A /* Foundation.framework in Frameworks */,
+				B2AC28704B5159D1E6C0642B3FEA19ED /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +75,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1585925F5C933CCBA8346C909A9A3299 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F69C31646ABBCF8995B0EE78559FEDBA /* Info.plist */,
+				2ECD9B7FE7996E97983718A9BBD1B3AF /* MisterFusion.modulemap */,
+				BCB7B7AEC609A3159AC4314357CB1D10 /* MisterFusion.xcconfig */,
+				582D55589B5D19A5567ECBB428AB1F9D /* MisterFusion-dummy.m */,
+				247D0134F0E2B3294BEFE065107DE0C2 /* MisterFusion-prefix.pch */,
+				86861608603591FC0166E8195FEC8F7E /* MisterFusion-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "MisterFusionSample/Pods/Target Support Files/MisterFusion";
+			sourceTree = "<group>";
+		};
+		16B04BC3B8C7853B754F65085304D5E8 /* MisterFusion */ = {
+			isa = PBXGroup;
+			children = (
+				DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */,
+				06CF67586D47989BA06D5D71E41E4853 /* MisterFusion.swift */,
+			);
+			path = MisterFusion;
+			sourceTree = "<group>";
+		};
 		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,20 +116,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		354A331838FBF91F8E1390FB72406A84 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				387F3D5212DBA06E4CADBBB2B30920F8 /* Info.plist */,
-				F1E03EDC0ED656F283E2753AAA027B75 /* MisterFusion.modulemap */,
-				FA5D630C222566A5B3D4576D54472988 /* MisterFusion.xcconfig */,
-				6F419AF51A6FE067C1EC65A26C284609 /* MisterFusion-dummy.m */,
-				FA455F9D04C1D7B27AF46ABD92115D8F /* MisterFusion-prefix.pch */,
-				05467BC5B1B331F75809EBA6581C6143 /* MisterFusion-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "MisterFusionSample/Pods/Target Support Files/MisterFusion";
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,14 +130,6 @@
 				9D6864C9D9DBBFD166A8AF4616977294 /* Pods-MisterFusionSample */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		74A0197284919610842F0F7E1F38DAF8 /* MisterFusion */ = {
-			isa = PBXGroup;
-			children = (
-				675535307773E44184D8549D118CC471 /* MisterFusion.swift */,
-			);
-			path = MisterFusion;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -158,32 +161,32 @@
 			path = "Target Support Files/Pods-MisterFusionSample";
 			sourceTree = "<group>";
 		};
-		A06E4FB4137257DC60E43E09A57EFDA1 /* MisterFusion */ = {
+		B9537593BB1563996171F8AA5554BEB1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				74A0197284919610842F0F7E1F38DAF8 /* MisterFusion */,
-				354A331838FBF91F8E1390FB72406A84 /* Support Files */,
+				DF358D2FAFEBFB4A6C6DE50F99D717E7 /* MisterFusion */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		DF358D2FAFEBFB4A6C6DE50F99D717E7 /* MisterFusion */ = {
+			isa = PBXGroup;
+			children = (
+				16B04BC3B8C7853B754F65085304D5E8 /* MisterFusion */,
+				1585925F5C933CCBA8346C909A9A3299 /* Support Files */,
 			);
 			name = MisterFusion;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		B9537593BB1563996171F8AA5554BEB1 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A06E4FB4137257DC60E43E09A57EFDA1 /* MisterFusion */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		572DD5AFDBCA4064A937CEAFDBFCE8DA /* Headers */ = {
+		5E7702F1E80E2696D9185BFED3A6B50A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16848D15E0B9CB819BDBC6827C82F38C /* MisterFusion-umbrella.h in Headers */,
+				E97A332AFCB13BB4E1857CA5BCB2A357 /* MisterFusion-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,23 +201,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2CB481FA530D525826AE616F1D6882CF /* MisterFusion */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16B29F03739E2E64893CB4A3559658FE /* Build configuration list for PBXNativeTarget "MisterFusion" */;
-			buildPhases = (
-				3813EB658797925F40413BD15FD7223B /* Sources */,
-				DECFC48DC6F69DF8E98243658AD5A952 /* Frameworks */,
-				572DD5AFDBCA4064A937CEAFDBFCE8DA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MisterFusion;
-			productName = MisterFusion;
-			productReference = B262301189D93C44F4DD9B879B623565 /* MisterFusion.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		9181625C106D6EB08ED258F0047730B1 /* Pods-MisterFusionSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 271FAABB069EBFA2F83C7E5E60CADB5E /* Build configuration list for PBXNativeTarget "Pods-MisterFusionSample" */;
@@ -231,6 +217,23 @@
 			name = "Pods-MisterFusionSample";
 			productName = "Pods-MisterFusionSample";
 			productReference = 948A0B26AEFBAAC078D89D3A9372CAF9 /* Pods_MisterFusionSample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9FC843BD22328DEFBCAB1DA4A92108F7 /* MisterFusion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D527E849301E62CDDB55A973DEBA607C /* Build configuration list for PBXNativeTarget "MisterFusion" */;
+			buildPhases = (
+				645328A86978301C1E53E5F8DB594307 /* Sources */,
+				54C77337B476137FCBAD1AB008AFCC03 /* Frameworks */,
+				5E7702F1E80E2696D9185BFED3A6B50A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MisterFusion;
+			productName = MisterFusion;
+			productReference = B262301189D93C44F4DD9B879B623565 /* MisterFusion.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -254,19 +257,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CB481FA530D525826AE616F1D6882CF /* MisterFusion */,
+				9FC843BD22328DEFBCAB1DA4A92108F7 /* MisterFusion */,
 				9181625C106D6EB08ED258F0047730B1 /* Pods-MisterFusionSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3813EB658797925F40413BD15FD7223B /* Sources */ = {
+		645328A86978301C1E53E5F8DB594307 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899EC32A6C85B884F4D71D99EFEC88DF /* MisterFusion-dummy.m in Sources */,
-				0EFA896C54B5BB7D3B033270F84C45EF /* MisterFusion.swift in Sources */,
+				0BEF9895F082AD647D455AB242C27B60 /* Array+MisterFusion.swift in Sources */,
+				3F9B69CC86EA382696261B1D3A8FE1AD /* MisterFusion-dummy.m in Sources */,
+				86C50D6856E2843A47C95790B13A97A7 /* MisterFusion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,15 +288,15 @@
 		FA972E2FCB901B073A984D8D9F8A1930 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MisterFusion;
-			target = 2CB481FA530D525826AE616F1D6882CF /* MisterFusion */;
+			target = 9FC843BD22328DEFBCAB1DA4A92108F7 /* MisterFusion */;
 			targetProxy = DF1C92A52D19AA7EF1182474F8674F44 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		345FB12D7E25E6FF6BE303D1A5CA7D63 /* Debug */ = {
+		55F455A4A49620B632903C5283964C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA5D630C222566A5B3D4576D54472988 /* MisterFusion.xcconfig */;
+			baseConfigurationReference = BCB7B7AEC609A3159AC4314357CB1D10 /* MisterFusion.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -317,6 +321,33 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		AAFB1514DC98CC4F766E26917CDA7ECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB7B7AEC609A3159AC4314357CB1D10 /* MisterFusion.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MisterFusion/MisterFusion-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MisterFusion/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MisterFusion/MisterFusion.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MisterFusion;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -391,33 +422,6 @@
 			};
 			name = Release;
 		};
-		E4E2A305562CF7998CB278E6E38436AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA5D630C222566A5B3D4576D54472988 /* MisterFusion.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MisterFusion/MisterFusion-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MisterFusion/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MisterFusion/MisterFusion.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MisterFusion;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		EB5910A66D5A3F5907A6D6DA785DDC52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F175D732F81EBA3C2BBD40CCC01123A3 /* Pods-MisterFusionSample.debug.xcconfig */;
@@ -482,15 +486,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16B29F03739E2E64893CB4A3559658FE /* Build configuration list for PBXNativeTarget "MisterFusion" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				345FB12D7E25E6FF6BE303D1A5CA7D63 /* Debug */,
-				E4E2A305562CF7998CB278E6E38436AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		271FAABB069EBFA2F83C7E5E60CADB5E /* Build configuration list for PBXNativeTarget "Pods-MisterFusionSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -505,6 +500,15 @@
 			buildConfigurations = (
 				C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */,
 				E43846B588E1892F3093F3B7082B6DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D527E849301E62CDDB55A973DEBA607C /* Build configuration list for PBXNativeTarget "MisterFusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55F455A4A49620B632903C5283964C1C /* Debug */,
+				AAFB1514DC98CC4F766E26917CDA7ECA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

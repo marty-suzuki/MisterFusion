@@ -134,7 +134,18 @@ public func addLayoutSubview(subview: UIView, andConstraints misterFusions: [Mis
 public func addLayoutSubview(subview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
 ```
 
-You can get added `NSLayoutConstraint` like this.
+#### Array Extensions
+
+```swift
+public func firstItem(view: UIView) -> [NSLayoutConstraint]    
+public func firstAttribute(attribute: NSLayoutAttribute) -> [NSLayoutConstraint]   
+public func relation(relation: NSLayoutRelation) -> [NSLayoutConstraint]  
+public func secondItem(view: UIView) -> [NSLayoutConstraint]    
+public func secondAttribute(attribute: NSLayoutAttribute) -> [NSLayoutConstraint]
+```
+
+You can get added `NSLayoutConstraint` with those functions.
+This is a example.
 
 ```swift
 let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andConstraints:
@@ -142,7 +153,7 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andC
     view.Right  |-| 10,
     view.Left   |+| 10,
     view.Bottom |-| 10
-).filter { $0.firstAttribute == .Bottom }.first
+).firstAttribute(.Bottom).first
 ```
 
 ## For Objective-C
@@ -172,6 +183,27 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andC
 - (NSArray<NSLayoutConstraint *> * __nonnull)addLayoutConstraints:(NSArray<MisterFusion *> * __nonnull)misterFusions;
 - (NSLayoutConstraint * __nonnull)addLayoutSubview:(UIView * __nonnull)subview andConstraint:(MisterFusion * __nonnull)misterFusion;
 - (NSArray<NSLayoutConstraint *> * __nonnull)addLayoutSubview:(UIView * __nonnull)subview andConstraints:(NSArray<MisterFusion *> * __nonnull)misterFusions;
+```
+
+#### NSArray Category
+```objective-c
+@property (nonatomic, readonly, copy) NSArray * __nonnull (^ __nonnull FirstItem)(UIView * __nonnull);
+@property (nonatomic, readonly, copy) NSArray * __nonnull (^ __nonnull FirstAttribute)(NSLayoutAttribute);
+@property (nonatomic, readonly, copy) NSArray * __nonnull (^ __nonnull SecondItem)(UIView * __nonnull);
+@property (nonatomic, readonly, copy) NSArray * __nonnull (^ __nonnull SecondAttribute)(NSLayoutAttribute);
+@property (nonatomic, readonly, copy) NSArray * __nonnull (^ __nonnull Reration)(NSLayoutRelation);
+```
+
+You can get added `NSLayoutConstraint` with those properties.
+This is a example.
+
+```objective-c
+NSLayoutConstraint *bottomConstraint = [self.view addLayoutSubview:view andConstraints:@[
+    view.Top   .Constant(10.0f),
+    view.Right .Constant(-10.0f),
+    view.Left  .Constant(10.0f),
+    view.Bottom.Constant(-10.0f)
+]].FirstAttribute(NSLayoutAttributeBottom).firstObject;
 ```
 
 ## Requirements

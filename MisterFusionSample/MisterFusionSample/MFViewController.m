@@ -47,19 +47,12 @@
     UIView *greenView = [UIView new];
     greenView.backgroundColor = [UIColor greenColor];
     //Advanced MisterFusion code
-    NSArray<NSLayoutConstraint *> *constraints = [yellowView addLayoutSubview:greenView andConstraints:@[
+    self.greenViewBottomConstraint = [yellowView addLayoutSubview:greenView andConstraints:@[
         greenView.Top,
         greenView.Right,
         greenView.Bottom,
         greenView.Width.Multiplier(0.5f)
-    ]];
-    
-    for (NSLayoutConstraint *constraint in constraints) {
-        if (constraint.firstAttribute == NSLayoutAttributeBottom) {
-            self.greenViewBottomConstraint = constraint;
-            break;
-        }
-    }
+    ]].FirstAttribute(NSLayoutAttributeBottom).firstObject;
     self.greenView = greenView;
     
     UIView *whiteView = [UIView new];
