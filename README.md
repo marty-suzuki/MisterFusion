@@ -7,7 +7,10 @@
 [![Version](https://img.shields.io/cocoapods/v/MisterFusion.svg?style=flat)](http://cocoapods.org/pods/MisterFusion)
 [![License](https://img.shields.io/cocoapods/l/MisterFusion.svg?style=flat)](http://cocoapods.org/pods/MisterFusion)
 
-![](./logo.png)
+[ManiacDev.com](https://maniacdev.com/) referred.  
+[https://maniacdev.com/2015/12/open-source-auto-layout-library-with-a-simple-and-concise-syntax](https://maniacdev.com/2015/12/open-source-auto-layout-library-with-a-simple-and-concise-syntax)
+
+![](./Images/logo.png)
 
 MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 
@@ -65,6 +68,42 @@ view.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeLeft   relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft   multiplier:1.0f constant:10.0f],
     [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.5f constant:-15.0f]
 ]];
+```
+
+#### Sample Layout
+
+![](./Images/layout.png)
+
+If you want to realize layout like a above image, needed code is only this.
+
+```swift
+let redView = UIView()
+redView.backgroundColor = .redColor()
+self.view.addLayoutSubview(redView, andConstraints:
+    redView.Top   |+| 10,
+    redView.Right |-| 10,
+    redView.Left  |+| 10
+)
+
+let yellowView = UIView()
+yellowView.backgroundColor = .yellowColor()
+self.view.addLayoutSubview(yellowView, andConstraints:
+    yellowView.Top    |==| redView.Bottom |+| 10,
+    yellowView.Left   |+|  10,
+    yellowView.Bottom |-|  10,
+    yellowView.Height |==| redView.Height
+)
+
+let greenView = UIView()
+greenView.backgroundColor = .greenColor()
+self.view.addLayoutSubview(greenView, andConstraints:
+    greenView.Top    |==| redView.Bottom    |+| 10,
+    greenView.Left   |==| yellowView.Right  |+| 10,
+    greenView.Bottom |-|  10,
+    greenView.Right  |-|  10,
+    greenView.Width  |==| yellowView.Width,
+    greenView.Height |==| yellowView.Height
+)
 ```
 
 ## Installation
