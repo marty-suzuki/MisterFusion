@@ -12,6 +12,10 @@
 @interface MFViewController ()
 @property (strong, nonatomic) UIView *greenView;
 @property (strong, nonatomic) NSLayoutConstraint *greenViewBottomConstraint;
+
+@property (strong, nonatomic) UIView *whiteView;
+@property (strong, nonatomic) UIView *redView;
+@property (strong, nonatomic) NSLayoutConstraint *whiteViewHeightConstraint;
 @end
 
 @implementation MFViewController
@@ -31,6 +35,7 @@
         [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeLeft   relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft   multiplier:1.0f constant:10.0f],
         [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.5f constant:-15.0f]
     ]];
+    self.redView = redView;
     
     UIView *yellowView = [UIView new];
     yellowView.backgroundColor = [UIColor yellowColor];
@@ -57,12 +62,14 @@
     
     UIView *whiteView = [UIView new];
     whiteView.backgroundColor = [UIColor whiteColor];
-    [redView addLayoutSubview:whiteView andConstraints:@[
+    self.whiteViewHeightConstraint = [redView addLayoutSubview:whiteView andConstraints:@[
          whiteView.Bottom.Constant(-10.0f),
          whiteView.Right.Constant(-10.0f),
          whiteView.Left.Constant(10.0f),
-         whiteView.Height.NotRelatedConstant(100.0f)
-    ]];
+         whiteView.Height.NotRelatedConstant(100.0f).VerticalSizeClass(UIUserInterfaceSizeClassRegular),
+         whiteView.Height.NotRelatedConstant(50.0f).VerticalSizeClass(UIUserInterfaceSizeClassCompact)
+    ]].FirstAttribute(NSLayoutAttributeHeight).firstObject;
+    self.whiteView = whiteView;
 }
     
 - (void)viewDidAppear:(BOOL)animated {
@@ -73,6 +80,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [self.redView removeConstraint:self.whiteViewHeightConstraint];
+    self.whiteViewHeightConstraint = [self.redView addLayoutConstraints:@[
+        self.whiteView.Height.NotRelatedConstant(100.0f).VerticalSizeClass(UIUserInterfaceSizeClassRegular),
+        self.whiteView.Height.NotRelatedConstant(50.0f).VerticalSizeClass(UIUserInterfaceSizeClassCompact)
+    ]].FirstAttribute(NSLayoutAttributeHeight).firstObject;
 }
     
 -(void)stretchAnmation {

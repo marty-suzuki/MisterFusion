@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     private var greenView: UIView?
     private var greenViewBottomConstraint: NSLayoutConstraint?
     
+    private var whiteView: UIView?
+    private var redView: UIView?
+    private var whiteViewHeightConstraint: NSLayoutConstraint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,6 +32,7 @@ class ViewController: UIViewController {
             NSLayoutConstraint(item: redView, attribute: .Left,   relatedBy: .Equal, toItem: view, attribute: .Left,   multiplier: 1,   constant: 10),
             NSLayoutConstraint(item: redView, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 0.5, constant: -15),
         ])
+        self.redView = redView
         
         let yellowView = UIView()
         yellowView.backgroundColor = .yellowColor()
@@ -54,12 +59,14 @@ class ViewController: UIViewController {
         
         let whiteView = UIView()
         whiteView.backgroundColor = .whiteColor()
-        redView.addLayoutSubview(whiteView, andConstraints:
+        whiteViewHeightConstraint = redView.addLayoutSubview(whiteView, andConstraints:
             whiteView.Bottom |-| 10,
             whiteView.Right |-| 10,
             whiteView.Left |+| 10,
-            whiteView.Height |=| 100
-        )
+            whiteView.Height |=| 100 <|> .Regular,
+            whiteView.Height |=| 50 <|> .Compact
+        ).firstAttribute(.Height).first
+        self.whiteView = whiteView
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -71,7 +78,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+        guard let whiteView = whiteView, redView = redView, whiteViewHeightConstraint = whiteViewHeightConstraint else { return }
+        redView.removeConstraint(whiteViewHeightConstraint)
+        self.whiteViewHeightConstraint = redView.addLayoutConstraints(
+            whiteView.Height |=| 100 <|> .Regular,
+            whiteView.Height |=| 50 <|> .Compact
+        ).firstAttribute(.Height).first
+    }
+    
     func stretchAnmation() {
         greenViewBottomConstraint?.constant = 0
         UIView.animateWithDuration(2, animations: {

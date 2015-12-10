@@ -14,6 +14,11 @@
 
 MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 
+## Features
+- [x] Simple And Concise Syntax
+- [x] Use in Swift and Objective-C
+- [x] Support Size Class
+
 #### MisterFusion Code for Swift
 
 ```swift
@@ -161,14 +166,16 @@ self.view.addLayoutSubview(view, andConstraints:
 - `|+|`, `|-|` ... `constant`
 - `|<>|` ... `UILayoutPriority`
 - `|=|` ... For fixed `Height` and `Width`
+- `<|>` ... `UIUserInterfaceSizeClass` for VerticalSizeClass
+- `<->` ... `UIUserInterfaceSizeClass` for VerticalSizeClass
 
 #### UIView Extensions
 
 ```swift
-public func addLayoutConstraint(misterFusion: MisterFusion) -> NSLayoutConstraint
+public func addLayoutConstraint(misterFusion: MisterFusion) -> NSLayoutConstraint?
 public func addLayoutConstraints(misterFusions: MisterFusion...) -> [NSLayoutConstraint]
 public func addLayoutConstraints(misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
-public func addLayoutSubview(subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint
+public func addLayoutSubview(subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint?
 public func addLayoutSubview(subview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
 public func addLayoutSubview(subview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
 ```
@@ -195,6 +202,21 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andC
 ).firstAttribute(.Bottom).first
 ```
 
+You can use `Size Class` with `func traitCollectionDidChange(previousTraitCollection: UITraitCollection?)`.
+
+```swift
+override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+    guard let whiteView = whiteView, redView = redView, whiteViewHeightConstraint = whiteViewHeightConstraint else { return }
+    redView.removeConstraint(whiteViewHeightConstraint)
+    self.whiteViewHeightConstraint = redView.addLayoutConstraints(
+        whiteView.Height |=| 100 <|> .Regular,
+        whiteView.Height |=| 50  <|> .Compact
+    ).firstAttribute(.Height).first
+}
+```
+
+* A detail sample is [here](./MisterFusionSample/MisterFusionSample/ViewController.swift)
+
 ## For Objective-C
 
 ### Readonly Blocks
@@ -212,15 +234,19 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andC
 @property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull NotRelatedConstant)(CGFloat);
 //UILayoutPriority
 @property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull Priority)(UILayoutPriority);
+//UIUserInterfaceSizeClass for HorizontalSizeClass
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull HorizontalSizeClass)(UIUserInterfaceSizeClass);
+//UIUserInterfaceSizeClass for VerticalSizeClass
+@property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull VerticalSizeClass)(UIUserInterfaceSizeClass);
 @end
 ```
 
 #### UIView Category
 
 ```objective-c
-- (NSLayoutConstraint * __nonnull)addLayoutConstraint:(MisterFusion * __nonnull)misterFusion;
+- (NSLayoutConstraint * __nullable)addLayoutConstraint:(MisterFusion * __nonnull)misterFusion;
 - (NSArray<NSLayoutConstraint *> * __nonnull)addLayoutConstraints:(NSArray<MisterFusion *> * __nonnull)misterFusions;
-- (NSLayoutConstraint * __nonnull)addLayoutSubview:(UIView * __nonnull)subview andConstraint:(MisterFusion * __nonnull)misterFusion;
+- (NSLayoutConstraint * __nullable)addLayoutSubview:(UIView * __nonnull)subview andConstraint:(MisterFusion * __nonnull)misterFusion;
 - (NSArray<NSLayoutConstraint *> * __nonnull)addLayoutSubview:(UIView * __nonnull)subview andConstraints:(NSArray<MisterFusion *> * __nonnull)misterFusions;
 ```
 
@@ -245,10 +271,24 @@ NSLayoutConstraint *bottomConstraint = [self.view addLayoutSubview:view andConst
 ]].FirstAttribute(NSLayoutAttributeBottom).firstObject;
 ```
 
+You can use `Size Class` with `- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection`.
+
+```swift
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [self.redView removeConstraint:self.whiteViewHeightConstraint];
+    self.whiteViewHeightConstraint = [self.redView addLayoutConstraints:@[
+        self.whiteView.Height.NotRelatedConstant(100.0f).VerticalSizeClass(UIUserInterfaceSizeClassRegular),
+        self.whiteView.Height.NotRelatedConstant(50.0f).VerticalSizeClass(UIUserInterfaceSizeClassCompact)
+    ]].FirstAttribute(NSLayoutAttributeHeight).firstObject;
+}
+```
+
+* A detail sample is [here](./MisterFusionSample/MisterFusionSample/MFViewController.m)
+
 ## Requirements
 
 - Xcode 7.0 or greater
-- iOS8.0 or greater
+- iOS 8.0 or greater
 
 ## Author
 
