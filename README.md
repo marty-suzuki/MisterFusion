@@ -204,14 +204,20 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andC
 
 You can use `Size Class` with `func traitCollectionDidChange(previousTraitCollection: UITraitCollection?)`.
 
+![](./Images/misterfusion.gif)
+
+This is an example Regular, Compact size for iPhone6s+.
+
 ```swift
 override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
-    guard let whiteView = whiteView, redView = redView, whiteViewHeightConstraint = whiteViewHeightConstraint else { return }
-    redView.removeConstraint(whiteViewHeightConstraint)
-    self.whiteViewHeightConstraint = redView.addLayoutConstraints(
-        whiteView.Height |=| 100 <|> .Regular,
-        whiteView.Height |=| 50  <|> .Compact
-    ).firstAttribute(.Height).first
+    guard let whiteView = whiteView, redView = redView else { return }
+    if let whiteViewHeightConstraint = whiteViewWidthConstraint {
+        redView.removeConstraint(whiteViewHeightConstraint)
+    }
+    self.whiteViewWidthConstraint = redView.addLayoutConstraints(
+        whiteView.Width |-| 20 <|> .Compact <-> .Regular,
+        whiteView.Width |*| 0.5 |-| 10 <|> .Regular <-> .Compact
+    ).firstAttribute(.Width).first
 }
 ```
 
@@ -273,13 +279,17 @@ NSLayoutConstraint *bottomConstraint = [self.view addLayoutSubview:view andConst
 
 You can use `Size Class` with `- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection`.
 
-```swift
+![](./Images/misterfusion.gif)
+
+This is an example Regular, Compact size for iPhone6s+.
+
+```objective-c
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
-    [self.redView removeConstraint:self.whiteViewHeightConstraint];
-    self.whiteViewHeightConstraint = [self.redView addLayoutConstraints:@[
-        self.whiteView.Height.NotRelatedConstant(100.0f).VerticalSizeClass(UIUserInterfaceSizeClassRegular),
-        self.whiteView.Height.NotRelatedConstant(50.0f).VerticalSizeClass(UIUserInterfaceSizeClassCompact)
-    ]].FirstAttribute(NSLayoutAttributeHeight).firstObject;
+    [self.redView removeConstraint:self.whiteViewWidthConstraint];
+    self.whiteViewWidthConstraint = [self.redView addLayoutConstraints:@[
+        self.whiteView.Width.Multiplier(0.5f).Constant(-10).VerticalSizeClass(UIUserInterfaceSizeClassRegular).HorizontalSizeClass(UIUserInterfaceSizeClassCompact),
+        self.whiteView.Width.Constant(-20).VerticalSizeClass(UIUserInterfaceSizeClassCompact).HorizontalSizeClass(UIUserInterfaceSizeClassRegular)
+    ]].FirstAttribute(NSLayoutAttributeWidth).firstObject;
 }
 ```
 

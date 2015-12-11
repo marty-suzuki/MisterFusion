@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     private var whiteView: UIView?
     private var redView: UIView?
-    private var whiteViewHeightConstraint: NSLayoutConstraint?
+    private var whiteViewWidthConstraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,13 +59,11 @@ class ViewController: UIViewController {
         
         let whiteView = UIView()
         whiteView.backgroundColor = .whiteColor()
-        whiteViewHeightConstraint = redView.addLayoutSubview(whiteView, andConstraints:
+        redView.addLayoutSubview(whiteView, andConstraints:
             whiteView.Bottom |-| 10,
-            whiteView.Right |-| 10,
             whiteView.Left |+| 10,
-            whiteView.Height |=| 100 <|> .Regular,
-            whiteView.Height |=| 50 <|> .Compact
-        ).firstAttribute(.Height).first
+            whiteView.Height |=| 100
+        )
         self.whiteView = whiteView
     }
     
@@ -80,12 +78,14 @@ class ViewController: UIViewController {
     }
     
     override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
-        guard let whiteView = whiteView, redView = redView, whiteViewHeightConstraint = whiteViewHeightConstraint else { return }
-        redView.removeConstraint(whiteViewHeightConstraint)
-        self.whiteViewHeightConstraint = redView.addLayoutConstraints(
-            whiteView.Height |=| 100 <|> .Regular,
-            whiteView.Height |=| 50 <|> .Compact
-        ).firstAttribute(.Height).first
+        guard let whiteView = whiteView, redView = redView else { return }
+        if let whiteViewHeightConstraint = whiteViewWidthConstraint {
+            redView.removeConstraint(whiteViewHeightConstraint)
+        }
+        self.whiteViewWidthConstraint = redView.addLayoutConstraints(
+            whiteView.Width |-| 20 <|> .Compact <-> .Regular,
+            whiteView.Width |*| 0.5 |-| 10 <|> .Regular <-> .Compact
+        ).firstAttribute(.Width).first
     }
     
     func stretchAnmation() {

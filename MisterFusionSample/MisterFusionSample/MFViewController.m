@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) UIView *whiteView;
 @property (strong, nonatomic) UIView *redView;
-@property (strong, nonatomic) NSLayoutConstraint *whiteViewHeightConstraint;
+@property (strong, nonatomic) NSLayoutConstraint *whiteViewWidthConstraint;
 @end
 
 @implementation MFViewController
@@ -62,13 +62,11 @@
     
     UIView *whiteView = [UIView new];
     whiteView.backgroundColor = [UIColor whiteColor];
-    self.whiteViewHeightConstraint = [redView addLayoutSubview:whiteView andConstraints:@[
+    [redView addLayoutSubview:whiteView andConstraints:@[
          whiteView.Bottom.Constant(-10.0f),
-         whiteView.Right.Constant(-10.0f),
          whiteView.Left.Constant(10.0f),
-         whiteView.Height.NotRelatedConstant(100.0f).VerticalSizeClass(UIUserInterfaceSizeClassRegular),
-         whiteView.Height.NotRelatedConstant(50.0f).VerticalSizeClass(UIUserInterfaceSizeClassCompact)
-    ]].FirstAttribute(NSLayoutAttributeHeight).firstObject;
+         whiteView.Height.NotRelatedConstant(100.0f)
+    ]];
     self.whiteView = whiteView;
 }
     
@@ -83,11 +81,11 @@
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
-    [self.redView removeConstraint:self.whiteViewHeightConstraint];
-    self.whiteViewHeightConstraint = [self.redView addLayoutConstraints:@[
-        self.whiteView.Height.NotRelatedConstant(100.0f).VerticalSizeClass(UIUserInterfaceSizeClassRegular),
-        self.whiteView.Height.NotRelatedConstant(50.0f).VerticalSizeClass(UIUserInterfaceSizeClassCompact)
-    ]].FirstAttribute(NSLayoutAttributeHeight).firstObject;
+    [self.redView removeConstraint:self.whiteViewWidthConstraint];
+    self.whiteViewWidthConstraint = [self.redView addLayoutConstraints:@[
+        self.whiteView.Width.Multiplier(0.5f).Constant(-10).VerticalSizeClass(UIUserInterfaceSizeClassRegular).HorizontalSizeClass(UIUserInterfaceSizeClassCompact),
+        self.whiteView.Width.Constant(-20).VerticalSizeClass(UIUserInterfaceSizeClassCompact).HorizontalSizeClass(UIUserInterfaceSizeClassRegular)
+    ]].FirstAttribute(NSLayoutAttributeWidth).firstObject;
 }
     
 -(void)stretchAnmation {
