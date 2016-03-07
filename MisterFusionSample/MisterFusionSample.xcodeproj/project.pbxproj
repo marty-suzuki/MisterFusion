@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3743B7891BF6EF9A00515882 /* MFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743B7881BF6EF9A00515882 /* MFViewController.m */; };
+		377AF06C1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377AF06B1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift */; };
 		37F35B221BF625AB008C6EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B211BF625AB008C6EAB /* AppDelegate.swift */; };
 		37F35B241BF625AB008C6EAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B231BF625AB008C6EAB /* ViewController.swift */; };
 		37F35B271BF625AB008C6EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F35B251BF625AB008C6EAB /* Main.storyboard */; };
@@ -16,10 +17,23 @@
 		C1E7624B7602DFDE305B56A7 /* Pods_MisterFusionSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE5CD4A6696F96E19871051 /* Pods_MisterFusionSample.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		377AF06E1C8DCF7F008A3BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37F35B161BF625AB008C6EAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37F35B1D1BF625AB008C6EAB;
+			remoteInfo = MisterFusionSample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3743B7861BF6EF9A00515882 /* MisterFusionSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MisterFusionSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		3743B7871BF6EF9A00515882 /* MFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFViewController.h; sourceTree = "<group>"; };
 		3743B7881BF6EF9A00515882 /* MFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFViewController.m; sourceTree = "<group>"; };
+		377AF0691C8DCF7F008A3BE2 /* MisterFusionSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MisterFusionSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		377AF06B1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisterFusionSampleTests.swift; sourceTree = "<group>"; };
+		377AF06D1C8DCF7F008A3BE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37F35B1E1BF625AB008C6EAB /* MisterFusionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisterFusionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F35B211BF625AB008C6EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F35B231BF625AB008C6EAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		377AF0661C8DCF7F008A3BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37F35B1B1BF625AB008C6EAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +73,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		377AF06A1C8DCF7F008A3BE2 /* MisterFusionSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				377AF06B1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift */,
+				377AF06D1C8DCF7F008A3BE2 /* Info.plist */,
+			);
+			path = MisterFusionSampleTests;
+			sourceTree = "<group>";
+		};
 		37F35B151BF625AB008C6EAB = {
 			isa = PBXGroup;
 			children = (
 				37F35B201BF625AB008C6EAB /* MisterFusionSample */,
+				377AF06A1C8DCF7F008A3BE2 /* MisterFusionSampleTests */,
 				37F35B1F1BF625AB008C6EAB /* Products */,
 				A46107936931AD07131AE308 /* Pods */,
 				1CB700AD471CAB76221797ED /* Frameworks */,
@@ -66,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				37F35B1E1BF625AB008C6EAB /* MisterFusionSample.app */,
+				377AF0691C8DCF7F008A3BE2 /* MisterFusionSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +130,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		377AF0681C8DCF7F008A3BE2 /* MisterFusionSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 377AF0721C8DCF7F008A3BE2 /* Build configuration list for PBXNativeTarget "MisterFusionSampleTests" */;
+			buildPhases = (
+				377AF0651C8DCF7F008A3BE2 /* Sources */,
+				377AF0661C8DCF7F008A3BE2 /* Frameworks */,
+				377AF0671C8DCF7F008A3BE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				377AF06F1C8DCF7F008A3BE2 /* PBXTargetDependency */,
+			);
+			name = MisterFusionSampleTests;
+			productName = MisterFusionSampleTests;
+			productReference = 377AF0691C8DCF7F008A3BE2 /* MisterFusionSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		37F35B1D1BF625AB008C6EAB /* MisterFusionSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37F35B301BF625AB008C6EAB /* Build configuration list for PBXNativeTarget "MisterFusionSample" */;
@@ -124,10 +174,14 @@
 		37F35B161BF625AB008C6EAB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Taiki Suzuki";
 				TargetAttributes = {
+					377AF0681C8DCF7F008A3BE2 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 37F35B1D1BF625AB008C6EAB;
+					};
 					37F35B1D1BF625AB008C6EAB = {
 						CreatedOnToolsVersion = 7.1;
 					};
@@ -147,11 +201,19 @@
 			projectRoot = "";
 			targets = (
 				37F35B1D1BF625AB008C6EAB /* MisterFusionSample */,
+				377AF0681C8DCF7F008A3BE2 /* MisterFusionSampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		377AF0671C8DCF7F008A3BE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37F35B1C1BF625AB008C6EAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +275,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		377AF0651C8DCF7F008A3BE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377AF06C1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37F35B1A1BF625AB008C6EAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,6 +294,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		377AF06F1C8DCF7F008A3BE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37F35B1D1BF625AB008C6EAB /* MisterFusionSample */;
+			targetProxy = 377AF06E1C8DCF7F008A3BE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		37F35B251BF625AB008C6EAB /* Main.storyboard */ = {
@@ -245,6 +323,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		377AF0701C8DCF7F008A3BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MisterFusionSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MisterFusionSample.app/MisterFusionSample";
+			};
+			name = Debug;
+		};
+		377AF0711C8DCF7F008A3BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MisterFusionSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MisterFusionSample.app/MisterFusionSample";
+			};
+			name = Release;
+		};
 		37F35B2E1BF625AB008C6EAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -358,6 +462,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		377AF0721C8DCF7F008A3BE2 /* Build configuration list for PBXNativeTarget "MisterFusionSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377AF0701C8DCF7F008A3BE2 /* Debug */,
+				377AF0711C8DCF7F008A3BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		37F35B191BF625AB008C6EAB /* Build configuration list for PBXProject "MisterFusionSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

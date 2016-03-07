@@ -62,7 +62,21 @@ public class MisterFusion: NSObject {
         }
     }
     
+    public var NotRelatedLessThanOrEqualConstant: CGFloat -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |<=| $0
+        }
+    }
+    
     public var GreaterThanOrEqual: MisterFusion -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |>=| $0
+        }
+    }
+    
+    public var NotRelatedGreaterThanOrEqualConstant: CGFloat -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |>=| $0
@@ -122,9 +136,17 @@ public func |<=| (left: MisterFusion, right: MisterFusion) -> MisterFusion {
     return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .LessThanOrEqual, toItem: right.item, toAttribute: right.attribute, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil)
 }
 
+public func |<=| (left: MisterFusion, right: CGFloat) -> MisterFusion {
+    return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .LessThanOrEqual, toItem: nil, toAttribute: .NotAnAttribute, multiplier: nil, constant: right, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil)
+}
+
 infix operator |>=| { associativity left precedence 100 }
 public func |>=| (left: MisterFusion, right: MisterFusion) -> MisterFusion {
     return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .GreaterThanOrEqual, toItem: right.item, toAttribute: right.attribute, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil)
+}
+
+public func |>=| (left: MisterFusion, right: CGFloat) -> MisterFusion {
+    return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .GreaterThanOrEqual, toItem: nil, toAttribute: .NotAnAttribute, multiplier: nil, constant: right, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil)
 }
 
 infix operator |+| { associativity left precedence 100 }
