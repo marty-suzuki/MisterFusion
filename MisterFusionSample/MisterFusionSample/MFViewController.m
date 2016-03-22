@@ -65,7 +65,7 @@
     [redView addLayoutSubview:whiteView andConstraints:@[
          whiteView.Bottom.Constant(-10.0f),
          whiteView.Left.Constant(10.0f),
-         whiteView.Height.NotRelatedConstant(100.0f)
+         whiteView.Height.NotRelatedEqualConstant(100.0f)
     ]];
     self.whiteView = whiteView;
 }

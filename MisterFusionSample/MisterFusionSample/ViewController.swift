@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         redView.addLayoutSubview(whiteView, andConstraints:
             whiteView.Bottom |-| 10,
             whiteView.Left |+| 10,
-            whiteView.Height |=| 100
+            whiteView.Height |==| 100
         )
         self.whiteView = whiteView
     }
