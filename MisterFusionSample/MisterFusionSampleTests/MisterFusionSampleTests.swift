@@ -128,4 +128,25 @@ class MisterFusionSampleTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
     }
+    
+    func testIdentifier() {
+        let superview = UIView()
+        let subview = UIView()
+        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+            subview.Height |==| 90 -=- "TestSubViewHeight"
+            ) else {
+                XCTFail("must return NSLayoutConstraint")
+                return
+        }
+        
+        XCTAssertEqual(constraint.firstItem as? UIView, subview)
+        XCTAssertEqual(constraint.firstAttribute, .Some(.Height))
+        XCTAssertEqual(constraint.relation, .Some(.Equal))
+        XCTAssertEqual(constraint.secondItem as? UIView, nil)
+        XCTAssertEqual(constraint.secondAttribute, .Some(.NotAnAttribute))
+        XCTAssertEqual(constraint.constant, 90)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(constraint.identifier, "TestSubViewHeight")
+    }
 }

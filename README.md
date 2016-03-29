@@ -168,6 +168,7 @@ self.view.addLayoutSubview(view, andConstraints:
 - ~~`|=|` ... For fixed `Height` and `Width`~~ (deprecated since 1.1.0, use `|==|`)
 - `<|>` ... `UIUserInterfaceSizeClass` for VerticalSizeClass
 - `<->` ... `UIUserInterfaceSizeClass` for VerticalSizeClass
+- `-=-` ... Identifier
 
 #### UIView Extensions
 
@@ -178,6 +179,15 @@ public func addLayoutConstraints(misterFusions: [MisterFusion]) -> [NSLayoutCons
 public func addLayoutSubview(subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint?
 public func addLayoutSubview(subview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
 public func addLayoutSubview(subview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
+public func insertLayoutSubview(subview: UIView, atIndex index: Int, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint?
+public func insertLayoutSubview(subview: UIView, atIndex index: Int, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
+public func insertLayoutSubview(subview: UIView, atIndex index: Int, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
+public func insertLayoutSubview(subview: UIView, belowSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint?
+public func insertLayoutSubview(subview: UIView, belowSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
+public func insertLayoutSubview(subview: UIView, belowSubview siblingSubview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
+public func insertLayoutSubview(subview: UIView, aboveSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint?
+public func insertLayoutSubview(subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
+public func insertLayoutSubview(subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint] 
 ```
 
 #### Array Extensions
@@ -247,16 +257,24 @@ override func traitCollectionDidChange(previousTraitCollection: UITraitCollectio
 @property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull HorizontalSizeClass)(UIUserInterfaceSizeClass);
 //UIUserInterfaceSizeClass for VerticalSizeClass
 @property (nonatomic, readonly, copy) MisterFusion * __nullable (^ __nonnull VerticalSizeClass)(UIUserInterfaceSizeClass);
+//Identifier
+@property (nonatomic, readonly, copy) MisterFusion * _Nullable (^ _Nonnull Identifier)(NSString * _Nonnull);
 @end
 ```
 
 #### UIView Category
 
 ```objective-c
-- (NSLayoutConstraint * __nullable)addLayoutConstraint:(MisterFusion * __nonnull)misterFusion;
-- (NSArray<NSLayoutConstraint *> * __nonnull)addLayoutConstraints:(NSArray<MisterFusion *> * __nonnull)misterFusions;
-- (NSLayoutConstraint * __nullable)addLayoutSubview:(UIView * __nonnull)subview andConstraint:(MisterFusion * __nonnull)misterFusion;
-- (NSArray<NSLayoutConstraint *> * __nonnull)addLayoutSubview:(UIView * __nonnull)subview andConstraints:(NSArray<MisterFusion *> * __nonnull)misterFusions;
+- (NSLayoutConstraint * _Nullable)addLayoutConstraint:(MisterFusion * _Nonnull)misterFusion;
+- (NSArray<NSLayoutConstraint *> * _Nonnull)addLayoutConstraints:(NSArray<MisterFusion *> * _Nonnull)misterFusions;
+- (NSLayoutConstraint * _Nullable)addLayoutSubview:(UIView * _Nonnull)subview andConstraint:(MisterFusion * _Nonnull)misterFusion;
+- (NSArray<NSLayoutConstraint *> * _Nonnull)addLayoutSubview:(UIView * _Nonnull)subview andConstraints:(NSArray<MisterFusion *> * _Nonnull)misterFusions;
+- (NSLayoutConstraint * _Nullable)insertLayoutSubview:(UIView * _Nonnull)subview atIndex:(NSInteger)index andConstraint:(MisterFusion * _Nonnull)misterFusion;
+- (NSArray<NSLayoutConstraint *> * _Nonnull)insertLayoutSubview:(UIView * _Nonnull)subview atIndex:(NSInteger)index andConstraints:(NSArray<MisterFusion *> * _Nonnull)misterFusions;
+- (NSLayoutConstraint * _Nullable)insertLayoutSubview:(UIView * _Nonnull)subview belowSubview:(UIView * _Nonnull)siblingSubview andConstraint:(MisterFusion * _Nonnull)misterFusion;
+- (NSArray<NSLayoutConstraint *> * _Nonnull)insertLayoutSubview:(UIView * _Nonnull)subview belowSubview:(UIView * _Nonnull)siblingSubview andConstraints:(NSArray<MisterFusion *> * _Nonnull)misterFusions;
+- (NSLayoutConstraint * _Nullable)insertLayoutSubview:(UIView * _Nonnull)subview aboveSubview:(UIView * _Nonnull)siblingSubview andConstraint:(MisterFusion * _Nonnull)misterFusion;
+- (NSArray<NSLayoutConstraint *> * _Nonnull)insertLayoutSubview:(UIView * _Nonnull)subview aboveSubview:(UIView * _Nonnull)siblingSubview andConstraints:(NSArray<MisterFusion *> * _Nonnull)misterFusions;
 ```
 
 #### NSArray Category
