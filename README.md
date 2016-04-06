@@ -5,6 +5,7 @@
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
 [![Version](https://img.shields.io/cocoapods/v/MisterFusion.svg?style=flat)](http://cocoapods.org/pods/MisterFusion)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/MisterFusion.svg?style=flat)](http://cocoapods.org/pods/MisterFusion)
 
 [ManiacDev.com](https://maniacdev.com/) referred.  
@@ -130,6 +131,16 @@ In addtion, import **MisterFusion** like this.
 
     #import <MisterFusion/MisterFusion-Swift.h>
 
+#### Carthage
+
+If you’re using [Carthage](https://github.com/Carthage/Carthage), simply add
+MisterFusion to your `Cartfile`:
+
+```
+github "szk-atmosphere/MisterFusion"
+```
+Make sure to add `MisterFusion.framework` to "Linked Frameworks and Libraries" and "copy-frameworks" Build Phases.
+
 ## Advanced Setting
 
 You can set `multiplier`, `constant` and `priority` like this.
@@ -187,7 +198,7 @@ public func insertLayoutSubview(subview: UIView, belowSubview siblingSubview: UI
 public func insertLayoutSubview(subview: UIView, belowSubview siblingSubview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
 public func insertLayoutSubview(subview: UIView, aboveSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint?
 public func insertLayoutSubview(subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint]
-public func insertLayoutSubview(subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint] 
+public func insertLayoutSubview(subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint]
 ```
 
 #### Array Extensions
