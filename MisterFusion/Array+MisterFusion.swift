@@ -9,29 +9,30 @@
 import UIKit
 
 extension Array where Element: NSLayoutConstraint {
-    public func firstItem(view: UIView) -> [NSLayoutConstraint] {
+    public func firstItem(_ view: UIView) -> [NSLayoutConstraint] {
         return filter { $0.firstItem as? UIView == view }
     }
     
-    public func firstAttribute(attribute: NSLayoutAttribute) -> [NSLayoutConstraint] {
+    public func firstAttribute(_ attribute: NSLayoutAttribute) -> [NSLayoutConstraint] {
         return filter { $0.firstAttribute == attribute }
     }
     
-    public func relation(relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func relation(_ relation: NSLayoutRelation) -> [NSLayoutConstraint] {
         return filter { $0.relation == relation }
     }
     
-    public func secondItem(view: UIView) -> [NSLayoutConstraint] {
+    public func secondItem(_ view: UIView) -> [NSLayoutConstraint] {
         return filter { $0.secondItem as? UIView == view }
     }
     
-    public func secondAttribute(attribute: NSLayoutAttribute) -> [NSLayoutConstraint] {
+    public func secondAttribute(_ attribute: NSLayoutAttribute) -> [NSLayoutConstraint] {
         return filter { $0.secondAttribute == attribute }
     }
 }
 
 extension NSArray {
-    public var FirstItem: UIView -> NSArray {
+    @objc(FirstItem)
+    public var firstItem: (UIView) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
@@ -40,7 +41,8 @@ extension NSArray {
         }
     }
     
-    public var FirstAttribute: NSLayoutAttribute -> NSArray {
+    @objc(FirstAttribute)
+    public var firstAttribute: (NSLayoutAttribute) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
@@ -49,7 +51,8 @@ extension NSArray {
         }
     }
     
-    public var SecondItem: UIView -> NSArray {
+    @objc(SecondItem)
+    public var secondItem: (UIView) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
@@ -58,7 +61,8 @@ extension NSArray {
         }
     }
     
-    public var SecondAttribute: NSLayoutAttribute -> NSArray {
+    @objc(SecondAttribute)
+    public var secondAttribute: (NSLayoutAttribute) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
@@ -67,7 +71,8 @@ extension NSArray {
         }
     }
     
-    public var Reration: NSLayoutRelation -> NSArray {
+    @objc(Reration)
+    public var reration: (NSLayoutRelation) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
