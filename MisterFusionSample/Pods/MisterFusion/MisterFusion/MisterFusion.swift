@@ -328,15 +328,13 @@ extension UIView {
         return addLayoutSubview(subview, andConstraints: misterFusions)
     }
 
-    //MARK: - insertSubview(_ at:_)
-    @objc(insertLayoutSubview:atIndex:andConstraint:)
+    //MARK: - insertSubview(_ atIndex:_)
     public func insertLayoutSubview(_ subview: UIView, at index: Int, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
         insertSubview(subview, at: index)
         subview.translatesAutoresizingMaskIntoConstraints = false
         return addLayoutConstraint(misterFusion)
     }
     
-    @objc(insertLayoutSubview:atIndex:andConstraints:)
     public func insertLayoutSubview(_ subview: UIView, at index: Int, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         insertSubview(subview, at: index)
         subview.translatesAutoresizingMaskIntoConstraints = false
