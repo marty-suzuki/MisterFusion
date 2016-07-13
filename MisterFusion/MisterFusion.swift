@@ -151,7 +151,8 @@ public func |<=| (left: MisterFusion, right: MisterFusion) -> MisterFusion {
 }
 
 public func |<=| (left: MisterFusion, right: CGFloat) -> MisterFusion {
-    return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .lessThanOrEqual, toItem: nil, toAttribute: .notAnAttribute, multiplier: nil, constant: right, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: left.identifier)
+    let toAttribute = left.attribute == .height || left.attribute == .width ? .notAnAttribute : left.attribute
+    return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .lessThanOrEqual, toItem: nil, toAttribute: toAttribute, multiplier: nil, constant: right, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: left.identifier)
 }
 
 infix operator |>=| { associativity left precedence 95 }
@@ -160,7 +161,8 @@ public func |>=| (left: MisterFusion, right: MisterFusion) -> MisterFusion {
 }
 
 public func |>=| (left: MisterFusion, right: CGFloat) -> MisterFusion {
-    return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .greaterThanOrEqual, toItem: nil, toAttribute: .notAnAttribute, multiplier: nil, constant: right, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: left.identifier)
+    let toAttribute = left.attribute == .height || left.attribute == .width ? .notAnAttribute : left.attribute
+    return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: .greaterThanOrEqual, toItem: nil, toAttribute: toAttribute, multiplier: nil, constant: right, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: left.identifier)
 }
 
 infix operator |+| { associativity left precedence 95 }
