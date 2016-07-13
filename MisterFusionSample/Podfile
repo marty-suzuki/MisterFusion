@@ -6,3 +6,7 @@ use_frameworks!
 target 'MisterFusionSample' do
 pod 'MisterFusion', :path => '../'
 end
+
+target 'MisterFusionSampleTests' do
+pod 'MisterFusion', :path => '../'
+end

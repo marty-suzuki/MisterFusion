@@ -45,14 +45,14 @@ class MisterFusionSampleTests: XCTestCase {
         let superview = UIView()
         let subview = UIView()
         guard let constraint = superview.addLayoutSubview(subview, andConstraint:
-            subview.Height |<=| 65
+            subview.Width |<=| 65
             ) else {
                 XCTFail("must return NSLayoutConstraint")
                 return
         }
         
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
-        XCTAssertEqual(constraint.firstAttribute, .Some(.Height))
+        XCTAssertEqual(constraint.firstAttribute, .Some(.Width))
         XCTAssertEqual(constraint.relation, .Some(.LessThanOrEqual))
         XCTAssertEqual(constraint.secondItem as? UIView, nil)
         XCTAssertEqual(constraint.secondAttribute, .Some(.NotAnAttribute))
@@ -148,5 +148,45 @@ class MisterFusionSampleTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
         XCTAssertEqual(constraint.identifier, "TestSubViewHeight")
+    }
+    
+    func testTopRelatedLessThanOrEqualConstant() {
+        let superview = UIView()
+        let subview = UIView()
+        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+            subview.Top |<=| 65
+            ) else {
+                XCTFail("must return NSLayoutConstraint")
+                return
+        }
+        
+        XCTAssertEqual(constraint.firstItem as? UIView, subview)
+        XCTAssertEqual(constraint.firstAttribute, .Some(.Top))
+        XCTAssertEqual(constraint.relation, .Some(.LessThanOrEqual))
+        XCTAssertEqual(constraint.secondItem as? UIView, superview)
+        XCTAssertEqual(constraint.secondAttribute, .Some(.Top))
+        XCTAssertEqual(constraint.constant, 65)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+    }
+    
+    func testBottomRelatedGreaterThanOrEqualConstant() {
+        let superview = UIView()
+        let subview = UIView()
+        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+            subview.Bottom |>=| 90
+            ) else {
+                XCTFail("must return NSLayoutConstraint")
+                return
+        }
+        
+        XCTAssertEqual(constraint.firstItem as? UIView, subview)
+        XCTAssertEqual(constraint.firstAttribute, .Some(.Bottom))
+        XCTAssertEqual(constraint.relation, .Some(.GreaterThanOrEqual))
+        XCTAssertEqual(constraint.secondItem as? UIView, superview)
+        XCTAssertEqual(constraint.secondAttribute, .Some(.Bottom))
+        XCTAssertEqual(constraint.constant, 90)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
     }
 }

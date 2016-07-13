@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		084CED1BAC34F554A5205D6F9E47C44F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
 		0BEF9895F082AD647D455AB242C27B60 /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */; };
-		2CF932F8F00BD1A68FD8588E21BC4042 /* Pods-MisterFusionSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F58D10D098BE4301F117601D64A125CD /* Pods-MisterFusionSample-dummy.m */; };
-		3D89B37BBB84C43F71EA80632A0D94EE /* Pods-MisterFusionSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A8B88FE9E8358AAD2EC077C740E402 /* Pods-MisterFusionSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CF932F8F00BD1A68FD8588E21BC4042 /* Pods-MisterFusionSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0EE32002F2342AD749AB87EC5521B3 /* Pods-MisterFusionSample-dummy.m */; };
+		3D89B37BBB84C43F71EA80632A0D94EE /* Pods-MisterFusionSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B076423EFB29F6B67651E87A96823D /* Pods-MisterFusionSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F9B69CC86EA382696261B1D3A8FE1AD /* MisterFusion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 582D55589B5D19A5567ECBB428AB1F9D /* MisterFusion-dummy.m */; };
 		4778FE64F99BC198EE4D9DF60FAF08A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
 		5218AD1C058471A4C6C4089E64445994 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */; };
+		7D95EB0B4B410C4328D4D636A32B789E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D635D41133915B228CE899EF89DD95CE /* Foundation.framework */; };
 		86C50D6856E2843A47C95790B13A97A7 /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF67586D47989BA06D5D71E41E4853 /* MisterFusion.swift */; };
+		A5B4836F455A823656CABAB910CA67C7 /* Pods-MisterFusionSampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2456BFF663055B6189D4F49C4C696F7B /* Pods-MisterFusionSampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E413751F0B4A6B9BDF2A84BEF9CC3161 /* Pods-MisterFusionSampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C86C7E89F4E5EFE1D1FE8F6E09F9D3A /* Pods-MisterFusionSampleTests-dummy.m */; };
 		E97A332AFCB13BB4E1857CA5BCB2A357 /* MisterFusion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86861608603591FC0166E8195FEC8F7E /* MisterFusion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -26,32 +29,50 @@
 			remoteGlobalIDString = 9FC843BD22328DEFBCAB1DA4A92108F7;
 			remoteInfo = MisterFusion;
 		};
+		8A90501887AD0C58B7BDF93D9C0DA0C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FC843BD22328DEFBCAB1DA4A92108F7;
+			remoteInfo = MisterFusion;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05E5EA5BA6D73EC44B6A75816DCF428C /* Pods-MisterFusionSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MisterFusionSample.modulemap"; sourceTree = "<group>"; };
 		06CF67586D47989BA06D5D71E41E4853 /* MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MisterFusion.swift; sourceTree = "<group>"; };
-		13C4A448F118513D7E8BD7B25BEA7A68 /* Pods-MisterFusionSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSample.release.xcconfig"; sourceTree = "<group>"; };
-		153D1CCBC301C5B4064CC42D9E7A77B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A04B8E016F536DD2804AF057BA29CFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C7404E41EB2FC3A4DBA65A4F314A851 /* Pods-MisterFusionSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSample.debug.xcconfig"; sourceTree = "<group>"; };
+		1F0EE32002F2342AD749AB87EC5521B3 /* Pods-MisterFusionSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MisterFusionSample-dummy.m"; sourceTree = "<group>"; };
+		2456BFF663055B6189D4F49C4C696F7B /* Pods-MisterFusionSampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MisterFusionSampleTests-umbrella.h"; sourceTree = "<group>"; };
 		247D0134F0E2B3294BEFE065107DE0C2 /* MisterFusion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-prefix.pch"; sourceTree = "<group>"; };
+		2507E1433E9E82E9726C048791CF8AEB /* Pods_MisterFusionSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECD9B7FE7996E97983718A9BBD1B3AF /* MisterFusion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MisterFusion.modulemap; sourceTree = "<group>"; };
-		45A8B88FE9E8358AAD2EC077C740E402 /* Pods-MisterFusionSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MisterFusionSample-umbrella.h"; sourceTree = "<group>"; };
+		3C86C7E89F4E5EFE1D1FE8F6E09F9D3A /* Pods-MisterFusionSampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MisterFusionSampleTests-dummy.m"; sourceTree = "<group>"; };
+		40FB5B14983A57A8C97B6D5352F1C53F /* Pods-MisterFusionSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C33D7C6211FAD97E4F3C399E94C23C0 /* Pods-MisterFusionSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MisterFusionSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		56EB55B2D1597AEB563BCCD6BC2BB9BF /* Pods-MisterFusionSampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSampleTests-resources.sh"; sourceTree = "<group>"; };
 		582D55589B5D19A5567ECBB428AB1F9D /* MisterFusion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MisterFusion-dummy.m"; sourceTree = "<group>"; };
-		5AE8B16D3C2316C46DF1DB5066AC6D8E /* Pods-MisterFusionSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSample-frameworks.sh"; sourceTree = "<group>"; };
+		620FC65EF7736C4EE4CCFE2F5895122B /* Pods_MisterFusionSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64E46CCC852DFE2065339BB1F0147D93 /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ADC58BDB3664766ADAF5296CC4B2087 /* Pods-MisterFusionSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSample-resources.sh"; sourceTree = "<group>"; };
+		7F55F8C06CB4710AD5868A41A525C895 /* Pods-MisterFusionSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86861608603591FC0166E8195FEC8F7E /* MisterFusion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95917882244F240511F396E4CCAD136F /* Pods-MisterFusionSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSample.release.xcconfig"; sourceTree = "<group>"; };
+		A320260D228919379DB2FA2E7BE3B4AD /* Pods-MisterFusionSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MisterFusionSample.modulemap"; sourceTree = "<group>"; };
 		AF066F8D85A4D7A3B3A04D25E4D2AC88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BC7C4173376A04FFB6DA80121A2A1FF5 /* Pods-MisterFusionSampleTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MisterFusionSampleTests.modulemap"; sourceTree = "<group>"; };
 		BCB7B7AEC609A3159AC4314357CB1D10 /* MisterFusion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MisterFusion.xcconfig; sourceTree = "<group>"; };
+		BFA9D386FB3D05E2B2FC20255FE09D0F /* Pods-MisterFusionSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSample-frameworks.sh"; sourceTree = "<group>"; };
+		C85C6D862BE3D5295BFBB07F832B461B /* Pods-MisterFusionSampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MisterFusionSampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D178448F536B7F24E267C1B03176FD24 /* Pods-MisterFusionSampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MisterFusionSampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D635D41133915B228CE899EF89DD95CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D8B076423EFB29F6B67651E87A96823D /* Pods-MisterFusionSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MisterFusionSample-umbrella.h"; sourceTree = "<group>"; };
 		DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+MisterFusion.swift"; sourceTree = "<group>"; };
-		E1473B284C536C412D997F4CA3BA3B55 /* Pods_MisterFusionSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7FFD6AB54850E3B135A1826382A33F4 /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F175D732F81EBA3C2BBD40CCC01123A3 /* Pods-MisterFusionSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSample.debug.xcconfig"; sourceTree = "<group>"; };
-		F2C488C95DD2D20DE20D411AF095361D /* Pods-MisterFusionSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MisterFusionSample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F4874063673E22FF4D9B42833ED9DDD8 /* Pods-MisterFusionSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MisterFusionSample-acknowledgements.plist"; sourceTree = "<group>"; };
-		F58D10D098BE4301F117601D64A125CD /* Pods-MisterFusionSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MisterFusionSample-dummy.m"; sourceTree = "<group>"; };
-		F683787F7A559DEE991F58B6FD047AF5 /* Pods-MisterFusionSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSample-resources.sh"; sourceTree = "<group>"; };
+		E8075E76033FA3BDA2B57950B06C7641 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F436FDDE4C896915E4C3AD477078FF81 /* Pods-MisterFusionSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MisterFusionSample-acknowledgements.plist"; sourceTree = "<group>"; };
 		F69C31646ABBCF8995B0EE78559FEDBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB76F426A8CD6A87340A21F5A7BEA0BC /* Pods-MisterFusionSampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSampleTests-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +90,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4778FE64F99BC198EE4D9DF60FAF08A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7A8878E98157D0742BDBCBAA5D00ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D95EB0B4B410C4328D4D636A32B789E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,15 +127,6 @@
 			path = MisterFusion;
 			sourceTree = "<group>";
 		};
-		26AACFF4E1D01B7605793E9F5BA8225F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E7FFD6AB54850E3B135A1826382A33F4 /* MisterFusion.framework */,
-				E1473B284C536C412D997F4CA3BA3B55 /* Pods_MisterFusionSample.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +135,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4C7244A0CD217BF1018E3816DE5F2947 /* Targets Support Files */ = {
+		741B4BE3BB23F82100A902B42E8148F4 /* Pods-MisterFusionSample */ = {
 			isa = PBXGroup;
 			children = (
-				9D6864C9D9DBBFD166A8AF4616977294 /* Pods-MisterFusionSample */,
+				E8075E76033FA3BDA2B57950B06C7641 /* Info.plist */,
+				A320260D228919379DB2FA2E7BE3B4AD /* Pods-MisterFusionSample.modulemap */,
+				4C33D7C6211FAD97E4F3C399E94C23C0 /* Pods-MisterFusionSample-acknowledgements.markdown */,
+				F436FDDE4C896915E4C3AD477078FF81 /* Pods-MisterFusionSample-acknowledgements.plist */,
+				1F0EE32002F2342AD749AB87EC5521B3 /* Pods-MisterFusionSample-dummy.m */,
+				BFA9D386FB3D05E2B2FC20255FE09D0F /* Pods-MisterFusionSample-frameworks.sh */,
+				7ADC58BDB3664766ADAF5296CC4B2087 /* Pods-MisterFusionSample-resources.sh */,
+				D8B076423EFB29F6B67651E87A96823D /* Pods-MisterFusionSample-umbrella.h */,
+				0C7404E41EB2FC3A4DBA65A4F314A851 /* Pods-MisterFusionSample.debug.xcconfig */,
+				95917882244F240511F396E4CCAD136F /* Pods-MisterFusionSample.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-MisterFusionSample";
+			path = "Target Support Files/Pods-MisterFusionSample";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -129,27 +159,19 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				B9537593BB1563996171F8AA5554BEB1 /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				26AACFF4E1D01B7605793E9F5BA8225F /* Products */,
-				4C7244A0CD217BF1018E3816DE5F2947 /* Targets Support Files */,
+				ADEB36073B6DDEC54B2F1BEE68EFE4C2 /* Products */,
+				D54F56F049382F6807B303490720B0A4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9D6864C9D9DBBFD166A8AF4616977294 /* Pods-MisterFusionSample */ = {
+		ADEB36073B6DDEC54B2F1BEE68EFE4C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				153D1CCBC301C5B4064CC42D9E7A77B6 /* Info.plist */,
-				05E5EA5BA6D73EC44B6A75816DCF428C /* Pods-MisterFusionSample.modulemap */,
-				F2C488C95DD2D20DE20D411AF095361D /* Pods-MisterFusionSample-acknowledgements.markdown */,
-				F4874063673E22FF4D9B42833ED9DDD8 /* Pods-MisterFusionSample-acknowledgements.plist */,
-				F58D10D098BE4301F117601D64A125CD /* Pods-MisterFusionSample-dummy.m */,
-				5AE8B16D3C2316C46DF1DB5066AC6D8E /* Pods-MisterFusionSample-frameworks.sh */,
-				F683787F7A559DEE991F58B6FD047AF5 /* Pods-MisterFusionSample-resources.sh */,
-				45A8B88FE9E8358AAD2EC077C740E402 /* Pods-MisterFusionSample-umbrella.h */,
-				F175D732F81EBA3C2BBD40CCC01123A3 /* Pods-MisterFusionSample.debug.xcconfig */,
-				13C4A448F118513D7E8BD7B25BEA7A68 /* Pods-MisterFusionSample.release.xcconfig */,
+				64E46CCC852DFE2065339BB1F0147D93 /* MisterFusion.framework */,
+				620FC65EF7736C4EE4CCFE2F5895122B /* Pods_MisterFusionSample.framework */,
+				2507E1433E9E82E9726C048791CF8AEB /* Pods_MisterFusionSampleTests.framework */,
 			);
-			name = "Pods-MisterFusionSample";
-			path = "Target Support Files/Pods-MisterFusionSample";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B9537593BB1563996171F8AA5554BEB1 /* Development Pods */ = {
@@ -158,6 +180,33 @@
 				DF358D2FAFEBFB4A6C6DE50F99D717E7 /* MisterFusion */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CCD83BF16FCAE2472A13594C09E6D3DA /* Pods-MisterFusionSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A04B8E016F536DD2804AF057BA29CFC /* Info.plist */,
+				BC7C4173376A04FFB6DA80121A2A1FF5 /* Pods-MisterFusionSampleTests.modulemap */,
+				D178448F536B7F24E267C1B03176FD24 /* Pods-MisterFusionSampleTests-acknowledgements.markdown */,
+				C85C6D862BE3D5295BFBB07F832B461B /* Pods-MisterFusionSampleTests-acknowledgements.plist */,
+				3C86C7E89F4E5EFE1D1FE8F6E09F9D3A /* Pods-MisterFusionSampleTests-dummy.m */,
+				FB76F426A8CD6A87340A21F5A7BEA0BC /* Pods-MisterFusionSampleTests-frameworks.sh */,
+				56EB55B2D1597AEB563BCCD6BC2BB9BF /* Pods-MisterFusionSampleTests-resources.sh */,
+				2456BFF663055B6189D4F49C4C696F7B /* Pods-MisterFusionSampleTests-umbrella.h */,
+				7F55F8C06CB4710AD5868A41A525C895 /* Pods-MisterFusionSampleTests.debug.xcconfig */,
+				40FB5B14983A57A8C97B6D5352F1C53F /* Pods-MisterFusionSampleTests.release.xcconfig */,
+			);
+			name = "Pods-MisterFusionSampleTests";
+			path = "Target Support Files/Pods-MisterFusionSampleTests";
+			sourceTree = "<group>";
+		};
+		D54F56F049382F6807B303490720B0A4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				741B4BE3BB23F82100A902B42E8148F4 /* Pods-MisterFusionSample */,
+				CCD83BF16FCAE2472A13594C09E6D3DA /* Pods-MisterFusionSampleTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		DF358D2FAFEBFB4A6C6DE50F99D717E7 /* MisterFusion */ = {
@@ -182,6 +231,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5AAA046B70241FB2998E360F77049FCF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B4836F455A823656CABAB910CA67C7 /* Pods-MisterFusionSampleTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E7702F1E80E2696D9185BFED3A6B50A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +258,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		24F59C710D33A3CB2C362FC095805A78 /* Pods-MisterFusionSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DCC26F8A4BFD086F0995ABAF4448457 /* Build configuration list for PBXNativeTarget "Pods-MisterFusionSampleTests" */;
+			buildPhases = (
+				15D693AFF596EC97AECADE6DDA4AE999 /* Sources */,
+				AF7A8878E98157D0742BDBCBAA5D00ED /* Frameworks */,
+				5AAA046B70241FB2998E360F77049FCF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45C48091459D14B48AA90052DB684594 /* PBXTargetDependency */,
+			);
+			name = "Pods-MisterFusionSampleTests";
+			productName = "Pods-MisterFusionSampleTests";
+			productReference = 2507E1433E9E82E9726C048791CF8AEB /* Pods_MisterFusionSampleTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9FC843BD22328DEFBCAB1DA4A92108F7 /* MisterFusion */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D527E849301E62CDDB55A973DEBA607C /* Build configuration list for PBXNativeTarget "MisterFusion" */;
@@ -215,7 +290,7 @@
 			);
 			name = MisterFusion;
 			productName = MisterFusion;
-			productReference = E7FFD6AB54850E3B135A1826382A33F4 /* MisterFusion.framework */;
+			productReference = 64E46CCC852DFE2065339BB1F0147D93 /* MisterFusion.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		ED83AEF5C945F3310CF1FAFC4E899C2E /* Pods-MisterFusionSample */ = {
@@ -233,7 +308,7 @@
 			);
 			name = "Pods-MisterFusionSample";
 			productName = "Pods-MisterFusionSample";
-			productReference = E1473B284C536C412D997F4CA3BA3B55 /* Pods_MisterFusionSample.framework */;
+			productReference = 620FC65EF7736C4EE4CCFE2F5895122B /* Pods_MisterFusionSample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -253,17 +328,26 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 26AACFF4E1D01B7605793E9F5BA8225F /* Products */;
+			productRefGroup = ADEB36073B6DDEC54B2F1BEE68EFE4C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9FC843BD22328DEFBCAB1DA4A92108F7 /* MisterFusion */,
 				ED83AEF5C945F3310CF1FAFC4E899C2E /* Pods-MisterFusionSample */,
+				24F59C710D33A3CB2C362FC095805A78 /* Pods-MisterFusionSampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		15D693AFF596EC97AECADE6DDA4AE999 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E413751F0B4A6B9BDF2A84BEF9CC3161 /* Pods-MisterFusionSampleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		645328A86978301C1E53E5F8DB594307 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,9 +375,48 @@
 			target = 9FC843BD22328DEFBCAB1DA4A92108F7 /* MisterFusion */;
 			targetProxy = 7E183BB800A153D15BB388DF752CEC81 /* PBXContainerItemProxy */;
 		};
+		45C48091459D14B48AA90052DB684594 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MisterFusion;
+			target = 9FC843BD22328DEFBCAB1DA4A92108F7 /* MisterFusion */;
+			targetProxy = 8A90501887AD0C58B7BDF93D9C0DA0C2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		22D43E42DE659132B7CF0F95FD13CC12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40FB5B14983A57A8C97B6D5352F1C53F /* Pods-MisterFusionSampleTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MisterFusionSampleTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MisterFusionSampleTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		46524F2C193596CF0962FC8A183BAEA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCB7B7AEC609A3159AC4314357CB1D10 /* MisterFusion.xcconfig */;
@@ -325,7 +448,7 @@
 		};
 		52B8C18EC070DB702CEBCDE776E0E75E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F175D732F81EBA3C2BBD40CCC01123A3 /* Pods-MisterFusionSample.debug.xcconfig */;
+			baseConfigurationReference = 0C7404E41EB2FC3A4DBA65A4F314A851 /* Pods-MisterFusionSample.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -467,7 +590,7 @@
 		};
 		C07D49892CBE5AD6526B419C597CE6E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13C4A448F118513D7E8BD7B25BEA7A68 /* Pods-MisterFusionSample.release.xcconfig */;
+			baseConfigurationReference = 95917882244F240511F396E4CCAD136F /* Pods-MisterFusionSample.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -498,6 +621,40 @@
 			};
 			name = Release;
 		};
+		E243BEFFA713AF71ABD79C64D56159F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F55F8C06CB4710AD5868A41A525C895 /* Pods-MisterFusionSampleTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MisterFusionSampleTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MisterFusionSampleTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -506,6 +663,15 @@
 			buildConfigurations = (
 				882EB4391EC2E701934974DA86F7343F /* Debug */,
 				811519CB8F683AC06F9C98B55AC40F11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DCC26F8A4BFD086F0995ABAF4448457 /* Build configuration list for PBXNativeTarget "Pods-MisterFusionSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E243BEFFA713AF71ABD79C64D56159F4 /* Debug */,
+				22D43E42DE659132B7CF0F95FD13CC12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
