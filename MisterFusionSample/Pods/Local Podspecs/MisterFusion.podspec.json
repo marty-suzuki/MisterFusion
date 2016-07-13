@@ -1,6 +1,6 @@
 {
   "name": "MisterFusion",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "summary": "MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.",
   "homepage": "https://github.com/szk-atmosphere/MisterFusion",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/szk-atmosphere/MisterFusion.git",
-    "tag": "1.2.0"
+    "tag": "1.2.1"
   },
   "social_media_url": "https://twitter.com/SzkAtmosphere",
   "platforms": {
