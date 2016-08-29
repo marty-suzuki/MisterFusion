@@ -11,19 +11,19 @@ import UIKit
 import MisterFusion
 
 class ViewController: UIViewController {
-    private var greenView: UIView?
-    private var greenViewBottomConstraint: NSLayoutConstraint?
+    fileprivate var greenView: UIView?
+    fileprivate var greenViewBottomConstraint: NSLayoutConstraint?
     
-    private var whiteView: UIView?
-    private var redView: UIView?
-    private var whiteViewWidthConstraint: NSLayoutConstraint?
+    fileprivate var whiteView: UIView?
+    fileprivate var redView: UIView?
+    fileprivate var whiteViewWidthConstraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         let redView = UIView()
-        redView.backgroundColor = .red()
+        redView.backgroundColor = .red
         redView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(redView)
         //Ordinary AutoLayout code
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         self.redView = redView
         
         let yellowView = UIView()
-        yellowView.backgroundColor = .yellow()
+        yellowView.backgroundColor = .yellow
         yellowView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(yellowView)
         //MisterFusion code
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         )
         
         let greenView = UIView()
-        greenView.backgroundColor = .green()
+        greenView.backgroundColor = .green
         //Advanced MisterFusion code
         greenViewBottomConstraint = yellowView.addLayoutSubview(greenView, andConstraints:
             greenView.top,
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         self.greenView = greenView
         
         let whiteView = UIView()
-        whiteView.backgroundColor = .white()
+        whiteView.backgroundColor = .white
         let _ = redView.addLayoutSubview(whiteView, andConstraints:
             whiteView.bottom |-| 10,
             whiteView.left |+| 10,
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        guard let whiteView = whiteView, redView = redView else { return }
+        guard let whiteView = whiteView, let redView = redView else { return }
         if let whiteViewHeightConstraint = whiteViewWidthConstraint {
             redView.removeConstraint(whiteViewHeightConstraint)
         }

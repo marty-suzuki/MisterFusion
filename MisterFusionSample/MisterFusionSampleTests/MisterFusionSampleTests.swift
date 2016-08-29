@@ -69,7 +69,7 @@ class MisterFusionSampleTests: XCTestCase {
             subview.right |==| superview.right |*| 1 |+| 0.5 |<>| UILayoutPriorityRequired
         )
         
-        guard let firstConstraint = constraints.first, secondConstraint = constraints.last else {
+        guard let firstConstraint = constraints.first, let secondConstraint = constraints.last else {
             XCTFail("must return NSLayoutConstraint")
             return
         }
