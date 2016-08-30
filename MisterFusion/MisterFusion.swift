@@ -151,6 +151,7 @@ open class MisterFusion: NSObject {
 
 precedencegroup MisterFusionAdditive {
     associativity: left
+    lowerThan: TernaryPrecedence, CastingPrecedence, AssignmentPrecedence
 }
 
 infix operator |==| : MisterFusionAdditive
@@ -253,14 +254,19 @@ extension UIView {
     @objc(CenterY)
     public var centerY: MisterFusion { return createMisterFusion(withAttribute: .centerY) }
 
-    @objc(LastBaseline)
-    public var lastBaseline: MisterFusion { return createMisterFusion(withAttribute: .lastBaseline) }
-    
-    @objc(FirstBaseline)
-    public var firstBaseline: MisterFusion { return createMisterFusion(withAttribute: .firstBaseline) }
+    @available(iOS, obsoleted: 7.0, renamed: "lastBaseline")
+    @objc(Baseline)
+    public var baseline: MisterFusion { return createMisterFusion(withAttribute: .lastBaseline) }
     
     @objc(NotAnAttribute)
     public var notAnAttribute: MisterFusion { return createMisterFusion(withAttribute: .notAnAttribute) }
+    
+    @objc(LastBaseline)
+    public var lastBaseline: MisterFusion { return createMisterFusion(withAttribute: .lastBaseline) }
+    
+    @available(iOS 8.0, *)
+    @objc(FirstBaseline)
+    public var firstBaseline: MisterFusion { return createMisterFusion(withAttribute: .firstBaseline) }
     
     @available(iOS 8.0, *)
     @objc(LeftMargin)
