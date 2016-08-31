@@ -50,9 +50,7 @@ open class MisterFusion: NSObject {
         super.init()
     }
     
-    
-    
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var Equal: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -60,7 +58,7 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var NotRelatedEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -68,7 +66,7 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var LessThanOrEqual: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -124,15 +122,23 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
+    open var NotRelatedConstant: (CGFloat) -> MisterFusion? {
+        return { [weak self] in
+            guard let me = self else { return nil }
+            return me |==| $0
+        }
+    }
+    
+    @available(*, unavailable)
     open var HorizontalSizeClass: (UIUserInterfaceSizeClass) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me <-> $0
         }
     }
-    
-    @available(iOS, unavailable)
+
+    @available(*, unavailable)
     open var VerticalSizeClass: (UIUserInterfaceSizeClass) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -140,7 +146,8 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+
+    @available(*, unavailable)
     open var Identifier: (String) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -332,7 +339,7 @@ extension UIView {
     }
     
     public func addLayoutConstraints(_ misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
-        return misterFusions.map { addLayoutConstraint($0) }.filter { $0 != nil }.map { $0! }
+        return misterFusions.flatMap { addLayoutConstraint($0) }
     }
     
     public func addLayoutConstraints(_ misterFusions: MisterFusion...) -> [NSLayoutConstraint] {
