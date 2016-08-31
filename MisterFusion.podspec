@@ -8,15 +8,15 @@
 
 Pod::Spec.new do |s|
   s.name             = "MisterFusion"
-  s.version          = "1.2.1"
+  s.version          = "1.3.0"
   s.summary          = "MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code."
 
-  s.homepage         = "https://github.com/szk-atmosphere/MisterFusion"
+  s.homepage         = "https://github.com/marty-suzuki/MisterFusion"
 
   s.license          = 'MIT'
   s.author           = { "Taiki Suzuki" => "s1180183@gmail.com" }
-  s.source           = { :git => "https://github.com/szk-atmosphere/MisterFusion.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/SzkAtmosphere'
+  s.source           = { :git => "https://github.com/marty-suzuki/MisterFusion.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/marty_suzuki'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
