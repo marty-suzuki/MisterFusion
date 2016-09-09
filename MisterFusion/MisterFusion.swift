@@ -249,11 +249,17 @@ extension UIView {
     
     public var CenterY: MisterFusion { return createMisterFusion(.CenterY) }
     
+    #if swift(>=2.3)
+    #else
     public var Baseline: MisterFusion { return createMisterFusion(.Baseline) }
+    #endif
     
     public var LastBaseline: MisterFusion { return createMisterFusion(.LastBaseline) }
     
     public var NotAnAttribute: MisterFusion { return createMisterFusion(.NotAnAttribute) }
+    
+    @available(iOS 8.0, *)
+    public var FirstBaseline: MisterFusion { return createMisterFusion(.FirstBaseline) }
     
     @available(iOS 8.0, *)
     public var LeftMargin: MisterFusion { return createMisterFusion(.LeftMargin) }
