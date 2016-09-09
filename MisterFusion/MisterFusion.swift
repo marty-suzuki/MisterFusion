@@ -248,8 +248,10 @@ extension UIView {
     public var CenterX: MisterFusion { return createMisterFusion(.CenterX) }
     
     public var CenterY: MisterFusion { return createMisterFusion(.CenterY) }
-    
+
+    #if swift(>=3.0)
     public var Baseline: MisterFusion { return createMisterFusion(.Baseline) }
+    #endif
     
     public var LastBaseline: MisterFusion { return createMisterFusion(.LastBaseline) }
     
