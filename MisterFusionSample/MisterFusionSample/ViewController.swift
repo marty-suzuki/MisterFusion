@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         yellowView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(yellowView)
         //MisterFusion code
-        let _ = view.addLayoutConstraints(
+        view.addLayoutConstraints(
             yellowView.top    |==| redView.bottom |+| 10,
             yellowView.right  |==| view.right     |-| 10,
             yellowView.left   |==| view.left      |+| 10,
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         let whiteView = UIView()
         whiteView.backgroundColor = .white
-        let _ = redView.addLayoutSubview(whiteView, andConstraints:
+        redView.addLayoutSubview(whiteView, andConstraints:
             whiteView.bottom |-| 10,
             whiteView.left |+| 10,
             whiteView.height |==| 100
