@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4EC86B6FCD5CBDA53791B1 /* Pods_MisterFusionSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699FD6F20007BA4CCC17A8E6 /* Pods_MisterFusionSampleTests.framework */; };
 		3743B7891BF6EF9A00515882 /* MFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743B7881BF6EF9A00515882 /* MFViewController.m */; };
 		377AF06C1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377AF06B1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift */; };
 		37F35B221BF625AB008C6EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B211BF625AB008C6EAB /* AppDelegate.swift */; };
@@ -15,7 +16,6 @@
 		37F35B291BF625AB008C6EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37F35B281BF625AB008C6EAB /* Assets.xcassets */; };
 		37F35B2C1BF625AB008C6EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F35B2A1BF625AB008C6EAB /* LaunchScreen.storyboard */; };
 		577D545B5089B23197791506 /* Pods_MisterFusionSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A885C51AA2CC8A03ABA21216 /* Pods_MisterFusionSample.framework */; };
-		FEE77C5691A59B32FE922720 /* Pods_MisterFusionSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46DA7CA9276F50403EDFF3D /* Pods_MisterFusionSampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,11 @@
 		37F35B281BF625AB008C6EAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37F35B2B1BF625AB008C6EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37F35B2D1BF625AB008C6EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9BDDE025D4CEE95F70A8DA /* Pods-MisterFusionSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MisterFusionSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		48B18DFFC47FCD26816001A8 /* Pods-MisterFusionSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MisterFusionSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample.debug.xcconfig"; sourceTree = "<group>"; };
-		89704550BB7B554099FFBAA0 /* Pods-MisterFusionSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MisterFusionSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		699FD6F20007BA4CCC17A8E6 /* Pods_MisterFusionSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F09AD7247D0E0CD4D9DCA7 /* Pods-MisterFusionSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MisterFusionSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		A885C51AA2CC8A03ABA21216 /* Pods_MisterFusionSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C46DA7CA9276F50403EDFF3D /* Pods_MisterFusionSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFC33A263BDFE23D4830DC9D /* Pods-MisterFusionSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MisterFusionSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		F2CE34ED4E9AA4CCBCD8B84B /* Pods-MisterFusionSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MisterFusionSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEE77C5691A59B32FE922720 /* Pods_MisterFusionSampleTests.framework in Frameworks */,
+				2C4EC86B6FCD5CBDA53791B1 /* Pods_MisterFusionSampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +75,8 @@
 			children = (
 				48B18DFFC47FCD26816001A8 /* Pods-MisterFusionSample.debug.xcconfig */,
 				F2CE34ED4E9AA4CCBCD8B84B /* Pods-MisterFusionSample.release.xcconfig */,
-				89704550BB7B554099FFBAA0 /* Pods-MisterFusionSampleTests.debug.xcconfig */,
-				CFC33A263BDFE23D4830DC9D /* Pods-MisterFusionSampleTests.release.xcconfig */,
+				3F9BDDE025D4CEE95F70A8DA /* Pods-MisterFusionSampleTests.debug.xcconfig */,
+				77F09AD7247D0E0CD4D9DCA7 /* Pods-MisterFusionSampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A885C51AA2CC8A03ABA21216 /* Pods_MisterFusionSample.framework */,
-				C46DA7CA9276F50403EDFF3D /* Pods_MisterFusionSampleTests.framework */,
+				699FD6F20007BA4CCC17A8E6 /* Pods_MisterFusionSampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,12 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 377AF0721C8DCF7F008A3BE2 /* Build configuration list for PBXNativeTarget "MisterFusionSampleTests" */;
 			buildPhases = (
-				7A9C6289C9C573260F522501 /* 📦 Check Pods Manifest.lock */,
+				650725C191C74702986CB587 /* [CP] Check Pods Manifest.lock */,
 				377AF0651C8DCF7F008A3BE2 /* Sources */,
 				377AF0661C8DCF7F008A3BE2 /* Frameworks */,
 				377AF0671C8DCF7F008A3BE2 /* Resources */,
-				3D66E425906B49C9BF30965D /* 📦 Embed Pods Frameworks */,
-				A2C203A105AC427FB3E8AA4D /* 📦 Copy Pods Resources */,
+				87A863D3D4E290AEB200EB08 /* [CP] Embed Pods Frameworks */,
+				7C039AD66E91ABA77BA7A7DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,12 +163,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37F35B301BF625AB008C6EAB /* Build configuration list for PBXNativeTarget "MisterFusionSample" */;
 			buildPhases = (
-				A294C3F6ADDE89566922D859 /* 📦 Check Pods Manifest.lock */,
+				A294C3F6ADDE89566922D859 /* [CP] Check Pods Manifest.lock */,
 				37F35B1A1BF625AB008C6EAB /* Sources */,
 				37F35B1B1BF625AB008C6EAB /* Frameworks */,
 				37F35B1C1BF625AB008C6EAB /* Resources */,
-				36C33B9F33E677EFFD9A317C /* 📦 Embed Pods Frameworks */,
-				9DF28894AC63573ACB22DA4D /* 📦 Copy Pods Resources */,
+				36C33B9F33E677EFFD9A317C /* [CP] Embed Pods Frameworks */,
+				9DF28894AC63573ACB22DA4D /* [CP] Copy Pods Resources */,
+				1308C3345AB243F5655EE9DB /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,15 +187,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Taiki Suzuki";
 				TargetAttributes = {
 					377AF0681C8DCF7F008A3BE2 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 37F35B1D1BF625AB008C6EAB;
 					};
 					37F35B1D1BF625AB008C6EAB = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -238,14 +241,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36C33B9F33E677EFFD9A317C /* 📦 Embed Pods Frameworks */ = {
+		1308C3345AB243F5655EE9DB /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,14 +256,59 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D66E425906B49C9BF30965D /* 📦 Embed Pods Frameworks */ = {
+		36C33B9F33E677EFFD9A317C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		650725C191C74702986CB587 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C039AD66E91ABA77BA7A7DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87A863D3D4E290AEB200EB08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,29 +316,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A9C6289C9C573260F522501 /* 📦 Check Pods Manifest.lock */ = {
+		9DF28894AC63573ACB22DA4D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9DF28894AC63573ACB22DA4D /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,34 +331,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A294C3F6ADDE89566922D859 /* 📦 Check Pods Manifest.lock */ = {
+		A294C3F6ADDE89566922D859 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		A2C203A105AC427FB3E8AA4D /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,28 +399,32 @@
 /* Begin XCBuildConfiguration section */
 		377AF0701C8DCF7F008A3BE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89704550BB7B554099FFBAA0 /* Pods-MisterFusionSampleTests.debug.xcconfig */;
+			baseConfigurationReference = 3F9BDDE025D4CEE95F70A8DA /* Pods-MisterFusionSampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MisterFusionSampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MisterFusionSample.app/MisterFusionSample";
 			};
 			name = Debug;
 		};
 		377AF0711C8DCF7F008A3BE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFC33A263BDFE23D4830DC9D /* Pods-MisterFusionSampleTests.release.xcconfig */;
+			baseConfigurationReference = 77F09AD7247D0E0CD4D9DCA7 /* Pods-MisterFusionSampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MisterFusionSampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MisterFusionSample.app/MisterFusionSample";
 			};
 			name = Release;
@@ -420,8 +442,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -464,8 +488,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -484,6 +510,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -492,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48B18DFFC47FCD26816001A8 /* Pods-MisterFusionSample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MisterFusionSample/Info.plist;
@@ -501,6 +529,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MisterFusionSample/MisterFusionSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -508,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2CE34ED4E9AA4CCBCD8B84B /* Pods-MisterFusionSample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MisterFusionSample/Info.plist;
@@ -516,6 +546,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MisterFusionSample/MisterFusionSample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

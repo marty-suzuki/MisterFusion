@@ -9,70 +9,80 @@
 import UIKit
 
 extension Array where Element: NSLayoutConstraint {
-    public func firstItem(view: UIView) -> [NSLayoutConstraint] {
+    public func firstItem(_ view: UIView) -> [Element] {
         return filter { $0.firstItem as? UIView == view }
     }
     
-    public func firstAttribute(attribute: NSLayoutAttribute) -> [NSLayoutConstraint] {
+    public func firstAttribute(_ attribute: NSLayoutAttribute) -> [Element] {
         return filter { $0.firstAttribute == attribute }
     }
     
-    public func relation(relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func relation(_ relation: NSLayoutRelation) -> [Element] {
         return filter { $0.relation == relation }
     }
     
-    public func secondItem(view: UIView) -> [NSLayoutConstraint] {
+    public func secondItem(_ view: UIView) -> [Element] {
         return filter { $0.secondItem as? UIView == view }
     }
     
-    public func secondAttribute(attribute: NSLayoutAttribute) -> [NSLayoutConstraint] {
+    public func secondAttribute(_ attribute: NSLayoutAttribute) -> [Element] {
         return filter { $0.secondAttribute == attribute }
     }
 }
 
 extension NSArray {
-    public var FirstItem: UIView -> NSArray {
+    @available(*, unavailable)
+    @objc(FirstItem)
+    public var firstItem: (UIView) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
         return { view in
-            return array.filter { $0.firstItem as? UIView == view }
+            return array.filter { $0.firstItem as? UIView == view } as NSArray
         }
     }
     
-    public var FirstAttribute: NSLayoutAttribute -> NSArray {
+    @available(*, unavailable)
+    @objc(FirstAttribute)
+    public var firstAttribute: (NSLayoutAttribute) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
         return { attribute in
-            return array.filter { $0.firstAttribute == attribute }
+            return array.filter { $0.firstAttribute == attribute } as NSArray
         }
     }
     
-    public var SecondItem: UIView -> NSArray {
+    @available(*, unavailable)
+    @objc(SecondItem)
+    public var secondItem: (UIView) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
         return { view in
-            return array.filter { $0.secondItem as? UIView == view }
+            return array.filter { $0.secondItem as? UIView == view } as NSArray
         }
     }
     
-    public var SecondAttribute: NSLayoutAttribute -> NSArray {
+    @available(*, unavailable)
+    @objc(SecondAttribute)
+    public var secondAttribute: (NSLayoutAttribute) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
         return { attribute in
-            return array.filter { $0.secondAttribute == attribute }
+            return array.filter { $0.secondAttribute == attribute } as NSArray
         }
     }
     
-    public var Reration: NSLayoutRelation -> NSArray {
+    @available(*, unavailable)
+    @objc(Reration)
+    public var reration: (NSLayoutRelation) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
             return { _ in return [] }
         }
         return { relation in
-            return array.filter { $0.relation == relation }
+            return array.filter { $0.relation == relation } as NSArray
         }
     }
 }

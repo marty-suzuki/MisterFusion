@@ -1,5 +1,5 @@
 PODS:
-  - MisterFusion (1.2.1)
+  - MisterFusion (2.0.0)
 
 DEPENDENCIES:
   - MisterFusion (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MisterFusion: cd2e79aaa9e2a0f525d79568409b34fa76d574bc
+  MisterFusion: 8813ace93c20b384745e2d8bb964f13e12eced63
 
 PODFILE CHECKSUM: ae128018c8525583d55ff21285dda20678d4d8df
 
-COCOAPODS: 1.0.0.beta.6
+COCOAPODS: 1.1.0.beta.2
