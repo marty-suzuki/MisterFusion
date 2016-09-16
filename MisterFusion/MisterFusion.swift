@@ -158,7 +158,7 @@ open class MisterFusion: NSObject {
 
 precedencegroup MisterFusionAdditive {
     associativity: left
-    lowerThan: TernaryPrecedence, CastingPrecedence, AssignmentPrecedence
+    higherThan: TernaryPrecedence, CastingPrecedence, AssignmentPrecedence
 }
 
 infix operator |==| : MisterFusionAdditive

@@ -121,7 +121,7 @@ self.view.addLayoutSubview(greenView, andConstraints:
 MisterFusion is available through [CocoaPods](http://cocoapods.org). If you have cocoapods 0.39.0 or greater, you can install
 it, simply add the following line to your Podfile:
 
-	pod 'MisterFusion', :git => 'https://github.com/szk-atmosphere/MisterFusion.git', :tag => '2.0.0-beta
+	pod 'MisterFusion'
 
 In addtion, import **MisterFusion** like this.
 
@@ -139,7 +139,7 @@ If you’re using [Carthage](https://github.com/Carthage/Carthage), simply add
 MisterFusion to your `Cartfile`:
 
 ```
-github "szk-atmosphere/MisterFusion" "2.0.0-beta"
+github "szk-atmosphere/MisterFusion"
 ```
 Make sure to add `MisterFusion.framework` to "Linked Frameworks and Libraries" and "copy-frameworks" Build Phases.
 
