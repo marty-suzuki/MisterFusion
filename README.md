@@ -26,7 +26,7 @@ MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 
 ```swift
 let view = UIView()
-self.view.addLayoutSubview(view, andConstraints:
+self.view.mf.addSubview(view, andConstraints:
     view.top    |+| 10,
     view.right  |-| 10,
     view.left   |+| 10,
@@ -86,16 +86,16 @@ If you want to realize layout like a above image, needed code is only this.
 
 ```swift
 let redView = UIView()
-redView.backgroundColor = .red()
-self.view.addLayoutSubview(redView, andConstraints:
+redView.backgroundColor = .red
+self.view.mf.addSubview(redView, andConstraints:
     redView.top   |+| 10,
     redView.right |-| 10,
     redView.left  |+| 10
 )
 
 let yellowView = UIView()
-yellowView.backgroundColor = .yellow()
-self.view.addLayoutSubview(yellowView, andConstraints:
+yellowView.backgroundColor = .yellow
+self.view.mf.addSubview(yellowView, andConstraints:
     yellowView.top    |==| redView.bottom |+| 10,
     yellowView.left   |+|  10,
     yellowView.bottom |-|  10,
@@ -103,8 +103,8 @@ self.view.addLayoutSubview(yellowView, andConstraints:
 )
 
 let greenView = UIView()
-greenView.backgroundColor = .green()
-self.view.addLayoutSubview(greenView, andConstraints:
+greenView.backgroundColor = .green
+self.view.mf.addSubview(greenView, andConstraints:
     greenView.top    |==| redView.bottom    |+| 10,
     greenView.left   |==| yellowView.right  |+| 10,
     greenView.bottom |-|  10,
@@ -151,7 +151,7 @@ You can set `multiplier`, `constant` and `priority` like this.
 #### Swift
 
 ```swift
-self.view.addLayoutSubview(view, andConstraints:
+self.view.mf.addSubview(view, andConstraints:
     view.top    |==| self.view.top    |*| 1 |+| 10 |<>| UILayoutPriorityRequired,
     view.right  |==| self.view.right  |*| 1 |-| 10 |<>| UILayoutPriorityRequired,
     view.left   |==| self.view.left   |*| 1 |+| 10 |<>| UILayoutPriorityRequired,
@@ -221,7 +221,7 @@ let bottomConstraint: NSLayoutConstraint = self.view.addLayoutSubview(view, andC
     view.right  |-| 10,
     view.left   |+| 10,
     view.bottom |-| 10
-).firstAttribute(.Bottom).first
+).firstAttribute(.bottom).first
 ```
 
 You can use `Size Class` with `func traitCollectionDidChange(previousTraitCollection: UITraitCollection?)`.
@@ -236,7 +236,7 @@ override func traitCollectionDidChange(previousTraitCollection: UITraitCollectio
     if let whiteViewHeightConstraint = whiteViewWidthConstraint {
         redView.removeConstraint(whiteViewHeightConstraint)
     }
-    self.whiteViewWidthConstraint = redView.addLayoutConstraints(
+    self.whiteViewWidthConstraint = redView.mf.addConstraints(
         whiteView.width |-| 20 <|> .compact <-> .regular,
         whiteView.width |*| 0.5 |-| 10 <|> .regular <-> .compact
     ).firstAttribute(.width).first

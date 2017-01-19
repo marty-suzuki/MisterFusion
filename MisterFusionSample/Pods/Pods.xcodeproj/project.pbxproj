@@ -10,6 +10,7 @@
 		0BEF9895F082AD647D455AB242C27B60 /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */; };
 		2CF932F8F00BD1A68FD8588E21BC4042 /* Pods-MisterFusionSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0EE32002F2342AD749AB87EC5521B3 /* Pods-MisterFusionSample-dummy.m */; };
 		32EA1F30413278D1B3EAD96076C1508F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		370874771E31201D004EF049 /* MisterFusionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370874761E31201D004EF049 /* MisterFusionExtension.swift */; };
 		3D89B37BBB84C43F71EA80632A0D94EE /* Pods-MisterFusionSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8B076423EFB29F6B67651E87A96823D /* Pods-MisterFusionSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F9B69CC86EA382696261B1D3A8FE1AD /* MisterFusion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 582D55589B5D19A5567ECBB428AB1F9D /* MisterFusion-dummy.m */; };
 		86C50D6856E2843A47C95790B13A97A7 /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CF67586D47989BA06D5D71E41E4853 /* MisterFusion.swift */; };
@@ -47,6 +48,7 @@
 		247D0134F0E2B3294BEFE065107DE0C2 /* MisterFusion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-prefix.pch"; sourceTree = "<group>"; };
 		2507E1433E9E82E9726C048791CF8AEB /* Pods_MisterFusionSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MisterFusionSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECD9B7FE7996E97983718A9BBD1B3AF /* MisterFusion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MisterFusion.modulemap; sourceTree = "<group>"; };
+		370874761E31201D004EF049 /* MisterFusionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisterFusionExtension.swift; sourceTree = "<group>"; };
 		3C86C7E89F4E5EFE1D1FE8F6E09F9D3A /* Pods-MisterFusionSampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MisterFusionSampleTests-dummy.m"; sourceTree = "<group>"; };
 		40FB5B14983A57A8C97B6D5352F1C53F /* Pods-MisterFusionSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MisterFusionSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C33D7C6211FAD97E4F3C399E94C23C0 /* Pods-MisterFusionSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MisterFusionSample-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */,
 				06CF67586D47989BA06D5D71E41E4853 /* MisterFusion.swift */,
+				370874761E31201D004EF049 /* MisterFusionExtension.swift */,
 			);
 			path = MisterFusion;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				0BEF9895F082AD647D455AB242C27B60 /* Array+MisterFusion.swift in Sources */,
 				3F9B69CC86EA382696261B1D3A8FE1AD /* MisterFusion-dummy.m in Sources */,
 				86C50D6856E2843A47C95790B13A97A7 /* MisterFusion.swift in Sources */,
+				370874771E31201D004EF049 /* MisterFusionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

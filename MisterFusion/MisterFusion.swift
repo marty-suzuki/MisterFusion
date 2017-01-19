@@ -314,6 +314,7 @@ extension UIView {
 
 extension UIView {
     //MARK: - addConstraint()
+    @discardableResult
     public func addLayoutConstraint(_ misterFusion: MisterFusion) -> NSLayoutConstraint? {
         let item: UIView = misterFusion.item ?? self
         let traitCollection = UIApplication.shared.keyWindow?.traitCollection
