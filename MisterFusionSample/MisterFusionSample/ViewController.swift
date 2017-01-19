@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         yellowView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(yellowView)
         //MisterFusion code
-        view.addLayoutConstraints(
+        view.mf.addConstraints(
             yellowView.top    |==| redView.bottom |+| 10,
             yellowView.right  |==| view.right     |-| 10,
             yellowView.left   |==| view.left      |+| 10,
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         let greenView = UIView()
         greenView.backgroundColor = .green
         //Advanced MisterFusion code
-        greenViewBottomConstraint = yellowView.addLayoutSubview(greenView, andConstraints:
+        greenViewBottomConstraint = yellowView.mf.addSubview(greenView, andConstraints:
             greenView.top,
             greenView.right,
             greenView.bottom,
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         
         let whiteView = UIView()
         whiteView.backgroundColor = .white
-        redView.addLayoutSubview(whiteView, andConstraints:
+        redView.mf.addSubview(whiteView, andConstraints:
             whiteView.bottom |-| 10,
             whiteView.left |+| 10,
             whiteView.height |==| 100
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         if let whiteViewHeightConstraint = whiteViewWidthConstraint {
             redView.removeConstraint(whiteViewHeightConstraint)
         }
-        self.whiteViewWidthConstraint = redView.addLayoutConstraints(
+        self.whiteViewWidthConstraint = redView.mf.addConstraints(
             whiteView.width |-| 20 <|> .compact <-> .regular,
             whiteView.width |*| 0.5 |-| 10 <|> .regular <-> .compact
         ).firstAttribute(.width).first
