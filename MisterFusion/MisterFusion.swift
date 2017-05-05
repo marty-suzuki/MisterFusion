@@ -23,16 +23,16 @@ open class MisterFusion: NSObject {
     
     override open var description: String {
         return "\(super.description)\n" +
-               "item               : \(item)\n" +
-               "attribute          : \(attribute?.rawValue))\n" +
-               "relatedBy          : \(relatedBy?.rawValue))\n" +
-               "toItem             : \(toItem)\n" +
-               "toAttribute        : \(toAttribute?.rawValue))\n" +
-               "multiplier         : \(multiplier)\n" +
-               "constant           : \(constant)\n" +
-               "priority           : \(priority)\n" +
-               "horizontalSizeClass: \(horizontalSizeClass?.rawValue)\n" +
-               "verticalSizeClass  : \(verticalSizeClass?.rawValue)\n"
+               "item               : \(item as UIView?)\n" +
+               "attribute          : \(attribute as NSLayoutAttribute?))\n" +
+               "relatedBy          : \(relatedBy as NSLayoutRelation?))\n" +
+               "toItem             : \(toItem as UIView?)\n" +
+               "toAttribute        : \(toAttribute as NSLayoutAttribute?))\n" +
+               "multiplier         : \(multiplier as CGFloat?)\n" +
+               "constant           : \(constant as CGFloat?)\n" +
+               "priority           : \(priority as UILayoutPriority?)\n" +
+               "horizontalSizeClass: \(horizontalSizeClass as UIUserInterfaceSizeClass?)\n" +
+               "verticalSizeClass  : \(verticalSizeClass as UIUserInterfaceSizeClass?)\n"
     }
     
     init(item: UIView?, attribute: NSLayoutAttribute?, relatedBy: NSLayoutRelation?, toItem: UIView?, toAttribute: NSLayoutAttribute?, multiplier: CGFloat?, constant: CGFloat?, priority: UILayoutPriority?, horizontalSizeClass: UIUserInterfaceSizeClass?, verticalSizeClass: UIUserInterfaceSizeClass?, identifier: String?) {
