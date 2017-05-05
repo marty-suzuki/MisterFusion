@@ -19,8 +19,8 @@ MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 - [x] Simple And Concise Syntax
 - [x] Use in Swift and Objective-C
 - [x] Support Size Class
-- [x] Support Swift2.3
 - [x] Support Swift3
+- [x] Support Swift3.1
 
 #### MisterFusion Code for Swift
 

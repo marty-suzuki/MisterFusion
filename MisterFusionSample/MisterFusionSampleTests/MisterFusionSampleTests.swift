@@ -24,7 +24,7 @@ class MisterFusionSampleTests: XCTestCase {
     func testNotRelatedGreaterThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
-        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+        guard let constraint = superview.mf.addSubview(subview, andConstraint:
             subview.height |>=| 90
         ) else {
             XCTFail("must return NSLayoutConstraint")
@@ -44,7 +44,7 @@ class MisterFusionSampleTests: XCTestCase {
     func testNotRelatedLessThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
-        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+        guard let constraint = superview.mf.addSubview(subview, andConstraint:
             subview.width |<=| 65
             ) else {
                 XCTFail("must return NSLayoutConstraint")
@@ -64,7 +64,7 @@ class MisterFusionSampleTests: XCTestCase {
     func testCombination() {
         let superview = UIView()
         let subview = UIView()
-        let constraints = superview.addLayoutSubview(subview, andConstraints:
+        let constraints = superview.mf.addSubview(subview, andConstraints:
             subview.right |+| 0.5,
             subview.right |==| superview.right |*| 1 |+| 0.5 |<>| UILayoutPriorityRequired
         )
@@ -110,7 +110,7 @@ class MisterFusionSampleTests: XCTestCase {
         let superview = UIView()
         let subview = UIView()
         let isTrue = subview.superview == superview
-        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+        guard let constraint = superview.mf.addSubview(subview, andConstraint:
             isTrue ? subview.height |==| 90 : subview.width |==| 100
             ) else {
                 XCTFail("must return NSLayoutConstraint")
@@ -132,7 +132,7 @@ class MisterFusionSampleTests: XCTestCase {
     func testIdentifier() {
         let superview = UIView()
         let subview = UIView()
-        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+        guard let constraint = superview.mf.addSubview(subview, andConstraint:
             subview.height |==| 90 -=- "TestSubViewHeight"
             ) else {
                 XCTFail("must return NSLayoutConstraint")
@@ -153,7 +153,7 @@ class MisterFusionSampleTests: XCTestCase {
     func testTopRelatedLessThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
-        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+        guard let constraint = superview.mf.addSubview(subview, andConstraint:
             subview.top |<=| 65
             ) else {
                 XCTFail("must return NSLayoutConstraint")
@@ -173,7 +173,7 @@ class MisterFusionSampleTests: XCTestCase {
     func testBottomRelatedGreaterThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
-        guard let constraint = superview.addLayoutSubview(subview, andConstraint:
+        guard let constraint = superview.mf.addSubview(subview, andConstraint:
             subview.bottom |>=| 90
             ) else {
                 XCTFail("must return NSLayoutConstraint")

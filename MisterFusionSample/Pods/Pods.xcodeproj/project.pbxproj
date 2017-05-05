@@ -20,6 +20,7 @@
 		DAC6940463D46ADFDB5CC94C95F4C2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		E413751F0B4A6B9BDF2A84BEF9CC3161 /* Pods-MisterFusionSampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C86C7E89F4E5EFE1D1FE8F6E09F9D3A /* Pods-MisterFusionSampleTests-dummy.m */; };
 		E97A332AFCB13BB4E1857CA5BCB2A357 /* MisterFusion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86861608603591FC0166E8195FEC8F7E /* MisterFusion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDA1025B1EBC120E00DE9A6C /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA1025A1EBC120E00DE9A6C /* Deprecated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+MisterFusion.swift"; sourceTree = "<group>"; };
 		E8075E76033FA3BDA2B57950B06C7641 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EDA1025A1EBC120E00DE9A6C /* Deprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecated.swift; sourceTree = "<group>"; };
 		F436FDDE4C896915E4C3AD477078FF81 /* Pods-MisterFusionSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MisterFusionSample-acknowledgements.plist"; sourceTree = "<group>"; };
 		F69C31646ABBCF8995B0EE78559FEDBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB76F426A8CD6A87340A21F5A7BEA0BC /* Pods-MisterFusionSampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MisterFusionSampleTests-frameworks.sh"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				DC017E2564D3A741EDF1D9C4EFA76CE6 /* Array+MisterFusion.swift */,
 				06CF67586D47989BA06D5D71E41E4853 /* MisterFusion.swift */,
 				370874761E31201D004EF049 /* MisterFusionExtension.swift */,
+				EDA1025A1EBC120E00DE9A6C /* Deprecated.swift */,
 			);
 			path = MisterFusion;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			files = (
 				0BEF9895F082AD647D455AB242C27B60 /* Array+MisterFusion.swift in Sources */,
 				3F9B69CC86EA382696261B1D3A8FE1AD /* MisterFusion-dummy.m in Sources */,
+				EDA1025B1EBC120E00DE9A6C /* Deprecated.swift in Sources */,
 				86C50D6856E2843A47C95790B13A97A7 /* MisterFusion.swift in Sources */,
 				370874771E31201D004EF049 /* MisterFusionExtension.swift in Sources */,
 			);
