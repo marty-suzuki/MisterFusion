@@ -84,7 +84,7 @@ class ViewController: UIViewController {
             redView.removeConstraint(whiteViewHeightConstraint)
         }
         self.whiteViewWidthConstraint = redView.mf.addConstraints(
-            whiteView.width |-| 20 <|> .compact <-> .regular,
+            whiteView.width |-| 20 <|> .compact,
             whiteView.width |*| 0.5 |-| 10 <|> .regular <-> .compact
         ).firstAttribute(.width).first
     }

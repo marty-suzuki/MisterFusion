@@ -84,7 +84,7 @@
     [self.redView removeConstraint:self.whiteViewWidthConstraint];
     self.whiteViewWidthConstraint = [self.redView addLayoutConstraints:@[
         self.whiteView.Width.Multiplier(0.5f).Constant(-10).VerticalSizeClass(UIUserInterfaceSizeClassRegular).HorizontalSizeClass(UIUserInterfaceSizeClassCompact),
-        self.whiteView.Width.Constant(-20).VerticalSizeClass(UIUserInterfaceSizeClassCompact).HorizontalSizeClass(UIUserInterfaceSizeClassRegular)
+        self.whiteView.Width.Constant(-20).VerticalSizeClass(UIUserInterfaceSizeClassCompact)
     ]].FirstAttribute(NSLayoutAttributeWidth).firstObject;
 }
     

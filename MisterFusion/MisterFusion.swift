@@ -314,8 +314,7 @@ extension UIView {
 
 extension UIView {
     //MARK: - addConstraint()
-    @discardableResult
-    public func addLayoutConstraint(_ misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    func _addLayoutConstraint(_ misterFusion: MisterFusion) -> NSLayoutConstraint? {
         let item: UIView = misterFusion.item ?? self
         let traitCollection = UIApplication.shared.keyWindow?.traitCollection
         if let horizontalSizeClass = misterFusion.horizontalSizeClass
@@ -339,95 +338,59 @@ extension UIView {
         return constraint
     }
     
-    @discardableResult
-    public func addLayoutConstraints(_ misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
-        return misterFusions.flatMap { addLayoutConstraint($0) }
-    }
-    
-    @discardableResult
-    public func addLayoutConstraints(_ misterFusions: MisterFusion...) -> [NSLayoutConstraint] {
-        return addLayoutConstraints(misterFusions)
+    func _addLayoutConstraints(_ misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+        return misterFusions.flatMap { _addLayoutConstraint($0) }
     }
 
     //MARK: - addSubview()
-    @discardableResult
-    public func addLayoutSubview(_ subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    func _addLayoutSubview(_ subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
         addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        return addLayoutConstraint(misterFusion)
+        return _addLayoutConstraint(misterFusion)
     }
     
-    @discardableResult
-    public func addLayoutSubview(_ subview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+    func _addLayoutSubview(_ subview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         addSubview(subview)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        return addLayoutConstraints(misterFusions)
-    }
-    
-    @discardableResult
-    public func addLayoutSubview(_ subview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint] {
-        return addLayoutSubview(subview, andConstraints: misterFusions)
+        return _addLayoutConstraints(misterFusions)
     }
 
     //MARK: - insertSubview(_ at:_)
-    @objc(insertLayoutSubview:atIndex:andConstraint:)
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, at index: Int, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    func _insertLayoutSubview(_ subview: UIView, at index: Int, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
         insertSubview(subview, at: index)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        return addLayoutConstraint(misterFusion)
+        return _addLayoutConstraint(misterFusion)
     }
     
-    @objc(insertLayoutSubview:atIndex:andConstraints:)
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, at index: Int, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+    func _insertLayoutSubview(_ subview: UIView, at index: Int, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         insertSubview(subview, at: index)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        return addLayoutConstraints(misterFusions)
-    }
-    
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, at index: Int, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint] {
-        return insertLayoutSubview(subview, at: index, andConstraints: misterFusions)
+        return _addLayoutConstraints(misterFusions)
     }
 
     //MARK: - insertSubview(_ belowSubview:_)
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    func _insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
         insertSubview(subview, belowSubview: siblingSubview)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        return addLayoutConstraint(misterFusion)
+        return _addLayoutConstraint(misterFusion)
     }
     
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+    func _insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         insertSubview(subview, belowSubview: siblingSubview)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        return addLayoutConstraints(misterFusions)
-    }
-    
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint] {
-        return insertLayoutSubview(subview, belowSubview: siblingSubview, andConstraints: misterFusions)
+        return _addLayoutConstraints(misterFusions)
     }
 
     //MARK: - insertSubview(_ aboveSubview:_)
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    func _insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
         insertSubview(subview, aboveSubview: siblingSubview)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        return addLayoutConstraint(misterFusion)
+        return _addLayoutConstraint(misterFusion)
     }
-    
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+
+    func _insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         insertSubview(subview, aboveSubview: siblingSubview)
         subview.translatesAutoresizingMaskIntoConstraints = false
-        return addLayoutConstraints(misterFusions)
-    }
-    
-    @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: MisterFusion...) -> [NSLayoutConstraint] {
-        return insertLayoutSubview(subview, aboveSubview: siblingSubview, andConstraints: misterFusions)
+        return _addLayoutConstraints(misterFusions)
     }
 }
