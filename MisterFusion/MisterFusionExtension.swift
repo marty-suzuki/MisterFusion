@@ -19,7 +19,7 @@ public extension MisterFusionCompatible {
     }
 }
 
-public final class MisterFusionExtension<Base> {
+public struct MisterFusionExtension<Base> {
     public let base: Base
     public init(_ base: Base) {
         self.base = base

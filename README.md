@@ -243,7 +243,7 @@ override func traitCollectionDidChange(previousTraitCollection: UITraitCollectio
 }
 ```
 
-* A detail sample is [here](./MisterFusionSample/MisterFusionSample/ViewController.swift)
+* A detail sample is [here](./Example/MisterFusionSample/ViewController.swift)
 
 ## For Objective-C
 
@@ -326,7 +326,7 @@ This is an example Regular, Compact size for iPhone6s+.
 }
 ```
 
-* A detail sample is [here](./MisterFusionSample/MisterFusionSample/MFViewController.m)
+* A detail sample is [here](./Example/MisterFusionSample/MFViewController.m)
 
 ## Requirements
 
