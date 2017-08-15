@@ -1,36 +1,36 @@
 //
-//  MisterFusionSampleTests.swift
-//  MisterFusionSampleTests
+//  MisterFusionTests.swift
+//  MisterFusionTests
 //
-//  Created by 鈴木大貴 on 2016/03/08.
-//  Copyright © 2016年 Taiki Suzuki. All rights reserved.
+//  Created by 鈴木大貴 on 2017/08/15.
+//  Copyright © 2017年 marty-suzuki. All rights reserved.
 //
 
 import XCTest
-import MisterFusion
+@testable import MisterFusion
 
-class MisterFusionSampleTests: XCTestCase {
+class MisterFusionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testNotRelatedGreaterThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
         guard let constraint = superview.mf.addSubview(subview, andConstraint:
             subview.height |>=| 90
-        ) else {
-            XCTFail("must return NSLayoutConstraint")
-            return
+            ) else {
+                XCTFail("must return NSLayoutConstraint")
+                return
         }
-        
+
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
         XCTAssertEqual(constraint.firstAttribute, .some(.height))
         XCTAssertEqual(constraint.relation, .some(.greaterThanOrEqual))
@@ -40,7 +40,7 @@ class MisterFusionSampleTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
     }
-    
+
     func testNotRelatedLessThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
@@ -50,7 +50,7 @@ class MisterFusionSampleTests: XCTestCase {
                 XCTFail("must return NSLayoutConstraint")
                 return
         }
-        
+
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
         XCTAssertEqual(constraint.firstAttribute, .some(.width))
         XCTAssertEqual(constraint.relation, .some(.lessThanOrEqual))
@@ -66,46 +66,46 @@ class MisterFusionSampleTests: XCTestCase {
         let subview = UIView()
         let constraints = superview.mf.addSubview(subview, andConstraints:
             subview.right |+| 0.5,
-            subview.right |==| superview.right |*| 1 |+| 0.5 |<>| UILayoutPriorityRequired
+                                                  subview.right |==| superview.right |*| 1 |+| 0.5 |<>| UILayoutPriorityRequired
         )
-        
+
         guard let firstConstraint = constraints.first, let secondConstraint = constraints.last else {
             XCTFail("must return NSLayoutConstraint")
             return
         }
-        
+
         XCTAssertEqual(firstConstraint.firstItem as? UIView, subview)
         XCTAssertEqual(firstConstraint.firstItem as? UIView, secondConstraint.firstItem as? UIView)
-        
+
         XCTAssertEqual(firstConstraint.firstAttribute, .some(.right))
         XCTAssertEqual(firstConstraint.firstAttribute, secondConstraint.firstAttribute)
-        
+
         XCTAssertEqual(firstConstraint.relation, .some(.equal))
         XCTAssertEqual(firstConstraint.relation, secondConstraint.relation)
-        
+
         XCTAssertEqual(firstConstraint.secondItem as? UIView, superview)
         XCTAssertEqual(firstConstraint.secondItem as? UIView, secondConstraint.secondItem as? UIView)
-        
+
         XCTAssertEqual(firstConstraint.secondAttribute, .some(.right))
         XCTAssertEqual(firstConstraint.secondAttribute, secondConstraint.secondAttribute)
-        
+
         XCTAssertEqual(firstConstraint.constant, 0.5)
         XCTAssertEqual(firstConstraint.constant, secondConstraint.constant)
-        
+
         XCTAssertEqual(firstConstraint.multiplier, 1)
         XCTAssertEqual(firstConstraint.multiplier, secondConstraint.multiplier)
-        
+
         XCTAssertEqual(firstConstraint.priority, UILayoutPriorityRequired)
         XCTAssertEqual(firstConstraint.priority, secondConstraint.priority)
     }
-    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
     func testNotRelatedEqualConstant() {
         let superview = UIView()
         let subview = UIView()
@@ -116,7 +116,7 @@ class MisterFusionSampleTests: XCTestCase {
                 XCTFail("must return NSLayoutConstraint")
                 return
         }
-        
+
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
         XCTAssertEqual(constraint.firstAttribute, .some(.width))
         XCTAssertNotEqual(constraint.firstAttribute, .some(.height))
@@ -128,7 +128,7 @@ class MisterFusionSampleTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
     }
-    
+
     func testIdentifier() {
         let superview = UIView()
         let subview = UIView()
@@ -138,7 +138,7 @@ class MisterFusionSampleTests: XCTestCase {
                 XCTFail("must return NSLayoutConstraint")
                 return
         }
-        
+
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
         XCTAssertEqual(constraint.firstAttribute, .some(.height))
         XCTAssertEqual(constraint.relation, .some(.equal))
@@ -149,7 +149,7 @@ class MisterFusionSampleTests: XCTestCase {
         XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
         XCTAssertEqual(constraint.identifier, "TestSubViewHeight")
     }
-    
+
     func testTopRelatedLessThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
@@ -159,7 +159,7 @@ class MisterFusionSampleTests: XCTestCase {
                 XCTFail("must return NSLayoutConstraint")
                 return
         }
-        
+
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
         XCTAssertEqual(constraint.firstAttribute, .some(.top))
         XCTAssertEqual(constraint.relation, .some(.lessThanOrEqual))
@@ -169,7 +169,7 @@ class MisterFusionSampleTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
     }
-    
+
     func testBottomRelatedGreaterThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
@@ -179,7 +179,7 @@ class MisterFusionSampleTests: XCTestCase {
                 XCTFail("must return NSLayoutConstraint")
                 return
         }
-        
+
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
         XCTAssertEqual(constraint.firstAttribute, .some(.bottom))
         XCTAssertEqual(constraint.relation, .some(.greaterThanOrEqual))

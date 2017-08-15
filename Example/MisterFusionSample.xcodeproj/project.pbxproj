@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C4EC86B6FCD5CBDA53791B1 /* Pods_MisterFusionSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699FD6F20007BA4CCC17A8E6 /* Pods_MisterFusionSampleTests.framework */; };
 		3743B7891BF6EF9A00515882 /* MFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743B7881BF6EF9A00515882 /* MFViewController.m */; };
-		377AF06C1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377AF06B1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift */; };
 		37F35B221BF625AB008C6EAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B211BF625AB008C6EAB /* AppDelegate.swift */; };
 		37F35B241BF625AB008C6EAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F35B231BF625AB008C6EAB /* ViewController.swift */; };
 		37F35B271BF625AB008C6EAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F35B251BF625AB008C6EAB /* Main.storyboard */; };
@@ -18,23 +16,10 @@
 		577D545B5089B23197791506 /* Pods_MisterFusionSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A885C51AA2CC8A03ABA21216 /* Pods_MisterFusionSample.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		377AF06E1C8DCF7F008A3BE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37F35B161BF625AB008C6EAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 37F35B1D1BF625AB008C6EAB;
-			remoteInfo = MisterFusionSample;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		3743B7861BF6EF9A00515882 /* MisterFusionSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MisterFusionSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		3743B7871BF6EF9A00515882 /* MFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFViewController.h; sourceTree = "<group>"; };
 		3743B7881BF6EF9A00515882 /* MFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFViewController.m; sourceTree = "<group>"; };
-		377AF0691C8DCF7F008A3BE2 /* MisterFusionSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MisterFusionSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		377AF06B1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisterFusionSampleTests.swift; sourceTree = "<group>"; };
-		377AF06D1C8DCF7F008A3BE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37F35B1E1BF625AB008C6EAB /* MisterFusionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisterFusionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F35B211BF625AB008C6EAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F35B231BF625AB008C6EAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,14 +36,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		377AF0661C8DCF7F008A3BE2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C4EC86B6FCD5CBDA53791B1 /* Pods_MisterFusionSampleTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		37F35B1B1BF625AB008C6EAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,20 +58,10 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		377AF06A1C8DCF7F008A3BE2 /* MisterFusionSampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				377AF06B1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift */,
-				377AF06D1C8DCF7F008A3BE2 /* Info.plist */,
-			);
-			path = MisterFusionSampleTests;
-			sourceTree = "<group>";
-		};
 		37F35B151BF625AB008C6EAB = {
 			isa = PBXGroup;
 			children = (
 				37F35B201BF625AB008C6EAB /* MisterFusionSample */,
-				377AF06A1C8DCF7F008A3BE2 /* MisterFusionSampleTests */,
 				37F35B1F1BF625AB008C6EAB /* Products */,
 				2E21ACCBB8DABBF9441FFF6A /* Pods */,
 				9082DD5D8A16AEB0765C8CCA /* Frameworks */,
@@ -105,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				37F35B1E1BF625AB008C6EAB /* MisterFusionSample.app */,
-				377AF0691C8DCF7F008A3BE2 /* MisterFusionSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,27 +104,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		377AF0681C8DCF7F008A3BE2 /* MisterFusionSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 377AF0721C8DCF7F008A3BE2 /* Build configuration list for PBXNativeTarget "MisterFusionSampleTests" */;
-			buildPhases = (
-				650725C191C74702986CB587 /* [CP] Check Pods Manifest.lock */,
-				377AF0651C8DCF7F008A3BE2 /* Sources */,
-				377AF0661C8DCF7F008A3BE2 /* Frameworks */,
-				377AF0671C8DCF7F008A3BE2 /* Resources */,
-				87A863D3D4E290AEB200EB08 /* [CP] Embed Pods Frameworks */,
-				7C039AD66E91ABA77BA7A7DA /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				377AF06F1C8DCF7F008A3BE2 /* PBXTargetDependency */,
-			);
-			name = MisterFusionSampleTests;
-			productName = MisterFusionSampleTests;
-			productReference = 377AF0691C8DCF7F008A3BE2 /* MisterFusionSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		37F35B1D1BF625AB008C6EAB /* MisterFusionSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37F35B301BF625AB008C6EAB /* Build configuration list for PBXNativeTarget "MisterFusionSample" */;
@@ -190,11 +135,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Taiki Suzuki";
 				TargetAttributes = {
-					377AF0681C8DCF7F008A3BE2 = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0800;
-						TestTargetID = 37F35B1D1BF625AB008C6EAB;
-					};
 					37F35B1D1BF625AB008C6EAB = {
 						CreatedOnToolsVersion = 7.1;
 						LastSwiftMigration = 0800;
@@ -215,19 +155,11 @@
 			projectRoot = "";
 			targets = (
 				37F35B1D1BF625AB008C6EAB /* MisterFusionSample */,
-				377AF0681C8DCF7F008A3BE2 /* MisterFusionSampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		377AF0671C8DCF7F008A3BE2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		37F35B1C1BF625AB008C6EAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,51 +203,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		650725C191C74702986CB587 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7C039AD66E91ABA77BA7A7DA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		87A863D3D4E290AEB200EB08 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSampleTests/Pods-MisterFusionSampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9DF28894AC63573ACB22DA4D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,14 +236,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		377AF0651C8DCF7F008A3BE2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				377AF06C1C8DCF7F008A3BE2 /* MisterFusionSampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		37F35B1A1BF625AB008C6EAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -368,14 +247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		377AF06F1C8DCF7F008A3BE2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 37F35B1D1BF625AB008C6EAB /* MisterFusionSample */;
-			targetProxy = 377AF06E1C8DCF7F008A3BE2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		37F35B251BF625AB008C6EAB /* Main.storyboard */ = {
@@ -397,38 +268,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		377AF0701C8DCF7F008A3BE2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F9BDDE025D4CEE95F70A8DA /* Pods-MisterFusionSampleTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MisterFusionSampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSampleTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MisterFusionSample.app/MisterFusionSample";
-			};
-			name = Debug;
-		};
-		377AF0711C8DCF7F008A3BE2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77F09AD7247D0E0CD4D9DCA7 /* Pods-MisterFusionSampleTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MisterFusionSampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSampleTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MisterFusionSample.app/MisterFusionSample";
-			};
-			name = Release;
-		};
 		37F35B2E1BF625AB008C6EAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -553,15 +392,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		377AF0721C8DCF7F008A3BE2 /* Build configuration list for PBXNativeTarget "MisterFusionSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				377AF0701C8DCF7F008A3BE2 /* Debug */,
-				377AF0711C8DCF7F008A3BE2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		37F35B191BF625AB008C6EAB /* Build configuration list for PBXProject "MisterFusionSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

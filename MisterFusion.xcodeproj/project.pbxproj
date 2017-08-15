@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDB99A2E1F42C6A10013E6CD /* MisterFusion.h in Headers */ = {isa = PBXBuildFile; fileRef = EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDB99A381F42C6E50013E6CD /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A341F42C6E50013E6CD /* Array+MisterFusion.swift */; };
+		EDB99A391F42C6E50013E6CD /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A351F42C6E50013E6CD /* Deprecated.swift */; };
+		EDB99A3A1F42C6E50013E6CD /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A361F42C6E50013E6CD /* MisterFusion.swift */; };
+		EDB99A3B1F42C6E50013E6CD /* MisterFusionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A371F42C6E50013E6CD /* MisterFusionExtension.swift */; };
+		EDB99A431F42C7E20013E6CD /* MisterFusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A421F42C7E20013E6CD /* MisterFusionTests.swift */; };
+		EDB99A451F42C7E20013E6CD /* MisterFusion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB99A291F42C6A00013E6CD /* MisterFusion.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDB99A461F42C7E20013E6CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDB99A201F42C6A00013E6CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDB99A281F42C6A00013E6CD;
+			remoteInfo = MisterFusion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDB99A291F42C6A00013E6CD /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MisterFusion.h; sourceTree = "<group>"; };
+		EDB99A2D1F42C6A00013E6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDB99A341F42C6E50013E6CD /* Array+MisterFusion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+MisterFusion.swift"; sourceTree = "<group>"; };
+		EDB99A351F42C6E50013E6CD /* Deprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deprecated.swift; sourceTree = "<group>"; };
+		EDB99A361F42C6E50013E6CD /* MisterFusion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisterFusion.swift; sourceTree = "<group>"; };
+		EDB99A371F42C6E50013E6CD /* MisterFusionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisterFusionExtension.swift; sourceTree = "<group>"; };
+		EDB99A401F42C7E20013E6CD /* MisterFusionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MisterFusionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB99A421F42C7E20013E6CD /* MisterFusionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisterFusionTests.swift; sourceTree = "<group>"; };
+		EDB99A441F42C7E20013E6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDB99A251F42C6A00013E6CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB99A3D1F42C7E20013E6CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB99A451F42C7E20013E6CD /* MisterFusion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDB99A1F1F42C6A00013E6CD = {
+			isa = PBXGroup;
+			children = (
+				EDB99A2B1F42C6A00013E6CD /* MisterFusion */,
+				EDB99A411F42C7E20013E6CD /* MisterFusionTests */,
+				EDB99A2A1F42C6A00013E6CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDB99A2A1F42C6A00013E6CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDB99A291F42C6A00013E6CD /* MisterFusion.framework */,
+				EDB99A401F42C7E20013E6CD /* MisterFusionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDB99A2B1F42C6A00013E6CD /* MisterFusion */ = {
+			isa = PBXGroup;
+			children = (
+				EDB99A341F42C6E50013E6CD /* Array+MisterFusion.swift */,
+				EDB99A351F42C6E50013E6CD /* Deprecated.swift */,
+				EDB99A361F42C6E50013E6CD /* MisterFusion.swift */,
+				EDB99A371F42C6E50013E6CD /* MisterFusionExtension.swift */,
+				EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */,
+				EDB99A2D1F42C6A00013E6CD /* Info.plist */,
+			);
+			path = MisterFusion;
+			sourceTree = "<group>";
+		};
+		EDB99A411F42C7E20013E6CD /* MisterFusionTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDB99A421F42C7E20013E6CD /* MisterFusionTests.swift */,
+				EDB99A441F42C7E20013E6CD /* Info.plist */,
+			);
+			path = MisterFusionTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EDB99A261F42C6A00013E6CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB99A2E1F42C6A10013E6CD /* MisterFusion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EDB99A281F42C6A00013E6CD /* MisterFusion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB99A311F42C6A10013E6CD /* Build configuration list for PBXNativeTarget "MisterFusion" */;
+			buildPhases = (
+				EDB99A241F42C6A00013E6CD /* Sources */,
+				EDB99A251F42C6A00013E6CD /* Frameworks */,
+				EDB99A261F42C6A00013E6CD /* Headers */,
+				EDB99A271F42C6A00013E6CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MisterFusion;
+			productName = MisterFusion;
+			productReference = EDB99A291F42C6A00013E6CD /* MisterFusion.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDB99A3F1F42C7E20013E6CD /* MisterFusionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDB99A4A1F42C7E20013E6CD /* Build configuration list for PBXNativeTarget "MisterFusionTests" */;
+			buildPhases = (
+				EDB99A3C1F42C7E20013E6CD /* Sources */,
+				EDB99A3D1F42C7E20013E6CD /* Frameworks */,
+				EDB99A3E1F42C7E20013E6CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDB99A471F42C7E20013E6CD /* PBXTargetDependency */,
+			);
+			name = MisterFusionTests;
+			productName = MisterFusionTests;
+			productReference = EDB99A401F42C7E20013E6CD /* MisterFusionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDB99A201F42C6A00013E6CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "marty-suzuki";
+				TargetAttributes = {
+					EDB99A281F42C6A00013E6CD = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					EDB99A3F1F42C7E20013E6CD = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EDB99A231F42C6A00013E6CD /* Build configuration list for PBXProject "MisterFusion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EDB99A1F1F42C6A00013E6CD;
+			productRefGroup = EDB99A2A1F42C6A00013E6CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDB99A281F42C6A00013E6CD /* MisterFusion */,
+				EDB99A3F1F42C7E20013E6CD /* MisterFusionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDB99A271F42C6A00013E6CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB99A3E1F42C7E20013E6CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDB99A241F42C6A00013E6CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB99A391F42C6E50013E6CD /* Deprecated.swift in Sources */,
+				EDB99A3A1F42C6E50013E6CD /* MisterFusion.swift in Sources */,
+				EDB99A381F42C6E50013E6CD /* Array+MisterFusion.swift in Sources */,
+				EDB99A3B1F42C6E50013E6CD /* MisterFusionExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDB99A3C1F42C7E20013E6CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB99A431F42C7E20013E6CD /* MisterFusionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDB99A471F42C7E20013E6CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDB99A281F42C6A00013E6CD /* MisterFusion */;
+			targetProxy = EDB99A461F42C7E20013E6CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDB99A2F1F42C6A10013E6CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EDB99A301F42C6A10013E6CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EDB99A321F42C6A10013E6CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MisterFusion/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.MisterFusion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EDB99A331F42C6A10013E6CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MisterFusion/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.MisterFusion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EDB99A481F42C7E20013E6CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MisterFusionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.MisterFusionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EDB99A491F42C7E20013E6CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MisterFusionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.marty-suzuki.MisterFusionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDB99A231F42C6A00013E6CD /* Build configuration list for PBXProject "MisterFusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB99A2F1F42C6A10013E6CD /* Debug */,
+				EDB99A301F42C6A10013E6CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB99A311F42C6A10013E6CD /* Build configuration list for PBXNativeTarget "MisterFusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB99A321F42C6A10013E6CD /* Debug */,
+				EDB99A331F42C6A10013E6CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDB99A4A1F42C7E20013E6CD /* Build configuration list for PBXNativeTarget "MisterFusionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDB99A481F42C7E20013E6CD /* Debug */,
+				EDB99A491F42C7E20013E6CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDB99A201F42C6A00013E6CD /* Project object */;
+}
