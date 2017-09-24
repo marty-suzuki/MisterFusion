@@ -51,7 +51,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(*, unavailable)
-    open var Equal: (MisterFusion) -> MisterFusion? {
+    @objc open var Equal: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |==| $0
@@ -59,7 +59,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(*, unavailable)
-    open var NotRelatedEqualConstant: (CGFloat) -> MisterFusion? {
+    @objc open var NotRelatedEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |==| $0
@@ -67,7 +67,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(*, unavailable)
-    open var LessThanOrEqual: (MisterFusion) -> MisterFusion? {
+    @objc open var LessThanOrEqual: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |<=| $0
@@ -75,7 +75,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(iOS, unavailable)
-    open var NotRelatedLessThanOrEqualConstant: (CGFloat) -> MisterFusion? {
+    @objc open var NotRelatedLessThanOrEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |<=| $0
@@ -83,7 +83,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(iOS, unavailable)
-    open var GreaterThanOrEqual: (MisterFusion) -> MisterFusion? {
+    @objc open var GreaterThanOrEqual: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |>=| $0
@@ -91,7 +91,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(iOS, unavailable)
-    open var NotRelatedGreaterThanOrEqualConstant: (CGFloat) -> MisterFusion? {
+    @objc open var NotRelatedGreaterThanOrEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |>=| $0
@@ -99,7 +99,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(iOS, unavailable)
-    open var Multiplier: (CGFloat) -> MisterFusion? {
+    @objc open var Multiplier: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |*| $0
@@ -107,7 +107,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(iOS, unavailable)
-    open var Constant: (CGFloat) -> MisterFusion? {
+    @objc open var Constant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |+| $0
@@ -115,7 +115,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(iOS, unavailable)
-    open var Priority: (UILayoutPriority) -> MisterFusion? {
+    @objc open var Priority: (UILayoutPriority) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |<>| $0
@@ -123,7 +123,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(*, unavailable)
-    open var NotRelatedConstant: (CGFloat) -> MisterFusion? {
+    @objc open var NotRelatedConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |==| $0
@@ -131,7 +131,7 @@ open class MisterFusion: NSObject {
     }
     
     @available(*, unavailable)
-    open var HorizontalSizeClass: (UIUserInterfaceSizeClass) -> MisterFusion? {
+    @objc open var HorizontalSizeClass: (UIUserInterfaceSizeClass) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me <-> $0
@@ -139,7 +139,7 @@ open class MisterFusion: NSObject {
     }
 
     @available(*, unavailable)
-    open var VerticalSizeClass: (UIUserInterfaceSizeClass) -> MisterFusion? {
+    @objc open var VerticalSizeClass: (UIUserInterfaceSizeClass) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me <|> $0
@@ -148,7 +148,7 @@ open class MisterFusion: NSObject {
     
 
     @available(*, unavailable)
-    open var Identifier: (String) -> MisterFusion? {
+    @objc open var Identifier: (String) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me -=- $0
@@ -332,7 +332,7 @@ extension UIView {
         let multiplier: CGFloat = misterFusion.multiplier ?? 1
         let constant: CGFloat = misterFusion.constant ?? 0
         let constraint = NSLayoutConstraint(item: item, attribute: attribute, relatedBy: relatedBy, toItem: toItem, attribute: toAttribute, multiplier: multiplier, constant: constant)
-        constraint.priority = misterFusion.priority ?? UILayoutPriorityRequired
+        constraint.priority = misterFusion.priority ?? .required
         constraint.identifier = misterFusion.identifier
         addConstraint(constraint)
         return constraint
