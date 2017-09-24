@@ -7,7 +7,6 @@
 [![Version](https://img.shields.io/cocoapods/v/MisterFusion.svg?style=flat)](http://cocoapods.org/pods/MisterFusion)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/MisterFusion.svg?style=flat)](http://cocoapods.org/pods/MisterFusion)
-[![Build Status](https://travis-ci.org/marty-suzuki/MisterFusion.svg?branch=master)](https://travis-ci.org/marty-suzuki/MisterFusion)
 
 [ManiacDev.com](https://maniacdev.com/) referred.  
 [https://maniacdev.com/2015/12/open-source-auto-layout-library-with-a-simple-and-concise-syntax](https://maniacdev.com/2015/12/open-source-auto-layout-library-with-a-simple-and-concise-syntax)
@@ -20,8 +19,7 @@ MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 - [x] Simple And Concise Syntax
 - [x] Use in Swift and Objective-C
 - [x] Support Size Class
-- [x] Support Swift3
-- [x] Support Swift3.1
+- [x] Support Swift4
 
 #### MisterFusion Code for Swift
 
@@ -153,10 +151,10 @@ You can set `multiplier`, `constant` and `priority` like this.
 
 ```swift
 self.view.mf.addSubview(view, andConstraints:
-    view.top    |==| self.view.top    |*| 1 |+| 10 |<>| UILayoutPriorityRequired,
-    view.right  |==| self.view.right  |*| 1 |-| 10 |<>| UILayoutPriorityRequired,
-    view.left   |==| self.view.left   |*| 1 |+| 10 |<>| UILayoutPriorityRequired,
-    view.bottom |==| self.view.bottom |*| 1 |-| 10 |<>| UILayoutPriorityRequired
+    view.top    |==| self.view.top    |*| 1 |+| 10 |<>| .required,
+    view.right  |==| self.view.right  |*| 1 |-| 10 |<>| .required,
+    view.left   |==| self.view.left   |*| 1 |+| 10 |<>| .required,
+    view.bottom |==| self.view.bottom |*| 1 |-| 10 |<>| .required
 )
 ```
 
@@ -244,7 +242,7 @@ override func traitCollectionDidChange(previousTraitCollection: UITraitCollectio
 }
 ```
 
-* A detail sample is [here](./Example/MisterFusionSample/ViewController.swift)
+* A detail sample is [here](./MisterFusionSample/MisterFusionSample/ViewController.swift)
 
 ## For Objective-C
 
@@ -327,11 +325,11 @@ This is an example Regular, Compact size for iPhone6s+.
 }
 ```
 
-* A detail sample is [here](./Example/MisterFusionSample/MFViewController.m)
+* A detail sample is [here](./MisterFusionSample/MisterFusionSample/MFViewController.m)
 
 ## Requirements
 
-- Xcode 8.0 or greater
+- Xcode 9 or greater
 - iOS 8.0 or greater
 
 ## Author
