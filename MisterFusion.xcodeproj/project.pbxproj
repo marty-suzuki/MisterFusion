@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		375338321F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375338311F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift */; };
 		EDB99A2E1F42C6A10013E6CD /* MisterFusion.h in Headers */ = {isa = PBXBuildFile; fileRef = EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDB99A381F42C6E50013E6CD /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A341F42C6E50013E6CD /* Array+MisterFusion.swift */; };
 		EDB99A391F42C6E50013E6CD /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A351F42C6E50013E6CD /* Deprecated.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		375338311F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisterFusion.SafeArea.swift; sourceTree = "<group>"; };
 		EDB99A291F42C6A00013E6CD /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MisterFusion.h; sourceTree = "<group>"; };
 		EDB99A2D1F42C6A00013E6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				EDB99A361F42C6E50013E6CD /* MisterFusion.swift */,
 				EDB99A371F42C6E50013E6CD /* MisterFusionExtension.swift */,
 				EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */,
+				375338311F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift */,
 				EDB99A2D1F42C6A00013E6CD /* Info.plist */,
 			);
 			path = MisterFusion;
@@ -212,6 +215,7 @@
 				EDB99A391F42C6E50013E6CD /* Deprecated.swift in Sources */,
 				EDB99A3A1F42C6E50013E6CD /* MisterFusion.swift in Sources */,
 				EDB99A381F42C6E50013E6CD /* Array+MisterFusion.swift in Sources */,
+				375338321F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift in Sources */,
 				EDB99A3B1F42C6E50013E6CD /* MisterFusionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +431,7 @@
 				EDB99A491F42C7E20013E6CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

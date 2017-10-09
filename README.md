@@ -20,8 +20,8 @@ MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 - [x] Simple And Concise Syntax
 - [x] Use in Swift and Objective-C
 - [x] Support Size Class
-- [x] Support Swift3
-- [x] Support Swift3.1
+- [x] Support Swift3.2
+- [x] Support SafeArea🎉 (since 2.3.1)
 
 #### MisterFusion Code for Swift
 
@@ -246,6 +246,32 @@ override func traitCollectionDidChange(previousTraitCollection: UITraitCollectio
 
 * A detail sample is [here](./Example/MisterFusionSample/ViewController.swift)
 
+#### Safe Area
+
+You can use `view.safeArea.top` and so on. This is supported Safe Area.
+
+```swift
+if #available(iOS 11, *) {
+    view.mf.addConstraints(
+        yellowView.top    |==| redView.bottom       |+| 10,
+        yellowView.right  |==| view.safeArea.right  |-| 10,
+        yellowView.left   |==| view.safeArea.left   |+| 10,
+        yellowView.height |==| view.safeArea.height |/| 2 |-| 15
+    )
+} else {
+    view.mf.addConstraints(
+        yellowView.top    |==| redView.bottom |+| 10,
+        yellowView.right  |==| view.right     |-| 10,
+        yellowView.left   |==| view.left      |+| 10,
+        yellowView.height |==| view.height    |/| 2 |-| 15
+    )
+}
+```
+
+![](./Images/safearea_port.png)
+
+![](./Images/safearea_land.png)
+
 ## For Objective-C
 
 ### Readonly Blocks
@@ -328,6 +354,33 @@ This is an example Regular, Compact size for iPhone6s+.
 ```
 
 * A detail sample is [here](./Example/MisterFusionSample/MFViewController.m)
+
+#### Safe Area
+
+You can use `view.SafeAreaTop` and so on. This is supported Safe Area.
+
+```objective-c
+if (@available(iOS 11.0, *)) {
+    [self.view addLayoutConstraints:@[
+        yellowView.Top   .Equal(redView.Bottom)          .Constant(10.0f),
+        yellowView.Right .Equal(self.view.SafeAreaRight) .Constant(-10.0f),
+        yellowView.Left  .Equal(self.view.SafeAreaLeft)  .Constant(10.0f),
+        yellowView.Height.Equal(self.view.SafeAreaHeight).Multiplier(0.5f).Constant(-15.0f)
+    ]];
+} else {
+    [self.view addLayoutConstraints:@[
+        yellowView.Top   .Equal(redView.Bottom)  .Constant(10.0f),
+        yellowView.Right .Equal(self.view.Right) .Constant(-10.0f),
+        yellowView.Left  .Equal(self.view.Left)  .Constant(10.0f),
+        yellowView.Height.Equal(self.view.Height).Multiplier(0.5f).Constant(-15.0f)
+    ]];
+}
+```
+
+![](./Images/safearea_port.png)
+
+![](./Images/safearea_land.png)
+
 
 ## Requirements
 

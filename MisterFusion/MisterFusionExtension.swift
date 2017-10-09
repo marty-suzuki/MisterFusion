@@ -9,8 +9,8 @@
 import UIKit
 
 public protocol MisterFusionCompatible {
-    associatedtype CompatibleType
-    var mf: CompatibleType { get }
+    associatedtype MisterFusionCompatibleType
+    var mf: MisterFusionCompatibleType { get }
 }
 
 public extension MisterFusionCompatible {

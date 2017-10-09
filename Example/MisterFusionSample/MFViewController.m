@@ -29,11 +29,17 @@
     redView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview: redView];
     //Ordinary AutoLayout code
+    id toItem;
+    if (@available(iOS 11.0, *)) {
+        toItem = self.view.safeAreaLayoutGuide;
+    } else {
+        toItem = self.view;
+    }
     [self.view addConstraints:@[
-        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeTop    relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop    multiplier:1.0f constant:10.0f],
-        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeRight  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight  multiplier:1.0f constant:-10.0f],
-        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeLeft   relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft   multiplier:1.0f constant:10.0f],
-        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.5f constant:-15.0f]
+        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeTop    relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeTop    multiplier:1.0f constant:10.0f],
+        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeRight  relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeRight  multiplier:1.0f constant:-10.0f],
+        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeLeft   relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeLeft   multiplier:1.0f constant:10.0f],
+        [NSLayoutConstraint constraintWithItem:redView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeHeight multiplier:0.5f constant:-15.0f]
     ]];
     self.redView = redView;
     
@@ -42,12 +48,21 @@
     yellowView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:yellowView];
     //MisterFusion code
-    [self.view addLayoutConstraints:@[
-        yellowView.Top   .Equal(redView.Bottom)  .Constant(10.0f),
-        yellowView.Right .Equal(self.view.Right) .Constant(-10.0f),
-        yellowView.Left  .Equal(self.view.Left)  .Constant(10.0f),
-        yellowView.Height.Equal(self.view.Height).Multiplier(0.5f).Constant(-15.0f)
-    ]];
+    if (@available(iOS 11.0, *)) {
+        [self.view addLayoutConstraints:@[
+            yellowView.Top   .Equal(redView.Bottom)          .Constant(10.0f),
+            yellowView.Right .Equal(self.view.SafeAreaRight) .Constant(-10.0f),
+            yellowView.Left  .Equal(self.view.SafeAreaLeft)  .Constant(10.0f),
+            yellowView.Height.Equal(self.view.SafeAreaHeight).Multiplier(0.5f).Constant(-15.0f)
+        ]];
+    } else {
+        [self.view addLayoutConstraints:@[
+            yellowView.Top   .Equal(redView.Bottom)  .Constant(10.0f),
+            yellowView.Right .Equal(self.view.Right) .Constant(-10.0f),
+            yellowView.Left  .Equal(self.view.Left)  .Constant(10.0f),
+            yellowView.Height.Equal(self.view.Height).Multiplier(0.5f).Constant(-15.0f)
+        ]];
+    }
     
     UIView *greenView = [UIView new];
     greenView.backgroundColor = [UIColor greenColor];

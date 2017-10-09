@@ -10,17 +10,6 @@ import XCTest
 @testable import MisterFusion
 
 class MisterFusionTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-
     func testNotRelatedGreaterThanOrEqualConstant() {
         let superview = UIView()
         let subview = UIView()
@@ -66,7 +55,7 @@ class MisterFusionTests: XCTestCase {
         let subview = UIView()
         let constraints = superview.mf.addSubview(subview, andConstraints:
             subview.right |+| 0.5,
-                                                  subview.right |==| superview.right |*| 1 |+| 0.5 |<>| UILayoutPriorityRequired
+            subview.right |==| superview.right |*| 1 |+| 0.5 |<>| UILayoutPriorityRequired
         )
 
         guard let firstConstraint = constraints.first, let secondConstraint = constraints.last else {
@@ -97,13 +86,6 @@ class MisterFusionTests: XCTestCase {
 
         XCTAssertEqual(firstConstraint.priority, UILayoutPriorityRequired)
         XCTAssertEqual(firstConstraint.priority, secondConstraint.priority)
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
     }
 
     func testNotRelatedEqualConstant() {
@@ -186,6 +168,27 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.secondItem as? UIView, superview)
         XCTAssertEqual(constraint.secondAttribute, .some(.bottom))
         XCTAssertEqual(constraint.constant, 90)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+    }
+    
+    @available(iOS 11, *)
+    func testSafeAreaTopRelatedEqualConstant() {
+        let superview = UIView()
+        let subview = UIView()
+        guard let constraint = superview.mf.addSubview(subview, andConstraint:
+            superview.safeArea.top |==| subview.top
+            ) else {
+                XCTFail("must return NSLayoutConstraint")
+                return
+        }
+        
+        XCTAssertEqual(constraint.firstItem as? UILayoutGuide, superview.safeAreaLayoutGuide)
+        XCTAssertEqual(constraint.firstAttribute, .some(.top))
+        XCTAssertEqual(constraint.relation, .some(.equal))
+        XCTAssertEqual(constraint.secondItem as? UIView, subview)
+        XCTAssertEqual(constraint.secondAttribute, .some(.top))
+        XCTAssertEqual(constraint.constant, 0)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
     }

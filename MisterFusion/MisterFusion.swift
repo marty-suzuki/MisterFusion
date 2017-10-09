@@ -8,11 +8,18 @@
 
 import UIKit
 
-open class MisterFusion: NSObject {
-    fileprivate let item: UIView?
+protocol LayoutObject: class {}
+
+extension UIView: LayoutObject {}
+
+@available(iOS 9.0, *)
+extension UILayoutGuide: LayoutObject {}
+
+public class MisterFusion: NSObject {
+    fileprivate let item: LayoutObject?
     fileprivate let attribute: NSLayoutAttribute?
     fileprivate let relatedBy: NSLayoutRelation?
-    fileprivate let toItem: UIView?
+    fileprivate let toItem: LayoutObject?
     fileprivate let toAttribute: NSLayoutAttribute?
     fileprivate let multiplier: CGFloat?
     fileprivate let constant: CGFloat?
@@ -23,10 +30,10 @@ open class MisterFusion: NSObject {
     
     override open var description: String {
         return "\(super.description)\n" +
-               "item               : \(item as UIView?)\n" +
+               "item               : \(item as LayoutObject?)\n" +
                "attribute          : \(attribute as NSLayoutAttribute?))\n" +
                "relatedBy          : \(relatedBy as NSLayoutRelation?))\n" +
-               "toItem             : \(toItem as UIView?)\n" +
+               "toItem             : \(toItem as LayoutObject?)\n" +
                "toAttribute        : \(toAttribute as NSLayoutAttribute?))\n" +
                "multiplier         : \(multiplier as CGFloat?)\n" +
                "constant           : \(constant as CGFloat?)\n" +
@@ -35,7 +42,7 @@ open class MisterFusion: NSObject {
                "verticalSizeClass  : \(verticalSizeClass as UIUserInterfaceSizeClass?)\n"
     }
     
-    init(item: UIView?, attribute: NSLayoutAttribute?, relatedBy: NSLayoutRelation?, toItem: UIView?, toAttribute: NSLayoutAttribute?, multiplier: CGFloat?, constant: CGFloat?, priority: UILayoutPriority?, horizontalSizeClass: UIUserInterfaceSizeClass?, verticalSizeClass: UIUserInterfaceSizeClass?, identifier: String?) {
+    init(item: LayoutObject?, attribute: NSLayoutAttribute?, relatedBy: NSLayoutRelation?, toItem: LayoutObject?, toAttribute: NSLayoutAttribute?, multiplier: CGFloat?, constant: CGFloat?, priority: UILayoutPriority?, horizontalSizeClass: UIUserInterfaceSizeClass?, verticalSizeClass: UIUserInterfaceSizeClass?, identifier: String?) {
         self.item = item
         self.attribute = attribute
         self.relatedBy = relatedBy
@@ -74,7 +81,7 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var NotRelatedLessThanOrEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -82,7 +89,7 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var GreaterThanOrEqual: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -90,7 +97,7 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var NotRelatedGreaterThanOrEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -98,7 +105,7 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var Multiplier: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -106,7 +113,7 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var Constant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -114,7 +121,7 @@ open class MisterFusion: NSObject {
         }
     }
     
-    @available(iOS, unavailable)
+    @available(*, unavailable)
     open var Priority: (UILayoutPriority) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -146,7 +153,6 @@ open class MisterFusion: NSObject {
         }
     }
     
-
     @available(*, unavailable)
     open var Identifier: (String) -> MisterFusion? {
         return { [weak self] in
@@ -232,82 +238,82 @@ public func -=- (left: MisterFusion, right: String) -> MisterFusion {
 
 extension UIView {
     @objc(Top)
-    public var top: MisterFusion { return createMisterFusion(withAttribute: .top) }
+    public var top: MisterFusion { return createMisterFusion(with: .top) }
     
     @objc(Right)
-    public var right: MisterFusion { return createMisterFusion(withAttribute: .right) }
+    public var right: MisterFusion { return createMisterFusion(with: .right) }
     
     @objc(Left)
-    public var left: MisterFusion { return createMisterFusion(withAttribute: .left) }
+    public var left: MisterFusion { return createMisterFusion(with: .left) }
     
     @objc(Bottom)
-    public var bottom: MisterFusion { return createMisterFusion(withAttribute: .bottom) }
+    public var bottom: MisterFusion { return createMisterFusion(with: .bottom) }
     
     @objc(Height)
-    public var height: MisterFusion { return createMisterFusion(withAttribute: .height) }
+    public var height: MisterFusion { return createMisterFusion(with: .height) }
     
     @objc(Width)
-    public var width: MisterFusion { return createMisterFusion(withAttribute: .width) }
+    public var width: MisterFusion { return createMisterFusion(with: .width) }
     
     @objc(Leading)
-    public var leading: MisterFusion { return createMisterFusion(withAttribute: .leading) }
+    public var leading: MisterFusion { return createMisterFusion(with: .leading) }
     
     @objc(Trailing)
-    public var trailing: MisterFusion { return createMisterFusion(withAttribute: .trailing) }
+    public var trailing: MisterFusion { return createMisterFusion(with: .trailing) }
     
     @objc(CenterX)
-    public var centerX: MisterFusion { return createMisterFusion(withAttribute: .centerX) }
+    public var centerX: MisterFusion { return createMisterFusion(with: .centerX) }
     
     @objc(CenterY)
-    public var centerY: MisterFusion { return createMisterFusion(withAttribute: .centerY) }
+    public var centerY: MisterFusion { return createMisterFusion(with: .centerY) }
 
     @available(iOS, obsoleted: 7.0, renamed: "lastBaseline")
     @objc(Baseline)
-    public var baseline: MisterFusion { return createMisterFusion(withAttribute: .lastBaseline) }
+    public var baseline: MisterFusion { return createMisterFusion(with: .lastBaseline) }
     
     @objc(NotAnAttribute)
-    public var notAnAttribute: MisterFusion { return createMisterFusion(withAttribute: .notAnAttribute) }
+    public var notAnAttribute: MisterFusion { return createMisterFusion(with: .notAnAttribute) }
     
     @objc(LastBaseline)
-    public var lastBaseline: MisterFusion { return createMisterFusion(withAttribute: .lastBaseline) }
+    public var lastBaseline: MisterFusion { return createMisterFusion(with: .lastBaseline) }
     
     @available(iOS 8.0, *)
     @objc(FirstBaseline)
-    public var firstBaseline: MisterFusion { return createMisterFusion(withAttribute: .firstBaseline) }
+    public var firstBaseline: MisterFusion { return createMisterFusion(with: .firstBaseline) }
     
     @available(iOS 8.0, *)
     @objc(LeftMargin)
-    public var leftMargin: MisterFusion { return createMisterFusion(withAttribute: .leftMargin) }
+    public var leftMargin: MisterFusion { return createMisterFusion(with: .leftMargin) }
     
     @available(iOS 8.0, *)
     @objc(RightMargin)
-    public var rightMargin: MisterFusion { return createMisterFusion(withAttribute: .rightMargin) }
+    public var rightMargin: MisterFusion { return createMisterFusion(with: .rightMargin) }
     
     @available(iOS 8.0, *)
     @objc(TopMargin)
-    public var topMargin: MisterFusion { return createMisterFusion(withAttribute: .topMargin) }
+    public var topMargin: MisterFusion { return createMisterFusion(with: .topMargin) }
     
     @available(iOS 8.0, *)
     @objc(BottomMargin)
-    public var bottomMargin: MisterFusion { return createMisterFusion(withAttribute: .bottomMargin) }
+    public var bottomMargin: MisterFusion { return createMisterFusion(with: .bottomMargin) }
     
     @available(iOS 8.0, *)
     @objc(LeadingMargin)
-    public var leadingMargin: MisterFusion { return createMisterFusion(withAttribute: .leadingMargin) }
+    public var leadingMargin: MisterFusion { return createMisterFusion(with: .leadingMargin) }
     
     @available(iOS 8.0, *)
     @objc(TrailingMargin)
-    public var trailingMargin: MisterFusion { return createMisterFusion(withAttribute: .trailingMargin) }
+    public var trailingMargin: MisterFusion { return createMisterFusion(with: .trailingMargin) }
     
     @available(iOS 8.0, *)
     @objc(CenterXWithinMargins)
-    public var centerXWithinMargins: MisterFusion { return createMisterFusion(withAttribute: .centerXWithinMargins) }
+    public var centerXWithinMargins: MisterFusion { return createMisterFusion(with: .centerXWithinMargins) }
     
     @available(iOS 8.0, *)
     @objc(CenterYWithinMargins)
-    public var centerYWithinMargins: MisterFusion { return createMisterFusion(withAttribute: .centerYWithinMargins) }
-    
-    fileprivate func createMisterFusion(withAttribute attribute: NSLayoutAttribute) -> MisterFusion {
+    public var centerYWithinMargins: MisterFusion { return createMisterFusion(with: .centerYWithinMargins) }
+
+    private func createMisterFusion(with attribute: NSLayoutAttribute) -> MisterFusion {
         return MisterFusion(item: self, attribute: attribute, relatedBy: nil, toItem: nil, toAttribute: nil, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: nil)
     }
 }
@@ -315,7 +321,7 @@ extension UIView {
 extension UIView {
     //MARK: - addConstraint()
     func _addLayoutConstraint(_ misterFusion: MisterFusion) -> NSLayoutConstraint? {
-        let item: UIView = misterFusion.item ?? self
+        let item: LayoutObject = misterFusion.item ?? self
         let traitCollection = UIApplication.shared.keyWindow?.traitCollection
         if let horizontalSizeClass = misterFusion.horizontalSizeClass
             , horizontalSizeClass != traitCollection?.horizontalSizeClass {
@@ -328,7 +334,7 @@ extension UIView {
         let attribute: NSLayoutAttribute = misterFusion.attribute ?? .notAnAttribute
         let relatedBy: NSLayoutRelation = misterFusion.relatedBy ?? .equal
         let toAttribute: NSLayoutAttribute = misterFusion.toAttribute ?? attribute
-        let toItem: UIView? = toAttribute == .notAnAttribute ? nil : misterFusion.toItem ?? self
+        let toItem: LayoutObject? = toAttribute == .notAnAttribute ? nil : misterFusion.toItem ?? self
         let multiplier: CGFloat = misterFusion.multiplier ?? 1
         let constant: CGFloat = misterFusion.constant ?? 0
         let constraint = NSLayoutConstraint(item: item, attribute: attribute, relatedBy: relatedBy, toItem: toItem, attribute: toAttribute, multiplier: multiplier, constant: constant)

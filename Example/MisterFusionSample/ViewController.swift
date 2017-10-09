@@ -27,11 +27,17 @@ class ViewController: UIViewController {
         redView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(redView)
         //Ordinary AutoLayout code
+        let toItem: AnyObject
+        if #available(iOS 11, *) {
+            toItem = view.safeAreaLayoutGuide
+        } else {
+            toItem = view
+        }
         view.addConstraints([
-            NSLayoutConstraint(item: redView, attribute: .top,    relatedBy: .equal, toItem: view, attribute: .top,    multiplier: 1,   constant: 10),
-            NSLayoutConstraint(item: redView, attribute: .right,  relatedBy: .equal, toItem: view, attribute: .right,  multiplier: 1,   constant: -10),
-            NSLayoutConstraint(item: redView, attribute: .left,   relatedBy: .equal, toItem: view, attribute: .left,   multiplier: 1,   constant: 10),
-            NSLayoutConstraint(item: redView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.5, constant: -15),
+            NSLayoutConstraint(item: redView, attribute: .top,    relatedBy: .equal, toItem: toItem, attribute: .top,    multiplier: 1,   constant: 10),
+            NSLayoutConstraint(item: redView, attribute: .right,  relatedBy: .equal, toItem: toItem, attribute: .right,  multiplier: 1,   constant: -10),
+            NSLayoutConstraint(item: redView, attribute: .left,   relatedBy: .equal, toItem: toItem, attribute: .left,   multiplier: 1,   constant: 10),
+            NSLayoutConstraint(item: redView, attribute: .height, relatedBy: .equal, toItem: toItem, attribute: .height, multiplier: 0.5, constant: -15),
         ])
         self.redView = redView
         
@@ -40,12 +46,21 @@ class ViewController: UIViewController {
         yellowView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(yellowView)
         //MisterFusion code
-        view.mf.addConstraints(
-            yellowView.top    |==| redView.bottom |+| 10,
-            yellowView.right  |==| view.right     |-| 10,
-            yellowView.left   |==| view.left      |+| 10,
-            yellowView.height |==| view.height    |/| 2 |-| 15
-        )
+        if #available(iOS 11, *) {
+            view.mf.addConstraints(
+                yellowView.top    |==| redView.bottom       |+| 10,
+                yellowView.right  |==| view.safeArea.right  |-| 10,
+                yellowView.left   |==| view.safeArea.left   |+| 10,
+                yellowView.height |==| view.safeArea.height |/| 2 |-| 15
+            )
+        } else {
+            view.mf.addConstraints(
+                yellowView.top    |==| redView.bottom |+| 10,
+                yellowView.right  |==| view.right     |-| 10,
+                yellowView.left   |==| view.left      |+| 10,
+                yellowView.height |==| view.height    |/| 2 |-| 15
+            )
+        }
         
         let greenView = UIView()
         greenView.backgroundColor = .green
