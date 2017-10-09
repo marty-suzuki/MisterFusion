@@ -20,8 +20,8 @@ MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 - [x] Simple And Concise Syntax
 - [x] Use in Swift and Objective-C
 - [x] Support Size Class
-- [x] Support Swift3.2
-- [x] Support SafeArea🎉 (since 2.3.1)
+- [x] Support Swift4
+- [x] Support SafeArea🎉 (Swift3.2 since 2.3.1, Swift4 since 3.1.0)
 
 #### MisterFusion Code for Swift
 

@@ -12,12 +12,12 @@ import UIKit
 extension UIView {
     //MARK: - addConstraint()
     @discardableResult
-    public func addLayoutConstraint(_ misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    @objc public func addLayoutConstraint(_ misterFusion: MisterFusion) -> NSLayoutConstraint? {
         return _addLayoutConstraint(misterFusion)
     }
     
     @discardableResult
-    public func addLayoutConstraints(_ misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+    @objc public func addLayoutConstraints(_ misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         return _addLayoutConstraints(misterFusions)
     }
     
@@ -28,12 +28,12 @@ extension UIView {
     
     //MARK: - addSubview()
     @discardableResult
-    public func addLayoutSubview(_ subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    @objc public func addLayoutSubview(_ subview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
         return _addLayoutSubview(subview, andConstraint: misterFusion)
     }
     
     @discardableResult
-    public func addLayoutSubview(_ subview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+    @objc public func addLayoutSubview(_ subview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         return _addLayoutSubview(subview, andConstraints: misterFusions)
     }
     
@@ -62,12 +62,12 @@ extension UIView {
     
     //MARK: - insertSubview(_ belowSubview:_)
     @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    @objc public func insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
         return _insertLayoutSubview(subview, belowSubview: siblingSubview, andConstraint: misterFusion)
     }
     
     @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+    @objc public func insertLayoutSubview(_ subview: UIView, belowSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         return _insertLayoutSubview(subview, belowSubview: siblingSubview, andConstraints: misterFusions)
     }
     
@@ -78,12 +78,12 @@ extension UIView {
     
     //MARK: - insertSubview(_ aboveSubview:_)
     @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
+    @objc public func insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraint misterFusion: MisterFusion) -> NSLayoutConstraint? {
         return _insertLayoutSubview(subview, aboveSubview: siblingSubview, andConstraint: misterFusion)
     }
 
     @discardableResult
-    public func insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+    @objc public func insertLayoutSubview(_ subview: UIView, aboveSubview siblingSubview: UIView, andConstraints misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
         return _insertLayoutSubview(subview, aboveSubview: siblingSubview, andConstraints: misterFusions)
     }
     

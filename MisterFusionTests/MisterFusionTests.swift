@@ -27,7 +27,7 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, .some(.notAnAttribute))
         XCTAssertEqual(constraint.constant, 90)
         XCTAssertEqual(constraint.multiplier, 1)
-        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
     }
 
     func testNotRelatedLessThanOrEqualConstant() {
@@ -47,7 +47,7 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, .some(.notAnAttribute))
         XCTAssertEqual(constraint.constant, 65)
         XCTAssertEqual(constraint.multiplier, 1)
-        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
     }
 
     func testCombination() {
@@ -55,7 +55,7 @@ class MisterFusionTests: XCTestCase {
         let subview = UIView()
         let constraints = superview.mf.addSubview(subview, andConstraints:
             subview.right |+| 0.5,
-            subview.right |==| superview.right |*| 1 |+| 0.5 |<>| UILayoutPriorityRequired
+            subview.right |==| superview.right |*| 1 |+| 0.5 |<>| UILayoutPriority.required
         )
 
         guard let firstConstraint = constraints.first, let secondConstraint = constraints.last else {
@@ -84,7 +84,7 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(firstConstraint.multiplier, 1)
         XCTAssertEqual(firstConstraint.multiplier, secondConstraint.multiplier)
 
-        XCTAssertEqual(firstConstraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(firstConstraint.priority, UILayoutPriority.required)
         XCTAssertEqual(firstConstraint.priority, secondConstraint.priority)
     }
 
@@ -108,7 +108,7 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.constant, 100)
         XCTAssertNotEqual(constraint.constant, 90)
         XCTAssertEqual(constraint.multiplier, 1)
-        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
     }
 
     func testIdentifier() {
@@ -128,7 +128,7 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, .some(.notAnAttribute))
         XCTAssertEqual(constraint.constant, 90)
         XCTAssertEqual(constraint.multiplier, 1)
-        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
         XCTAssertEqual(constraint.identifier, "TestSubViewHeight")
     }
 
@@ -149,7 +149,7 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, .some(.top))
         XCTAssertEqual(constraint.constant, 65)
         XCTAssertEqual(constraint.multiplier, 1)
-        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
     }
 
     func testBottomRelatedGreaterThanOrEqualConstant() {
@@ -169,7 +169,7 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, .some(.bottom))
         XCTAssertEqual(constraint.constant, 90)
         XCTAssertEqual(constraint.multiplier, 1)
-        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
     }
     
     @available(iOS 11, *)
@@ -190,6 +190,6 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, .some(.top))
         XCTAssertEqual(constraint.constant, 0)
         XCTAssertEqual(constraint.multiplier, 1)
-        XCTAssertEqual(constraint.priority, UILayoutPriorityRequired)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
     }
 }

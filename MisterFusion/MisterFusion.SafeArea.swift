@@ -86,68 +86,68 @@ extension SafeAreaExtension where Base: UIView {
 @available(iOS 11.0, *)
 extension UIView {
     @available(*, unavailable)
-    public var SafeAreaTop: MisterFusion { return safeArea.top }
+    @objc public var SafeAreaTop: MisterFusion { return safeArea.top }
     
     @available(*, unavailable)
-    public var SafeAreaRight: MisterFusion { return safeArea.right }
+    @objc public var SafeAreaRight: MisterFusion { return safeArea.right }
     
     @available(*, unavailable)
-    public var SafeAreaLeft: MisterFusion { return safeArea.left }
+    @objc public var SafeAreaLeft: MisterFusion { return safeArea.left }
     
     @available(*, unavailable)
-    public var SafeAreaBottom: MisterFusion { return safeArea.bottom }
+    @objc public var SafeAreaBottom: MisterFusion { return safeArea.bottom }
     
     @available(*, unavailable)
-    public var SafeAreaHeight: MisterFusion { return safeArea.height }
+    @objc public var SafeAreaHeight: MisterFusion { return safeArea.height }
     
     @available(*, unavailable)
-    public var SafeAreaWidth: MisterFusion { return safeArea.width }
+    @objc public var SafeAreaWidth: MisterFusion { return safeArea.width }
     
     @available(*, unavailable)
-    public var SafeAreaLeading: MisterFusion { return safeArea.leading }
+    @objc public var SafeAreaLeading: MisterFusion { return safeArea.leading }
     
     @available(*, unavailable)
-    public var SafeAreaTrailing: MisterFusion { return safeArea.trailing }
+    @objc public var SafeAreaTrailing: MisterFusion { return safeArea.trailing }
     
     @available(*, unavailable)
-    public var SafeAreaCenterX: MisterFusion { return safeArea.centerX }
+    @objc public var SafeAreaCenterX: MisterFusion { return safeArea.centerX }
     
     @available(*, unavailable)
-    public var SafeAreaCenterY: MisterFusion { return safeArea.centerY }
+    @objc public var SafeAreaCenterY: MisterFusion { return safeArea.centerY }
     
     @available(*, unavailable)
-    public var SafeAreaBaseline: MisterFusion { return safeArea.lastBaseline }
+    @objc public var SafeAreaBaseline: MisterFusion { return safeArea.lastBaseline }
     
     @available(*, unavailable)
-    public var SafeAreaNotAnAttribute: MisterFusion { return safeArea.notAnAttribute }
+    @objc public var SafeAreaNotAnAttribute: MisterFusion { return safeArea.notAnAttribute }
     
     @available(*, unavailable)
-    public var SafeAreaLastBaseline: MisterFusion { return safeArea.lastBaseline }
+    @objc public var SafeAreaLastBaseline: MisterFusion { return safeArea.lastBaseline }
     
     @available(*, unavailable)
-    public var SafeAreaFirstBaseline: MisterFusion { return safeArea.firstBaseline }
+    @objc public var SafeAreaFirstBaseline: MisterFusion { return safeArea.firstBaseline }
     
     @available(*, unavailable)
-    public var SafeAreaLeftMargin: MisterFusion { return safeArea.leftMargin }
+    @objc public var SafeAreaLeftMargin: MisterFusion { return safeArea.leftMargin }
     
     @available(*, unavailable)
-    public var SafeAreaRightMargin: MisterFusion { return safeArea.rightMargin }
+    @objc public var SafeAreaRightMargin: MisterFusion { return safeArea.rightMargin }
     
     @available(*, unavailable)
-    public var SafeAreaTopMargin: MisterFusion { return safeArea.topMargin }
+    @objc public var SafeAreaTopMargin: MisterFusion { return safeArea.topMargin }
     
     @available(*, unavailable)
-    public var SafeAreaBottomMargin: MisterFusion { return safeArea.bottomMargin }
+    @objc public var SafeAreaBottomMargin: MisterFusion { return safeArea.bottomMargin }
     
     @available(*, unavailable)
-    public var SafeAreaLeadingMargin: MisterFusion { return safeArea.leadingMargin }
+    @objc public var SafeAreaLeadingMargin: MisterFusion { return safeArea.leadingMargin }
     
     @available(*, unavailable)
-    public var SafeAreaTrailingMargin: MisterFusion { return safeArea.trailingMargin }
+    @objc public var SafeAreaTrailingMargin: MisterFusion { return safeArea.trailingMargin }
     
     @available(*, unavailable)
-    public var SafeAreaCenterXWithinMargins: MisterFusion { return safeArea.centerXWithinMargins }
+    @objc public var SafeAreaCenterXWithinMargins: MisterFusion { return safeArea.centerXWithinMargins }
     
     @available(*, unavailable)
-    public var SafeAreaCenterYWithinMargins: MisterFusion { return safeArea.centerYWithinMargins }
+    @objc public var SafeAreaCenterYWithinMargins: MisterFusion { return safeArea.centerYWithinMargins }
 }
