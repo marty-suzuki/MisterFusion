@@ -236,7 +236,7 @@ public func -=- (left: MisterFusion, right: String) -> MisterFusion {
     return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: left.relatedBy, toItem: left.toItem, toAttribute: left.toAttribute, multiplier: left.multiplier, constant: left.constant, priority: left.priority, horizontalSizeClass: left.horizontalSizeClass, verticalSizeClass: left.verticalSizeClass, identifier: right)
 }
 
-extension UIView {
+extension UIView: MisterFusionConvertible {
     @objc(Top)
     public var top: MisterFusion { return createMisterFusion(with: .top) }
     
@@ -266,10 +266,6 @@ extension UIView {
     
     @objc(CenterY)
     public var centerY: MisterFusion { return createMisterFusion(with: .centerY) }
-
-    @available(iOS, obsoleted: 7.0, renamed: "lastBaseline")
-    @objc(Baseline)
-    public var baseline: MisterFusion { return createMisterFusion(with: .lastBaseline) }
     
     @objc(NotAnAttribute)
     public var notAnAttribute: MisterFusion { return createMisterFusion(with: .notAnAttribute) }

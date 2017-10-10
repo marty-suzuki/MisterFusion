@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		375338321F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375338311F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift */; };
+		3761BF651F8D2C530028A318 /* MisterFusionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3761BF641F8D2C530028A318 /* MisterFusionConvertible.swift */; };
 		EDB99A2E1F42C6A10013E6CD /* MisterFusion.h in Headers */ = {isa = PBXBuildFile; fileRef = EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDB99A381F42C6E50013E6CD /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A341F42C6E50013E6CD /* Array+MisterFusion.swift */; };
 		EDB99A391F42C6E50013E6CD /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB99A351F42C6E50013E6CD /* Deprecated.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		375338311F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisterFusion.SafeArea.swift; sourceTree = "<group>"; };
+		3761BF641F8D2C530028A318 /* MisterFusionConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisterFusionConvertible.swift; sourceTree = "<group>"; };
 		EDB99A291F42C6A00013E6CD /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MisterFusion.h; sourceTree = "<group>"; };
 		EDB99A2D1F42C6A00013E6CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				EDB99A2C1F42C6A00013E6CD /* MisterFusion.h */,
 				375338311F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift */,
 				EDB99A2D1F42C6A00013E6CD /* Info.plist */,
+				3761BF641F8D2C530028A318 /* MisterFusionConvertible.swift */,
 			);
 			path = MisterFusion;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				EDB99A391F42C6E50013E6CD /* Deprecated.swift in Sources */,
 				EDB99A3A1F42C6E50013E6CD /* MisterFusion.swift in Sources */,
 				EDB99A381F42C6E50013E6CD /* Array+MisterFusion.swift in Sources */,
+				3761BF651F8D2C530028A318 /* MisterFusionConvertible.swift in Sources */,
 				375338321F8BEA5E00E60B4C /* MisterFusion.SafeArea.swift in Sources */,
 				EDB99A3B1F42C6E50013E6CD /* MisterFusionExtension.swift in Sources */,
 			);

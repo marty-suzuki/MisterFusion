@@ -46,21 +46,12 @@ class ViewController: UIViewController {
         yellowView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(yellowView)
         //MisterFusion code
-        if #available(iOS 11, *) {
-            view.mf.addConstraints(
-                yellowView.top    |==| redView.bottom       |+| 10,
-                yellowView.right  |==| view.safeArea.right  |-| 10,
-                yellowView.left   |==| view.safeArea.left   |+| 10,
-                yellowView.height |==| view.safeArea.height |/| 2 |-| 15
-            )
-        } else {
-            view.mf.addConstraints(
-                yellowView.top    |==| redView.bottom |+| 10,
-                yellowView.right  |==| view.right     |-| 10,
-                yellowView.left   |==| view.left      |+| 10,
-                yellowView.height |==| view.height    |/| 2 |-| 15
-            )
-        }
+        view.mf.addConstraints(
+            yellowView.top    |==| redView.bottom       |+| 10,
+            yellowView.right  |==| view.safeArea.right  |-| 10,
+            yellowView.left   |==| view.safeArea.left   |+| 10,
+            yellowView.height |==| view.safeArea.height |/| 2 |-| 15
+        )
         
         let greenView = UIView()
         greenView.backgroundColor = .green
