@@ -48,21 +48,12 @@
     yellowView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:yellowView];
     //MisterFusion code
-    if (@available(iOS 11.0, *)) {
-        [self.view addLayoutConstraints:@[
-            yellowView.Top   .Equal(redView.Bottom)          .Constant(10.0f),
-            yellowView.Right .Equal(self.view.SafeAreaRight) .Constant(-10.0f),
-            yellowView.Left  .Equal(self.view.SafeAreaLeft)  .Constant(10.0f),
-            yellowView.Height.Equal(self.view.SafeAreaHeight).Multiplier(0.5f).Constant(-15.0f)
-        ]];
-    } else {
-        [self.view addLayoutConstraints:@[
-            yellowView.Top   .Equal(redView.Bottom)  .Constant(10.0f),
-            yellowView.Right .Equal(self.view.Right) .Constant(-10.0f),
-            yellowView.Left  .Equal(self.view.Left)  .Constant(10.0f),
-            yellowView.Height.Equal(self.view.Height).Multiplier(0.5f).Constant(-15.0f)
-        ]];
-    }
+    [self.view addLayoutConstraints:@[
+        yellowView.Top   .Equal(redView.Bottom)          .Constant(10.0f),
+        yellowView.Right .Equal(self.view.SafeAreaRight) .Constant(-10.0f),
+        yellowView.Left  .Equal(self.view.SafeAreaLeft)  .Constant(10.0f),
+        yellowView.Height.Equal(self.view.SafeAreaHeight).Multiplier(0.5f).Constant(-15.0f)
+    ]];
     
     UIView *greenView = [UIView new];
     greenView.backgroundColor = [UIColor greenColor];

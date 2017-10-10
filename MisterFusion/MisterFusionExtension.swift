@@ -20,8 +20,8 @@ public extension MisterFusionCompatible {
 }
 
 public struct MisterFusionExtension<Base> {
-    public let base: Base
-    public init(_ base: Base) {
+    let base: Base
+    init(_ base: Base) {
         self.base = base
     }
 }

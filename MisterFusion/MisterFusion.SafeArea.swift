@@ -8,31 +8,26 @@
 
 import UIKit
 
-@available(iOS 11.0, *)
 public protocol SafeAreaCompatible {
     associatedtype SafeAreaCompatibleType
     var safeArea: SafeAreaCompatibleType { get }
 }
 
-@available(iOS 11.0, *)
 public extension SafeAreaCompatible {
     public var safeArea: SafeAreaExtension<Self> {
         return SafeAreaExtension(self)
     }
 }
 
-@available(iOS 11.0, *)
 public struct SafeAreaExtension<Base> {
-    public let base: Base
-    public init(_ base: Base) {
+    let base: Base
+    init(_ base: Base) {
         self.base = base
     }
 }
 
-@available(iOS 11.0, *)
 extension UIView: SafeAreaCompatible {}
 
-@available(iOS 11.0, *)
 extension SafeAreaExtension where Base: UIView {
     public var top: MisterFusion { return createMisterFusion(with: .top) }
     
@@ -79,7 +74,13 @@ extension SafeAreaExtension where Base: UIView {
     public var centerYWithinMargins: MisterFusion { return createMisterFusion(with: .centerYWithinMargins) }
     
     private func createMisterFusion(with attribute: NSLayoutAttribute) -> MisterFusion {
-        return MisterFusion(item: base.safeAreaLayoutGuide, attribute: attribute, relatedBy: nil, toItem: nil, toAttribute: nil, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: nil)
+        let item: LayoutObject
+        if #available(iOS 11, *) {
+            item = base.safeAreaLayoutGuide
+        } else {
+            item = base
+        }
+        return MisterFusion(item: item, attribute: attribute, relatedBy: nil, toItem: nil, toAttribute: nil, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: nil)
     }
 }
 
