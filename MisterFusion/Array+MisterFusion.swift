@@ -35,7 +35,7 @@ extension NSArray {
     @objc(FirstItem)
     public var firstItem: (UIView) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
-            return { _ in return [] }
+            return { _ in [] }
         }
         return { view in
             return array.filter { $0.firstItem as? UIView == view } as NSArray
@@ -46,7 +46,7 @@ extension NSArray {
     @objc(FirstAttribute)
     public var firstAttribute: (NSLayoutAttribute) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
-            return { _ in return [] }
+            return { _ in [] }
         }
         return { attribute in
             return array.filter { $0.firstAttribute == attribute } as NSArray
@@ -57,7 +57,7 @@ extension NSArray {
     @objc(SecondItem)
     public var secondItem: (UIView) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
-            return { _ in return [] }
+            return { _ in [] }
         }
         return { view in
             return array.filter { $0.secondItem as? UIView == view } as NSArray
@@ -68,7 +68,7 @@ extension NSArray {
     @objc(SecondAttribute)
     public var secondAttribute: (NSLayoutAttribute) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
-            return { _ in return [] }
+            return { _ in [] }
         }
         return { attribute in
             return array.filter { $0.secondAttribute == attribute } as NSArray
@@ -79,7 +79,7 @@ extension NSArray {
     @objc(Reration)
     public var reration: (NSLayoutRelation) -> NSArray {
         guard let array = self as? [NSLayoutConstraint] else {
-            return { _ in return [] }
+            return { _ in [] }
         }
         return { relation in
             return array.filter { $0.relation == relation } as NSArray
