@@ -8,27 +8,20 @@
 
 import UIKit
 
-public protocol MisterFusionCompatible {
-    associatedtype MisterFusionCompatibleType
-    var mf: MisterFusionCompatibleType { get }
-}
-
-public extension MisterFusionCompatible {
-    public var mf: MisterFusionExtension<Self> {
-        return MisterFusionExtension(self)
-    }
-}
-
-public struct MisterFusionExtension<Base> {
-    let base: Base
-    init(_ base: Base) {
+public struct MisterFusionExtension {
+    let base: UIView
+    init(_ base: UIView) {
         self.base = base
     }
 }
 
-extension UIView: MisterFusionCompatible {}
+extension UIView {
+    public var mf: MisterFusionExtension {
+        return MisterFusionExtension(self)
+    }
+}
 
-extension MisterFusionExtension where Base: UIView {
+extension MisterFusionExtension {
     //MARK: - addConstraint()
     @discardableResult
     public func addConstraint(_ misterFusion: MisterFusion) -> NSLayoutConstraint? {

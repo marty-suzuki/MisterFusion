@@ -8,27 +8,20 @@
 
 import UIKit
 
-public protocol SafeAreaCompatible {
-    associatedtype SafeAreaCompatibleType
-    var safeArea: SafeAreaCompatibleType { get }
-}
-
-public extension SafeAreaCompatible {
-    public var safeArea: SafeAreaExtension<Self> {
-        return SafeAreaExtension(self)
-    }
-}
-
-public struct SafeAreaExtension<Base> {
-    let base: Base
-    init(_ base: Base) {
+public struct SafeAreaExtension {
+    let base: UIView
+    init(_ base: UIView) {
         self.base = base
     }
 }
 
-extension UIView: SafeAreaCompatible {}
+extension UIView {
+    public var safeArea: SafeAreaExtension {
+        return SafeAreaExtension(self)
+    }
+}
 
-extension SafeAreaExtension where Base: UIView {
+extension SafeAreaExtension: MisterFusionConvertible {
     public var top: MisterFusion { return createMisterFusion(with: .top) }
     
     public var right: MisterFusion { return createMisterFusion(with: .right) }
@@ -48,8 +41,6 @@ extension SafeAreaExtension where Base: UIView {
     public var centerX: MisterFusion { return createMisterFusion(with: .centerX) }
     
     public var centerY: MisterFusion { return createMisterFusion(with: .centerY) }
-    
-    public var baseline: MisterFusion { return createMisterFusion(with: .lastBaseline) }
     
     public var notAnAttribute: MisterFusion { return createMisterFusion(with: .notAnAttribute) }
     
@@ -84,7 +75,6 @@ extension SafeAreaExtension where Base: UIView {
     }
 }
 
-@available(iOS 11.0, *)
 extension UIView {
     @available(*, unavailable)
     @objc public var SafeAreaTop: MisterFusion { return safeArea.top }
@@ -115,9 +105,6 @@ extension UIView {
     
     @available(*, unavailable)
     @objc public var SafeAreaCenterY: MisterFusion { return safeArea.centerY }
-    
-    @available(*, unavailable)
-    @objc public var SafeAreaBaseline: MisterFusion { return safeArea.lastBaseline }
     
     @available(*, unavailable)
     @objc public var SafeAreaNotAnAttribute: MisterFusion { return safeArea.notAnAttribute }

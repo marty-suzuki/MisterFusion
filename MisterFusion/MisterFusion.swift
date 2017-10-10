@@ -236,7 +236,7 @@ public func -=- (left: MisterFusion, right: String) -> MisterFusion {
     return MisterFusion(item: left.item, attribute: left.attribute, relatedBy: left.relatedBy, toItem: left.toItem, toAttribute: left.toAttribute, multiplier: left.multiplier, constant: left.constant, priority: left.priority, horizontalSizeClass: left.horizontalSizeClass, verticalSizeClass: left.verticalSizeClass, identifier: right)
 }
 
-extension UIView {
+extension UIView: MisterFusionConvertible {    
     @objc(Top)
     public var top: MisterFusion { return createMisterFusion(with: .top) }
     
@@ -266,10 +266,6 @@ extension UIView {
     
     @objc(CenterY)
     public var centerY: MisterFusion { return createMisterFusion(with: .centerY) }
-
-    @available(iOS, obsoleted: 7.0, renamed: "lastBaseline")
-    @objc(Baseline)
-    public var baseline: MisterFusion { return createMisterFusion(with: .lastBaseline) }
     
     @objc(NotAnAttribute)
     public var notAnAttribute: MisterFusion { return createMisterFusion(with: .notAnAttribute) }
@@ -277,39 +273,30 @@ extension UIView {
     @objc(LastBaseline)
     public var lastBaseline: MisterFusion { return createMisterFusion(with: .lastBaseline) }
     
-    @available(iOS 8.0, *)
     @objc(FirstBaseline)
     public var firstBaseline: MisterFusion { return createMisterFusion(with: .firstBaseline) }
     
-    @available(iOS 8.0, *)
     @objc(LeftMargin)
     public var leftMargin: MisterFusion { return createMisterFusion(with: .leftMargin) }
     
-    @available(iOS 8.0, *)
     @objc(RightMargin)
     public var rightMargin: MisterFusion { return createMisterFusion(with: .rightMargin) }
     
-    @available(iOS 8.0, *)
     @objc(TopMargin)
     public var topMargin: MisterFusion { return createMisterFusion(with: .topMargin) }
     
-    @available(iOS 8.0, *)
     @objc(BottomMargin)
     public var bottomMargin: MisterFusion { return createMisterFusion(with: .bottomMargin) }
     
-    @available(iOS 8.0, *)
     @objc(LeadingMargin)
     public var leadingMargin: MisterFusion { return createMisterFusion(with: .leadingMargin) }
     
-    @available(iOS 8.0, *)
     @objc(TrailingMargin)
     public var trailingMargin: MisterFusion { return createMisterFusion(with: .trailingMargin) }
     
-    @available(iOS 8.0, *)
     @objc(CenterXWithinMargins)
     public var centerXWithinMargins: MisterFusion { return createMisterFusion(with: .centerXWithinMargins) }
     
-    @available(iOS 8.0, *)
     @objc(CenterYWithinMargins)
     public var centerYWithinMargins: MisterFusion { return createMisterFusion(with: .centerYWithinMargins) }
 
@@ -338,7 +325,7 @@ extension UIView {
         let multiplier: CGFloat = misterFusion.multiplier ?? 1
         let constant: CGFloat = misterFusion.constant ?? 0
         let constraint = NSLayoutConstraint(item: item, attribute: attribute, relatedBy: relatedBy, toItem: toItem, attribute: toAttribute, multiplier: multiplier, constant: constant)
-        constraint.priority = misterFusion.priority ?? UILayoutPriority.required
+        constraint.priority = misterFusion.priority ?? .required
         constraint.identifier = misterFusion.identifier
         addConstraint(constraint)
         return constraint

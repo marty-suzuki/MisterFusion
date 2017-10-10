@@ -251,26 +251,48 @@ override func traitCollectionDidChange(previousTraitCollection: UITraitCollectio
 You can use `view.safeArea.top` and so on. This is supported Safe Area.
 
 ```swift
-if #available(iOS 11, *) {
-    view.mf.addConstraints(
-        yellowView.top    |==| redView.bottom       |+| 10,
-        yellowView.right  |==| view.safeArea.right  |-| 10,
-        yellowView.left   |==| view.safeArea.left   |+| 10,
-        yellowView.height |==| view.safeArea.height |/| 2 |-| 15
-    )
-} else {
-    view.mf.addConstraints(
-        yellowView.top    |==| redView.bottom |+| 10,
-        yellowView.right  |==| view.right     |-| 10,
-        yellowView.left   |==| view.left      |+| 10,
-        yellowView.height |==| view.height    |/| 2 |-| 15
-    )
+view.mf.addConstraints(
+    yellowView.top    |==| redView.bottom       |+| 10,
+    yellowView.right  |==| view.safeArea.right  |-| 10,
+    yellowView.left   |==| view.safeArea.left   |+| 10,
+    yellowView.height |==| view.safeArea.height |/| 2 |-| 15
+)
+```
+If OS version is below iOS 11, `view.safeArea.top` returns `view.top` internally.
+
+![](./Images/iphone_x.gif)
+
+Those are accessible safeArea properties.
+
+```swift
+extension UIView {
+    public var safeArea: SafeAreaExtension { get }
+}
+
+extension SafeAreaExtension where Base: UIView {
+    public var top: MisterFusion { get }
+    public var right: MisterFusion { get }
+    public var left: MisterFusion { get }
+    public var bottom: MisterFusion { get }
+    public var height: MisterFusion { get }
+    public var width: MisterFusion { get }
+    public var leading: MisterFusion { get }
+    public var trailing: MisterFusion { get }
+    public var centerX: MisterFusion { get }
+    public var centerY: MisterFusion { get }
+    public var notAnAttribute: MisterFusion { get }
+    public var lastBaseline: MisterFusion { get }
+    public var firstBaseline: MisterFusion { get }
+    public var leftMargin: MisterFusion { get }
+    public var rightMargin: MisterFusion { get }
+    public var topMargin: MisterFusion { get }
+    public var bottomMargin: MisterFusion { get }
+    public var leadingMargin: MisterFusion { get }
+    public var trailingMargin: MisterFusion { get }
+    public var centerXWithinMargins: MisterFusion { get }
+    public var centerYWithinMargins: MisterFusion { get }
 }
 ```
-
-![](./Images/safearea_port.png)
-
-![](./Images/safearea_land.png)
 
 ## For Objective-C
 
@@ -357,34 +379,50 @@ This is an example Regular, Compact size for iPhone6s+.
 
 #### Safe Area
 
-You can use `view.SafeAreaTop` and so on. This is supported Safe Area.
+You can use `self.view.SafeAreaTop` and so on. This is supported Safe Area.
 
 ```objective-c
-if (@available(iOS 11.0, *)) {
-    [self.view addLayoutConstraints:@[
-        yellowView.Top   .Equal(redView.Bottom)          .Constant(10.0f),
-        yellowView.Right .Equal(self.view.SafeAreaRight) .Constant(-10.0f),
-        yellowView.Left  .Equal(self.view.SafeAreaLeft)  .Constant(10.0f),
-        yellowView.Height.Equal(self.view.SafeAreaHeight).Multiplier(0.5f).Constant(-15.0f)
-    ]];
-} else {
-    [self.view addLayoutConstraints:@[
-        yellowView.Top   .Equal(redView.Bottom)  .Constant(10.0f),
-        yellowView.Right .Equal(self.view.Right) .Constant(-10.0f),
-        yellowView.Left  .Equal(self.view.Left)  .Constant(10.0f),
-        yellowView.Height.Equal(self.view.Height).Multiplier(0.5f).Constant(-15.0f)
-    ]];
-}
+[self.view addLayoutConstraints:@[
+    yellowView.Top   .Equal(redView.Bottom)          .Constant(10.0f),
+    yellowView.Right .Equal(self.view.SafeAreaRight) .Constant(-10.0f),
+    yellowView.Left  .Equal(self.view.SafeAreaLeft)  .Constant(10.0f),
+    yellowView.Height.Equal(self.view.SafeAreaHeight).Multiplier(0.5f).Constant(-15.0f)
+]];
 ```
 
-![](./Images/safearea_port.png)
+If OS version is below iOS 11, `self.view.SafeAreaTop` returns `self.view.Top` internally.
 
-![](./Images/safearea_land.png)
+![](./Images/iphone_x.gif)
 
+Those are accessible safeArea properties.
+
+```objective-c
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaTop;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaRight;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaLeft;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaBottom;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaHeight;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaWidth;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaLeading;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaTrailing;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaCenterX;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaCenterY;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaNotAnAttribute;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaLastBaseline;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaFirstBaseline;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaLeftMargin;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaRightMargin;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaTopMargin;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaBottomMargin;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaLeadingMargin;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaTrailingMargin;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaCenterXWithinMargins;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaCenterYWithinMargins;
+```
 
 ## Requirements
 
-- Xcode 8.0 or greater
+- Xcode 9 or greater
 - iOS 8.0 or greater
 
 ## Author
