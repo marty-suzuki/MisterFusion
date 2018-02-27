@@ -196,3 +196,11 @@ extension UIViewControllerSafeArea {
         return MisterFusion(item: item, attribute: attribute, relatedBy: nil, toItem: nil, toAttribute: nil, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: nil)
     }
 }
+
+extension UIViewController {
+    @available(*, unavailable)
+    @objc public var SafeAreaTop: MisterFusion { return safeArea.top }
+
+    @available(*, unavailable)
+    @objc public var SafeAreaBottom: MisterFusion { return safeArea.bottom }
+}
