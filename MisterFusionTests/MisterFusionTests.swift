@@ -171,8 +171,7 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
     }
-    
-    @available(iOS 11, *)
+
     func testSafeAreaTopRelatedEqualConstant() {
         let superview = UIView()
         let subview = UIView()
@@ -182,12 +181,66 @@ class MisterFusionTests: XCTestCase {
                 XCTFail("must return NSLayoutConstraint")
                 return
         }
-        
-        XCTAssertEqual(constraint.firstItem as? UILayoutGuide, superview.safeAreaLayoutGuide)
+
+        if #available(iOS 11, *) {
+            XCTAssertEqual(constraint.firstItem as? UILayoutGuide, superview.safeAreaLayoutGuide)
+        } else {
+            XCTAssertEqual(constraint.firstItem as? UIView, superview)
+        }
         XCTAssertEqual(constraint.firstAttribute, .some(.top))
         XCTAssertEqual(constraint.relation, .some(.equal))
         XCTAssertEqual(constraint.secondItem as? UIView, subview)
         XCTAssertEqual(constraint.secondAttribute, .some(.top))
+        XCTAssertEqual(constraint.constant, 0)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
+    }
+
+    func testViewControllerSafeAreaTopRelatedEqualConstant() {
+        let viewController = UIViewController()
+        let subview = UIView()
+        guard let constraint = viewController.view.mf.addSubview(subview, andConstraint:
+            viewController.safeArea.top |==| subview.top
+            ) else {
+                XCTFail("must return NSLayoutConstraint")
+                return
+        }
+
+        if #available(iOS 11, *) {
+            XCTAssertEqual(constraint.firstItem as? UILayoutGuide, viewController.view.safeAreaLayoutGuide)
+            XCTAssertEqual(constraint.firstAttribute, .some(.top))
+        } else {
+            XCTAssertEqual((constraint.firstItem as? UILayoutSupport)?.bottomAnchor, viewController.topLayoutGuide.bottomAnchor)
+            XCTAssertEqual(constraint.firstAttribute, .some(.bottom))
+        }
+        XCTAssertEqual(constraint.relation, .some(.equal))
+        XCTAssertEqual(constraint.secondItem as? UIView, subview)
+        XCTAssertEqual(constraint.secondAttribute, .some(.top))
+        XCTAssertEqual(constraint.constant, 0)
+        XCTAssertEqual(constraint.multiplier, 1)
+        XCTAssertEqual(constraint.priority, UILayoutPriority.required)
+    }
+
+    func testViewControllerSafeAreaBottomRelatedEqualConstant() {
+        let viewController = UIViewController()
+        let subview = UIView()
+        guard let constraint = viewController.view.mf.addSubview(subview, andConstraint:
+            viewController.safeArea.bottom |==| subview.bottom
+            ) else {
+                XCTFail("must return NSLayoutConstraint")
+                return
+        }
+
+        if #available(iOS 11, *) {
+            XCTAssertEqual(constraint.firstItem as? UILayoutGuide, viewController.view.safeAreaLayoutGuide)
+            XCTAssertEqual(constraint.firstAttribute, .some(.bottom))
+        } else {
+            XCTAssertEqual((constraint.firstItem as? UILayoutSupport)?.topAnchor, viewController.bottomLayoutGuide.topAnchor)
+            XCTAssertEqual(constraint.firstAttribute, .some(.top))
+        }
+        XCTAssertEqual(constraint.relation, .some(.equal))
+        XCTAssertEqual(constraint.secondItem as? UIView, subview)
+        XCTAssertEqual(constraint.secondAttribute, .some(.bottom))
         XCTAssertEqual(constraint.constant, 0)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)

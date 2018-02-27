@@ -8,7 +8,9 @@
 
 import UIKit
 
-public struct SafeAreaExtension {
+// MARK: - UIView
+
+public struct UIViewSafeArea {
     let base: UIView
     init(_ base: UIView) {
         self.base = base
@@ -16,12 +18,12 @@ public struct SafeAreaExtension {
 }
 
 extension UIView {
-    public var safeArea: SafeAreaExtension {
-        return SafeAreaExtension(self)
+    public var safeArea: UIViewSafeArea {
+        return UIViewSafeArea(self)
     }
 }
 
-extension SafeAreaExtension: MisterFusionConvertible {
+extension UIViewSafeArea: MisterFusionConvertible {
     public var top: MisterFusion { return createMisterFusion(with: .top) }
     
     public var right: MisterFusion { return createMisterFusion(with: .right) }
@@ -65,7 +67,7 @@ extension SafeAreaExtension: MisterFusionConvertible {
     public var centerYWithinMargins: MisterFusion { return createMisterFusion(with: .centerYWithinMargins) }
     
     private func createMisterFusion(with attribute: NSLayoutAttribute) -> MisterFusion {
-        let item: LayoutObject
+        let item: _LayoutObject
         if #available(iOS 11, *) {
             item = base.safeAreaLayoutGuide
         } else {
@@ -138,4 +140,67 @@ extension UIView {
     
     @available(*, unavailable)
     @objc public var SafeAreaCenterYWithinMargins: MisterFusion { return safeArea.centerYWithinMargins }
+}
+
+// MARK: - UIViewController
+
+public struct UIViewControllerSafeArea {
+    let base: UIViewController
+    init(_ base: UIViewController) {
+        self.base = base
+    }
+}
+
+extension UIViewController {
+    public var safeArea: UIViewControllerSafeArea {
+        return UIViewControllerSafeArea(self)
+    }
+}
+
+extension UIViewControllerSafeArea {
+    class _LayoutGuideProxy: _LayoutObject {
+        let rawValue: Any
+
+        init(_ layoutGuide: UILayoutSupport) {
+            self.rawValue = layoutGuide
+        }
+    }
+
+    public var top: MisterFusion {
+        let item: _LayoutObject
+        let attribute: NSLayoutAttribute
+        if #available(iOS 11, *) {
+            item = base.view.safeAreaLayoutGuide
+            attribute = .top
+        } else {
+            item = _LayoutGuideProxy(base.topLayoutGuide)
+            attribute = .bottom
+        }
+        return createMisterFusion(with: item, and: attribute)
+    }
+
+    public var bottom: MisterFusion {
+        let item: _LayoutObject
+        let attribute: NSLayoutAttribute
+        if #available(iOS 11, *) {
+            item = base.view.safeAreaLayoutGuide
+            attribute = .bottom
+        } else {
+            item = _LayoutGuideProxy(base.bottomLayoutGuide)
+            attribute = .top
+        }
+        return createMisterFusion(with: item, and: attribute)
+    }
+
+    private func createMisterFusion(with item: _LayoutObject, and attribute: NSLayoutAttribute) -> MisterFusion {
+        return MisterFusion(item: item, attribute: attribute, relatedBy: nil, toItem: nil, toAttribute: nil, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: nil)
+    }
+}
+
+extension UIViewController {
+    @available(*, unavailable)
+    @objc public var SafeAreaTop: MisterFusion { return safeArea.top }
+
+    @available(*, unavailable)
+    @objc public var SafeAreaBottom: MisterFusion { return safeArea.bottom }
 }

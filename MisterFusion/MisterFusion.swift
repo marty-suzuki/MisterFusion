@@ -8,18 +8,24 @@
 
 import UIKit
 
-protocol LayoutObject: class {}
+protocol _LayoutObject: class {
+    var rawValue: Any { get }
+}
 
-extension UIView: LayoutObject {}
+extension UIView: _LayoutObject {
+    var rawValue: Any { return self }
+}
 
 @available(iOS 9.0, *)
-extension UILayoutGuide: LayoutObject {}
+extension UILayoutGuide: _LayoutObject {
+    var rawValue: Any { return self }
+}
 
 public class MisterFusion: NSObject {
-    fileprivate let item: LayoutObject?
+    fileprivate let item: _LayoutObject?
     fileprivate let attribute: NSLayoutAttribute?
     fileprivate let relatedBy: NSLayoutRelation?
-    fileprivate let toItem: LayoutObject?
+    fileprivate let toItem: _LayoutObject?
     fileprivate let toAttribute: NSLayoutAttribute?
     fileprivate let multiplier: CGFloat?
     fileprivate let constant: CGFloat?
@@ -30,10 +36,10 @@ public class MisterFusion: NSObject {
     
     override open var description: String {
         return "\(super.description)\n" +
-               "item               : \(item as LayoutObject?)\n" +
+               "item               : \(item as _LayoutObject?)\n" +
                "attribute          : \(attribute as NSLayoutAttribute?))\n" +
                "relatedBy          : \(relatedBy as NSLayoutRelation?))\n" +
-               "toItem             : \(toItem as LayoutObject?)\n" +
+               "toItem             : \(toItem as _LayoutObject?)\n" +
                "toAttribute        : \(toAttribute as NSLayoutAttribute?))\n" +
                "multiplier         : \(multiplier as CGFloat?)\n" +
                "constant           : \(constant as CGFloat?)\n" +
@@ -42,7 +48,7 @@ public class MisterFusion: NSObject {
                "verticalSizeClass  : \(verticalSizeClass as UIUserInterfaceSizeClass?)\n"
     }
     
-    init(item: LayoutObject?, attribute: NSLayoutAttribute?, relatedBy: NSLayoutRelation?, toItem: LayoutObject?, toAttribute: NSLayoutAttribute?, multiplier: CGFloat?, constant: CGFloat?, priority: UILayoutPriority?, horizontalSizeClass: UIUserInterfaceSizeClass?, verticalSizeClass: UIUserInterfaceSizeClass?, identifier: String?) {
+    init(item: _LayoutObject?, attribute: NSLayoutAttribute?, relatedBy: NSLayoutRelation?, toItem: _LayoutObject?, toAttribute: NSLayoutAttribute?, multiplier: CGFloat?, constant: CGFloat?, priority: UILayoutPriority?, horizontalSizeClass: UIUserInterfaceSizeClass?, verticalSizeClass: UIUserInterfaceSizeClass?, identifier: String?) {
         self.item = item
         self.attribute = attribute
         self.relatedBy = relatedBy
@@ -308,7 +314,7 @@ extension UIView: MisterFusionConvertible {
 extension UIView {
     //MARK: - addConstraint()
     func _addLayoutConstraint(_ misterFusion: MisterFusion) -> NSLayoutConstraint? {
-        let item: LayoutObject = misterFusion.item ?? self
+        let item: _LayoutObject = misterFusion.item ?? self
         let traitCollection = UIApplication.shared.keyWindow?.traitCollection
         if let horizontalSizeClass = misterFusion.horizontalSizeClass
             , horizontalSizeClass != traitCollection?.horizontalSizeClass {
@@ -321,10 +327,10 @@ extension UIView {
         let attribute: NSLayoutAttribute = misterFusion.attribute ?? .notAnAttribute
         let relatedBy: NSLayoutRelation = misterFusion.relatedBy ?? .equal
         let toAttribute: NSLayoutAttribute = misterFusion.toAttribute ?? attribute
-        let toItem: LayoutObject? = toAttribute == .notAnAttribute ? nil : misterFusion.toItem ?? self
+        let toItem: _LayoutObject? = toAttribute == .notAnAttribute ? nil : misterFusion.toItem ?? self
         let multiplier: CGFloat = misterFusion.multiplier ?? 1
         let constant: CGFloat = misterFusion.constant ?? 0
-        let constraint = NSLayoutConstraint(item: item, attribute: attribute, relatedBy: relatedBy, toItem: toItem, attribute: toAttribute, multiplier: multiplier, constant: constant)
+        let constraint = NSLayoutConstraint(item: item.rawValue, attribute: attribute, relatedBy: relatedBy, toItem: toItem?.rawValue, attribute: toAttribute, multiplier: multiplier, constant: constant)
         constraint.priority = misterFusion.priority ?? .required
         constraint.identifier = misterFusion.identifier
         addConstraint(constraint)

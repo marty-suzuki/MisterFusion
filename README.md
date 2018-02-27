@@ -267,10 +267,10 @@ Those are accessible safeArea properties.
 
 ```swift
 extension UIView {
-    public var safeArea: SafeAreaExtension { get }
+    public var safeArea: UIViewSafeArea { get }
 }
 
-extension SafeAreaExtension where Base: UIView {
+extension UIViewSafeArea {
     public var top: MisterFusion { get }
     public var right: MisterFusion { get }
     public var left: MisterFusion { get }
@@ -292,6 +292,25 @@ extension SafeAreaExtension where Base: UIView {
     public var trailingMargin: MisterFusion { get }
     public var centerXWithinMargins: MisterFusion { get }
     public var centerYWithinMargins: MisterFusion { get }
+}
+```
+
+In ViewController, you can use `self.safeArea.top` and `self.safeArea.bottom`.
+
+Greater than or equal to iOS 11, `self.safeArea.top` returns `self.view.safeAreaLayoutGuide.topAnchor`.
+And `self.safeArea.bottom` returns, `self.view.safeAreaLayoutGuide.bottomAnchor`.
+
+Less then or equal to iOS 10, `self.safeArea.top` returns 'self.topLayoutGuide.bottomAnchor'.
+And `self.safeArea.bottom` returns, `self.bottomLayoutGuide.topAnchor`.
+
+```swift
+extension UIViewController {
+    public var safeArea: UIViewControllerSafeArea { get }
+}
+
+extension UIViewControllerSafeArea {
+    public var top: MisterFusion { get }
+    public var bottom: MisterFusion { get }
 }
 ```
 
@@ -398,6 +417,7 @@ If OS version is below iOS 11, `self.view.SafeAreaTop` returns `self.view.Top` i
 Those are accessible safeArea properties.
 
 ```objective-c
+// UIView
 @property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaTop;
 @property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaRight;
 @property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaLeft;
@@ -419,6 +439,20 @@ Those are accessible safeArea properties.
 @property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaTrailingMargin;
 @property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaCenterXWithinMargins;
 @property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaCenterYWithinMargins;
+```
+
+In ViewController, you can use `self.SafeAreaTop` and `self.SafeAreaBottom`.
+
+Greater than or equal to iOS 11, `self.SafeAreaTop` returns `self.view.safeAreaLayoutGuide.topAnchor`.
+And `self.SafeAreaBottom` returns, `self.view.safeAreaLayoutGuide.bottomAnchor`.
+
+Less then or equal to iOS 10, `self.SafeAreaTop` returns 'self.topLayoutGuide.bottomAnchor'.
+And `self.SafeAreaBottom` returns, `self.bottomLayoutGuide.topAnchor`.
+
+```objective-c
+// UIViewController
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaTop;
+@property (nonatomic, readonly, strong) MisterFusion * _Nonnull SafeAreaBottom;
 ```
 
 ## Requirements
