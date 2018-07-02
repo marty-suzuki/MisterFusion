@@ -21,10 +21,10 @@ class MisterFusionTests: XCTestCase {
         }
 
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
-        XCTAssertEqual(constraint.firstAttribute, .some(.height))
-        XCTAssertEqual(constraint.relation, .some(.greaterThanOrEqual))
+        XCTAssertEqual(constraint.firstAttribute, .height)
+        XCTAssertEqual(constraint.relation, .greaterThanOrEqual)
         XCTAssertEqual(constraint.secondItem as? UIView, nil)
-        XCTAssertEqual(constraint.secondAttribute, .some(.notAnAttribute))
+        XCTAssertEqual(constraint.secondAttribute, .notAnAttribute)
         XCTAssertEqual(constraint.constant, 90)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
@@ -41,10 +41,10 @@ class MisterFusionTests: XCTestCase {
         }
 
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
-        XCTAssertEqual(constraint.firstAttribute, .some(.width))
-        XCTAssertEqual(constraint.relation, .some(.lessThanOrEqual))
+        XCTAssertEqual(constraint.firstAttribute, .width)
+        XCTAssertEqual(constraint.relation, .lessThanOrEqual)
         XCTAssertEqual(constraint.secondItem as? UIView, nil)
-        XCTAssertEqual(constraint.secondAttribute, .some(.notAnAttribute))
+        XCTAssertEqual(constraint.secondAttribute, .notAnAttribute)
         XCTAssertEqual(constraint.constant, 65)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
@@ -66,16 +66,16 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(firstConstraint.firstItem as? UIView, subview)
         XCTAssertEqual(firstConstraint.firstItem as? UIView, secondConstraint.firstItem as? UIView)
 
-        XCTAssertEqual(firstConstraint.firstAttribute, .some(.right))
+        XCTAssertEqual(firstConstraint.firstAttribute, .right)
         XCTAssertEqual(firstConstraint.firstAttribute, secondConstraint.firstAttribute)
 
-        XCTAssertEqual(firstConstraint.relation, .some(.equal))
+        XCTAssertEqual(firstConstraint.relation, .equal)
         XCTAssertEqual(firstConstraint.relation, secondConstraint.relation)
 
         XCTAssertEqual(firstConstraint.secondItem as? UIView, superview)
         XCTAssertEqual(firstConstraint.secondItem as? UIView, secondConstraint.secondItem as? UIView)
 
-        XCTAssertEqual(firstConstraint.secondAttribute, .some(.right))
+        XCTAssertEqual(firstConstraint.secondAttribute, .right)
         XCTAssertEqual(firstConstraint.secondAttribute, secondConstraint.secondAttribute)
 
         XCTAssertEqual(firstConstraint.constant, 0.5)
@@ -100,11 +100,11 @@ class MisterFusionTests: XCTestCase {
         }
 
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
-        XCTAssertEqual(constraint.firstAttribute, .some(.width))
-        XCTAssertNotEqual(constraint.firstAttribute, .some(.height))
-        XCTAssertEqual(constraint.relation, .some(.equal))
+        XCTAssertEqual(constraint.firstAttribute, .width)
+        XCTAssertNotEqual(constraint.firstAttribute, .height)
+        XCTAssertEqual(constraint.relation, .equal)
         XCTAssertEqual(constraint.secondItem as? UIView, nil)
-        XCTAssertEqual(constraint.secondAttribute, .some(.notAnAttribute))
+        XCTAssertEqual(constraint.secondAttribute, .notAnAttribute)
         XCTAssertEqual(constraint.constant, 100)
         XCTAssertNotEqual(constraint.constant, 90)
         XCTAssertEqual(constraint.multiplier, 1)
@@ -122,10 +122,10 @@ class MisterFusionTests: XCTestCase {
         }
 
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
-        XCTAssertEqual(constraint.firstAttribute, .some(.height))
-        XCTAssertEqual(constraint.relation, .some(.equal))
+        XCTAssertEqual(constraint.firstAttribute, .height)
+        XCTAssertEqual(constraint.relation, .equal)
         XCTAssertEqual(constraint.secondItem as? UIView, nil)
-        XCTAssertEqual(constraint.secondAttribute, .some(.notAnAttribute))
+        XCTAssertEqual(constraint.secondAttribute,.notAnAttribute)
         XCTAssertEqual(constraint.constant, 90)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
@@ -143,10 +143,10 @@ class MisterFusionTests: XCTestCase {
         }
 
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
-        XCTAssertEqual(constraint.firstAttribute, .some(.top))
-        XCTAssertEqual(constraint.relation, .some(.lessThanOrEqual))
+        XCTAssertEqual(constraint.firstAttribute, .top)
+        XCTAssertEqual(constraint.relation, .lessThanOrEqual)
         XCTAssertEqual(constraint.secondItem as? UIView, superview)
-        XCTAssertEqual(constraint.secondAttribute, .some(.top))
+        XCTAssertEqual(constraint.secondAttribute, .top)
         XCTAssertEqual(constraint.constant, 65)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
@@ -163,10 +163,10 @@ class MisterFusionTests: XCTestCase {
         }
 
         XCTAssertEqual(constraint.firstItem as? UIView, subview)
-        XCTAssertEqual(constraint.firstAttribute, .some(.bottom))
-        XCTAssertEqual(constraint.relation, .some(.greaterThanOrEqual))
+        XCTAssertEqual(constraint.firstAttribute, .bottom)
+        XCTAssertEqual(constraint.relation, .greaterThanOrEqual)
         XCTAssertEqual(constraint.secondItem as? UIView, superview)
-        XCTAssertEqual(constraint.secondAttribute, .some(.bottom))
+        XCTAssertEqual(constraint.secondAttribute, .bottom)
         XCTAssertEqual(constraint.constant, 90)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
@@ -187,10 +187,10 @@ class MisterFusionTests: XCTestCase {
         } else {
             XCTAssertEqual(constraint.firstItem as? UIView, superview)
         }
-        XCTAssertEqual(constraint.firstAttribute, .some(.top))
-        XCTAssertEqual(constraint.relation, .some(.equal))
+        XCTAssertEqual(constraint.firstAttribute, .top)
+        XCTAssertEqual(constraint.relation, .equal)
         XCTAssertEqual(constraint.secondItem as? UIView, subview)
-        XCTAssertEqual(constraint.secondAttribute, .some(.top))
+        XCTAssertEqual(constraint.secondAttribute, .top)
         XCTAssertEqual(constraint.constant, 0)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
@@ -208,14 +208,14 @@ class MisterFusionTests: XCTestCase {
 
         if #available(iOS 11, *) {
             XCTAssertEqual(constraint.firstItem as? UILayoutGuide, viewController.view.safeAreaLayoutGuide)
-            XCTAssertEqual(constraint.firstAttribute, .some(.top))
+            XCTAssertEqual(constraint.firstAttribute, .top)
         } else {
             XCTAssertEqual((constraint.firstItem as? UILayoutSupport)?.bottomAnchor, viewController.topLayoutGuide.bottomAnchor)
-            XCTAssertEqual(constraint.firstAttribute, .some(.bottom))
+            XCTAssertEqual(constraint.firstAttribute, .bottom)
         }
-        XCTAssertEqual(constraint.relation, .some(.equal))
+        XCTAssertEqual(constraint.relation, .equal)
         XCTAssertEqual(constraint.secondItem as? UIView, subview)
-        XCTAssertEqual(constraint.secondAttribute, .some(.top))
+        XCTAssertEqual(constraint.secondAttribute, .top)
         XCTAssertEqual(constraint.constant, 0)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
@@ -233,14 +233,14 @@ class MisterFusionTests: XCTestCase {
 
         if #available(iOS 11, *) {
             XCTAssertEqual(constraint.firstItem as? UILayoutGuide, viewController.view.safeAreaLayoutGuide)
-            XCTAssertEqual(constraint.firstAttribute, .some(.bottom))
+            XCTAssertEqual(constraint.firstAttribute, .bottom)
         } else {
             XCTAssertEqual((constraint.firstItem as? UILayoutSupport)?.topAnchor, viewController.bottomLayoutGuide.topAnchor)
-            XCTAssertEqual(constraint.firstAttribute, .some(.top))
+            XCTAssertEqual(constraint.firstAttribute, .top)
         }
-        XCTAssertEqual(constraint.relation, .some(.equal))
+        XCTAssertEqual(constraint.relation, .equal)
         XCTAssertEqual(constraint.secondItem as? UIView, subview)
-        XCTAssertEqual(constraint.secondAttribute, .some(.bottom))
+        XCTAssertEqual(constraint.secondAttribute, .bottom)
         XCTAssertEqual(constraint.constant, 0)
         XCTAssertEqual(constraint.multiplier, 1)
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)

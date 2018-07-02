@@ -338,7 +338,11 @@ extension UIView {
     }
     
     func _addLayoutConstraints(_ misterFusions: [MisterFusion]) -> [NSLayoutConstraint] {
+        #if swift(>=4.1)
+        return misterFusions.compactMap { _addLayoutConstraint($0) }
+        #else
         return misterFusions.flatMap { _addLayoutConstraint($0) }
+        #endif
     }
 
     //MARK: - addSubview()
