@@ -68,7 +68,7 @@ extension UIViewSafeArea: MisterFusionConvertible {
     
     private func createMisterFusion(with attribute: NSLayoutAttribute) -> MisterFusion {
         let item: _LayoutObject
-        if #available(iOS 11, *) {
+        if #available(iOS 11, tvOS 11, *) {
             item = base.safeAreaLayoutGuide
         } else {
             item = base
@@ -169,7 +169,7 @@ extension UIViewControllerSafeArea {
     public var top: MisterFusion {
         let item: _LayoutObject
         let attribute: NSLayoutAttribute
-        if #available(iOS 11, *) {
+        if #available(iOS 11, tvOS 11, *) {
             item = base.view.safeAreaLayoutGuide
             attribute = .top
         } else {
@@ -182,7 +182,7 @@ extension UIViewControllerSafeArea {
     public var bottom: MisterFusion {
         let item: _LayoutObject
         let attribute: NSLayoutAttribute
-        if #available(iOS 11, *) {
+        if #available(iOS 11, tvOS 11, *) {
             item = base.view.safeAreaLayoutGuide
             attribute = .bottom
         } else {
