@@ -1,6 +1,6 @@
 # MisterFusion
 
-[![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
+[![Platform](http://img.shields.io/badge/platform-iOS%20|%20tvOS-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
@@ -459,6 +459,7 @@ And `self.SafeAreaBottom` returns, `self.bottomLayoutGuide.topAnchor`.
 
 - Xcode 9 or greater
 - iOS 8.0 or greater
+- tvOS 10.0 or greater
 
 ## Author
 

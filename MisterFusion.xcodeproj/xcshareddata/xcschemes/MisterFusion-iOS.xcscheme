@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EDB99A281F42C6A00013E6CD"
                BuildableName = "MisterFusion.framework"
-               BlueprintName = "MisterFusion"
+               BlueprintName = "MisterFusion-iOS"
                ReferencedContainer = "container:MisterFusion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDB99A281F42C6A00013E6CD"
             BuildableName = "MisterFusion.framework"
-            BlueprintName = "MisterFusion"
+            BlueprintName = "MisterFusion-iOS"
             ReferencedContainer = "container:MisterFusion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,7 +66,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDB99A281F42C6A00013E6CD"
             BuildableName = "MisterFusion.framework"
-            BlueprintName = "MisterFusion"
+            BlueprintName = "MisterFusion-iOS"
             ReferencedContainer = "container:MisterFusion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,7 +84,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EDB99A281F42C6A00013E6CD"
             BuildableName = "MisterFusion.framework"
-            BlueprintName = "MisterFusion"
+            BlueprintName = "MisterFusion-iOS"
             ReferencedContainer = "container:MisterFusion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "MisterFusion"
 
-  s.version          = "3.2.0"
+  s.version          = "3.2.1"
 
   s.summary          = "MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code."
 
@@ -20,7 +20,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/marty-suzuki/MisterFusion.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/marty_suzuki'
 
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target  = "8.0"
+  s.tvos.deployment_target = "10.0"
   s.requires_arc = true
 
   s.source_files = 'MisterFusion/*.{swift}'
