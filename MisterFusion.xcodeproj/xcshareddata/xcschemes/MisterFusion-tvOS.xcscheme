@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EDB99A281F42C6A00013E6CD"
-               BuildableName = "MisterFusion.framework"
-               BlueprintName = "MisterFusion-iOS"
+               BlueprintIdentifier = "3786992720FB2CBF0099DCE6"
+               BuildableName = "MisterFusion-tvOS.framework"
+               BlueprintName = "MisterFusion-tvOS"
                ReferencedContainer = "container:MisterFusion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EDB99A3F1F42C7E20013E6CD"
-               BuildableName = "MisterFusionTests.xctest"
-               BlueprintName = "MisterFusionTests"
-               ReferencedContainer = "container:MisterFusion.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EDB99A281F42C6A00013E6CD"
-            BuildableName = "MisterFusion.framework"
-            BlueprintName = "MisterFusion-iOS"
-            ReferencedContainer = "container:MisterFusion.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EDB99A281F42C6A00013E6CD"
-            BuildableName = "MisterFusion.framework"
-            BlueprintName = "MisterFusion-iOS"
+            BlueprintIdentifier = "3786992720FB2CBF0099DCE6"
+            BuildableName = "MisterFusion-tvOS.framework"
+            BlueprintName = "MisterFusion-tvOS"
             ReferencedContainer = "container:MisterFusion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EDB99A281F42C6A00013E6CD"
-            BuildableName = "MisterFusion.framework"
-            BlueprintName = "MisterFusion-iOS"
+            BlueprintIdentifier = "3786992720FB2CBF0099DCE6"
+            BuildableName = "MisterFusion-tvOS.framework"
+            BlueprintName = "MisterFusion-tvOS"
             ReferencedContainer = "container:MisterFusion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
