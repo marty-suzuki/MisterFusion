@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3786992720FB2CBF0099DCE6"
-               BuildableName = "MisterFusion-tvOS.framework"
+               BuildableName = "MisterFusion.framework"
                BlueprintName = "MisterFusion-tvOS"
                ReferencedContainer = "container:MisterFusion.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3786992720FB2CBF0099DCE6"
-            BuildableName = "MisterFusion-tvOS.framework"
+            BuildableName = "MisterFusion.framework"
             BlueprintName = "MisterFusion-tvOS"
             ReferencedContainer = "container:MisterFusion.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3786992720FB2CBF0099DCE6"
-            BuildableName = "MisterFusion-tvOS.framework"
+            BuildableName = "MisterFusion.framework"
             BlueprintName = "MisterFusion-tvOS"
             ReferencedContainer = "container:MisterFusion.xcodeproj">
          </BuildableReference>
