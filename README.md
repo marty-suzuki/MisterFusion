@@ -463,6 +463,7 @@ And `self.SafeAreaBottom` returns, `self.bottomLayoutGuide.topAnchor`.
 - Xcode 9 or greater
 - iOS 8.0 or greater
 - tvOS 10.0 or greater
+- macOS 10.11 or greater
 
 ## Author
 
