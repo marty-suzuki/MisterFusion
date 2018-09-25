@@ -6,8 +6,6 @@
 //  Copyright © 2017年 marty-suzuki. All rights reserved.
 //
 
-import Foundation
-
 public protocol MisterFusionConvertible {
     var top: MisterFusion { get }
     var right: MisterFusion { get }
@@ -22,6 +20,8 @@ public protocol MisterFusionConvertible {
     var notAnAttribute: MisterFusion { get }
     var lastBaseline: MisterFusion { get }
     var firstBaseline: MisterFusion { get }
+
+    #if os(iOS) || os(tvOS)
     var leftMargin: MisterFusion { get }
     var rightMargin: MisterFusion { get }
     var topMargin: MisterFusion { get }
@@ -30,4 +30,5 @@ public protocol MisterFusionConvertible {
     var trailingMargin: MisterFusion { get }
     var centerXWithinMargins: MisterFusion { get }
     var centerYWithinMargins: MisterFusion { get }
+    #endif
 }
