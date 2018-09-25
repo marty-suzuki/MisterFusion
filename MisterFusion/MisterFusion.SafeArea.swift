@@ -6,18 +6,19 @@
 //  Copyright © 2017年 marty-suzuki. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
 import UIKit
 
 // MARK: - UIView
 
 public struct UIViewSafeArea {
-    let base: UIView
-    init(_ base: UIView) {
+    let base: View
+    init(_ base: View) {
         self.base = base
     }
 }
 
-extension UIView {
+extension View {
     public var safeArea: UIViewSafeArea {
         return UIViewSafeArea(self)
     }
@@ -66,7 +67,7 @@ extension UIViewSafeArea: MisterFusionConvertible {
     
     public var centerYWithinMargins: MisterFusion { return createMisterFusion(with: .centerYWithinMargins) }
     
-    private func createMisterFusion(with attribute: MisterFusion.Attribute) -> MisterFusion {
+    private func createMisterFusion(with attribute: Attribute) -> MisterFusion {
         let item: _LayoutObject
         if #available(iOS 11, tvOS 11, *) {
             item = base.safeAreaLayoutGuide
@@ -77,7 +78,7 @@ extension UIViewSafeArea: MisterFusionConvertible {
     }
 }
 
-extension UIView {
+extension View {
     @objc public var SafeAreaTop: MisterFusion { return safeArea.top }
 
     @objc public var SafeAreaRight: MisterFusion { return safeArea.right }
@@ -147,7 +148,7 @@ extension UIViewControllerSafeArea {
 
     public var top: MisterFusion {
         let item: _LayoutObject
-        let attribute: MisterFusion.Attribute
+        let attribute: Attribute
         if #available(iOS 11, tvOS 11, *) {
             item = base.view.safeAreaLayoutGuide
             attribute = .top
@@ -160,7 +161,7 @@ extension UIViewControllerSafeArea {
 
     public var bottom: MisterFusion {
         let item: _LayoutObject
-        let attribute: MisterFusion.Attribute
+        let attribute: Attribute
         if #available(iOS 11, tvOS 11, *) {
             item = base.view.safeAreaLayoutGuide
             attribute = .bottom
@@ -171,7 +172,7 @@ extension UIViewControllerSafeArea {
         return createMisterFusion(with: item, and: attribute)
     }
 
-    private func createMisterFusion(with item: _LayoutObject, and attribute: MisterFusion.Attribute) -> MisterFusion {
+    private func createMisterFusion(with item: _LayoutObject, and attribute: Attribute) -> MisterFusion {
         return MisterFusion(item: item, attribute: attribute, relatedBy: nil, toItem: nil, toAttribute: nil, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: nil)
     }
 }
@@ -181,3 +182,4 @@ extension UIViewController {
 
     @objc public var SafeAreaBottom: MisterFusion { return safeArea.bottom }
 }
+#endif
