@@ -6,6 +6,7 @@
 //  Copyright © 2017年 marty-suzuki. All rights reserved.
 //
 
+#if os(iOS)
 import XCTest
 @testable import MisterFusion
 
@@ -246,3 +247,4 @@ class MisterFusionTests: XCTestCase {
         XCTAssertEqual(constraint.priority, UILayoutPriority.required)
     }
 }
+#endif

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "MisterFusion"
 
-  s.version          = "3.2.1"
+  s.version          = "4.0.0"
 
   s.summary          = "MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code."
 
@@ -22,14 +22,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target  = "8.0"
   s.tvos.deployment_target = "10.0"
+  s.osx.deployment_target = "10.11"
   s.requires_arc = true
 
   s.source_files = 'MisterFusion/*.{swift}'
-  #s.resource_bundles = {
-  #  'MisterFusion' => ['Pod/Assets/*.png']
-  #}
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

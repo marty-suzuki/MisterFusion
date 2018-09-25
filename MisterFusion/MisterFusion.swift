@@ -21,12 +21,12 @@ public typealias LayoutPriority = NSLayoutConstraint.Priority
 public typealias UserInterfaceSizeClass = Void
 #endif
 
-#if swift(>=4.2)
+#if swift(>=4.2) || os(macOS)
 public typealias Attribute = NSLayoutConstraint.Attribute
 public typealias Relation = NSLayoutConstraint.Relation
-#else
-public typealias Attribute = NSLayoutConstraint.Attribute
-public typealias Relation = NSLayoutConstraint.Relation
+#elseif os(iOS) || os(tvOS)
+public typealias Attribute = NSLayoutAttribute
+public typealias Relation = NSLayoutRelation
 #endif
 
 protocol _LayoutObject: class {
