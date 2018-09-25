@@ -1,6 +1,6 @@
 # MisterFusion
 
-[![Platform](http://img.shields.io/badge/platform-iOS%20|%20tvOS-blue.svg?style=flat
+[![Platform](http://img.shields.io/badge/platform-iOS%20|%20tvOS%20|%20macOS-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/swift-4.0%20|%204.1%20|%204.2-orange.svg?style=flat
 )](https://developer.apple.com/swift)
@@ -23,6 +23,9 @@ MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 - [x] Support Size Class
 - [x] Support Swift4
 - [x] Support SafeArea🎉 (Swift3.2 since 2.3.1, Swift4 since 3.1.0)
+- [x] Support iOS
+- [x] Support tvOS (since 3.2.0)
+- [x] Support macOS (since 4.0.0)
 
 #### MisterFusion Code for Swift
 
