@@ -22,11 +22,20 @@ extension UILayoutGuide: _LayoutObject {
 }
 
 public class MisterFusion: NSObject {
+    
+    #if swift(>=4.2)
+    public typealias Attribute = NSLayoutConstraint.Attribute
+    public typealias Relation = NSLayoutConstraint.Relation
+    #else
+    public typealias Attribute = NSLayoutAttribute
+    public typealias Relation = NSLayoutRelation
+    #endif
+
     fileprivate let item: _LayoutObject?
-    fileprivate let attribute: NSLayoutAttribute?
-    fileprivate let relatedBy: NSLayoutRelation?
+    fileprivate let attribute: Attribute?
+    fileprivate let relatedBy: Relation?
     fileprivate let toItem: _LayoutObject?
-    fileprivate let toAttribute: NSLayoutAttribute?
+    fileprivate let toAttribute: Attribute?
     fileprivate let multiplier: CGFloat?
     fileprivate let constant: CGFloat?
     fileprivate let priority: UILayoutPriority?
@@ -37,10 +46,10 @@ public class MisterFusion: NSObject {
     override open var description: String {
         return "\(super.description)\n" +
                "item               : \(item as _LayoutObject?)\n" +
-               "attribute          : \(attribute as NSLayoutAttribute?))\n" +
-               "relatedBy          : \(relatedBy as NSLayoutRelation?))\n" +
+               "attribute          : \(attribute as Attribute?))\n" +
+               "relatedBy          : \(relatedBy as Relation?))\n" +
                "toItem             : \(toItem as _LayoutObject?)\n" +
-               "toAttribute        : \(toAttribute as NSLayoutAttribute?))\n" +
+               "toAttribute        : \(toAttribute as Attribute?))\n" +
                "multiplier         : \(multiplier as CGFloat?)\n" +
                "constant           : \(constant as CGFloat?)\n" +
                "priority           : \(priority as UILayoutPriority?)\n" +
@@ -48,7 +57,7 @@ public class MisterFusion: NSObject {
                "verticalSizeClass  : \(verticalSizeClass as UIUserInterfaceSizeClass?)\n"
     }
     
-    init(item: _LayoutObject?, attribute: NSLayoutAttribute?, relatedBy: NSLayoutRelation?, toItem: _LayoutObject?, toAttribute: NSLayoutAttribute?, multiplier: CGFloat?, constant: CGFloat?, priority: UILayoutPriority?, horizontalSizeClass: UIUserInterfaceSizeClass?, verticalSizeClass: UIUserInterfaceSizeClass?, identifier: String?) {
+    init(item: _LayoutObject?, attribute: Attribute?, relatedBy: Relation?, toItem: _LayoutObject?, toAttribute: Attribute?, multiplier: CGFloat?, constant: CGFloat?, priority: UILayoutPriority?, horizontalSizeClass: UIUserInterfaceSizeClass?, verticalSizeClass: UIUserInterfaceSizeClass?, identifier: String?) {
         self.item = item
         self.attribute = attribute
         self.relatedBy = relatedBy
@@ -62,88 +71,77 @@ public class MisterFusion: NSObject {
         self.identifier = identifier
         super.init()
     }
-    
-    @available(*, unavailable)
+
     @objc public var Equal: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |==| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var NotRelatedEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |==| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var LessThanOrEqual: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |<=| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var NotRelatedLessThanOrEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |<=| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var GreaterThanOrEqual: (MisterFusion) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |>=| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var NotRelatedGreaterThanOrEqualConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |>=| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var Multiplier: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |*| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var Constant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |+| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var Priority: (UILayoutPriority) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |<>| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var NotRelatedConstant: (CGFloat) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
             return me |==| $0
         }
     }
-    
-    @available(*, unavailable)
+
     @objc public var HorizontalSizeClass: (UIUserInterfaceSizeClass) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -151,7 +149,6 @@ public class MisterFusion: NSObject {
         }
     }
 
-    @available(*, unavailable)
     @objc public var VerticalSizeClass: (UIUserInterfaceSizeClass) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -159,7 +156,6 @@ public class MisterFusion: NSObject {
         }
     }
     
-    @available(*, unavailable)
     @objc public var Identifier: (String) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -306,7 +302,7 @@ extension UIView: MisterFusionConvertible {
     @objc(CenterYWithinMargins)
     public var centerYWithinMargins: MisterFusion { return createMisterFusion(with: .centerYWithinMargins) }
 
-    private func createMisterFusion(with attribute: NSLayoutAttribute) -> MisterFusion {
+    private func createMisterFusion(with attribute: MisterFusion.Attribute) -> MisterFusion {
         return MisterFusion(item: self, attribute: attribute, relatedBy: nil, toItem: nil, toAttribute: nil, multiplier: nil, constant: nil, priority: nil, horizontalSizeClass: nil, verticalSizeClass: nil, identifier: nil)
     }
 }
@@ -324,9 +320,9 @@ extension UIView {
             , verticalSizeClass != traitCollection?.verticalSizeClass {
             return nil
         }
-        let attribute: NSLayoutAttribute = misterFusion.attribute ?? .notAnAttribute
-        let relatedBy: NSLayoutRelation = misterFusion.relatedBy ?? .equal
-        let toAttribute: NSLayoutAttribute = misterFusion.toAttribute ?? attribute
+        let attribute: MisterFusion.Attribute = misterFusion.attribute ?? .notAnAttribute
+        let relatedBy: MisterFusion.Relation = misterFusion.relatedBy ?? .equal
+        let toAttribute: MisterFusion.Attribute = misterFusion.toAttribute ?? attribute
         let toItem: _LayoutObject? = toAttribute == .notAnAttribute ? nil : misterFusion.toItem ?? self
         let multiplier: CGFloat = misterFusion.multiplier ?? 1
         let constant: CGFloat = misterFusion.constant ?? 0
