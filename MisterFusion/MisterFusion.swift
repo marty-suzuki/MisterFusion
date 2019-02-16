@@ -342,7 +342,7 @@ extension View {
         let item: _LayoutObject = misterFusion.item ?? self
 
         #if os(iOS) || os(tvOS)
-        let traitCollection = UIApplication.shared.keyWindow?.traitCollection
+        let traitCollection = window?.traitCollection
         if let horizontalSizeClass = misterFusion.horizontalSizeClass
             , horizontalSizeClass != traitCollection?.horizontalSizeClass {
             return nil
