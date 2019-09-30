@@ -2,16 +2,12 @@
 
 [![Platform](http://img.shields.io/badge/platform-iOS%20|%20tvOS%20|%20macOS-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
-[![Language](http://img.shields.io/badge/swift-4.0%20|%204.1%20|%204.2-orange.svg?style=flat
+[![Language](http://img.shields.io/badge/swift-5-orange.svg?style=flat
 )](https://developer.apple.com/swift)
 [![Version](https://img.shields.io/cocoapods/v/MisterFusion.svg?style=flat)](http://cocoapods.org/pods/MisterFusion)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/MisterFusion.svg?style=flat)](http://cocoapods.org/pods/MisterFusion)
-[![CocoaPods](https://img.shields.io/cocoapods/dt/MisterFusion.svg)](https://cocoapods.org/?q=misterfusion)
 [![Build Status](https://travis-ci.org/marty-suzuki/MisterFusion.svg?branch=master)](https://travis-ci.org/marty-suzuki/MisterFusion)
-
-[ManiacDev.com](https://maniacdev.com/) referred.  
-[https://maniacdev.com/2015/12/open-source-auto-layout-library-with-a-simple-and-concise-syntax](https://maniacdev.com/2015/12/open-source-auto-layout-library-with-a-simple-and-concise-syntax)
 
 ![](./Images/logo.png)
 
@@ -21,7 +17,8 @@ MisterFusion makes more easier to use AutoLayout in Swift & Objective-C code.
 - [x] Simple And Concise Syntax
 - [x] Use in Swift and Objective-C
 - [x] Support Size Class
-- [x] Support Swift4
+- [x] Support Swift5
+- [x] Support Swift4 (until 4.0.1)
 - [x] Support SafeArea🎉 (Swift3.2 since 2.3.1, Swift4 since 3.1.0)
 - [x] Support iOS
 - [x] Support tvOS (since 3.2.0)
@@ -460,7 +457,7 @@ And `self.SafeAreaBottom` returns, `self.bottomLayoutGuide.topAnchor`.
 
 ## Requirements
 
-- Xcode 9 or greater
+- Xcode 10.2 or greater
 - iOS 8.0 or greater
 - tvOS 10.0 or greater
 - macOS 10.11 or greater
