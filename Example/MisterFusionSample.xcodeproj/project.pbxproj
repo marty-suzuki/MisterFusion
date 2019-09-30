@@ -113,7 +113,6 @@
 				37F35B1B1BF625AB008C6EAB /* Frameworks */,
 				37F35B1C1BF625AB008C6EAB /* Resources */,
 				36C33B9F33E677EFFD9A317C /* [CP] Embed Pods Frameworks */,
-				9DF28894AC63573ACB22DA4D /* [CP] Copy Pods Resources */,
 				1308C3345AB243F5655EE9DB /* Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -146,6 +145,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -194,7 +194,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MisterFusion/MisterFusion.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -203,22 +203,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9DF28894AC63573ACB22DA4D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MisterFusionSample/Pods-MisterFusionSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A294C3F6ADDE89566922D859 /* [CP] Check Pods Manifest.lock */ = {
@@ -394,7 +379,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MisterFusionSample/MisterFusionSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -411,7 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MisterFusionSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MisterFusionSample/MisterFusionSample-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
