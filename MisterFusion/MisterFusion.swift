@@ -167,6 +167,7 @@ public class MisterFusion: NSObject {
         }
     }
 
+    #if os(iOS) || os(tvOS)
     @objc public var HorizontalSizeClass: (UserInterfaceSizeClass) -> MisterFusion? {
         return { [weak self] in
             guard let me = self else { return nil }
@@ -180,6 +181,7 @@ public class MisterFusion: NSObject {
             return me <|> $0
         }
     }
+    #endif
     
     @objc public var Identifier: (String) -> MisterFusion? {
         return { [weak self] in
